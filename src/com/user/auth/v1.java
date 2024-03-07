@@ -8,6 +8,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletRequest;
 
 
 /**
@@ -39,7 +40,7 @@ public class v1 implements Filter {
         httpResponse.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
         httpResponse.setHeader("Access-Control-Allow-Credentials", "true");
         httpResponse.setHeader("Access-Control-Max-Age", "3600");
-        System.out.println(request.getParameter("n")+"jgvyhvhgbnhmjvhg");
+        System.out.println(((HttpServletRequest) request).getServletPath());
         // Pass the request along the filter chain
         chain.doFilter(request, response);
     }

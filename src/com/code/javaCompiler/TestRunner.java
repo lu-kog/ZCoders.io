@@ -49,6 +49,7 @@ public class TestRunner {
 		Iterator<?> keys = testCasesJson.keys();
 
 		// creating testcase Objects
+		int i=0;
 		while (keys.hasNext()) {
 			Object expectedOutput;
 			List<Object> paramsValues = new ArrayList<Object>();
@@ -66,9 +67,10 @@ public class TestRunner {
 				paramsValues.add(params.get((String) paramKeys.next()));
 			}
 
-			TestCase newCase = new TestCase(obj, methodName, expectedOutput, paramsValues.toArray());
+			TestCase newCase = new TestCase(obj, methodName,(JSONObject) testCasesJson.get(i+""), expectedOutput, i, paramsValues.toArray());
 
 			testCases.add(newCase);
+			i++;
 		}
 
 		List<Callable<JSONObject>> tasks = testCases.stream()
@@ -81,7 +83,7 @@ public class TestRunner {
 		Iterator<Callable<JSONObject>> tasksCall = tasks.iterator();
 		ExecutorService executor = Executors.newSingleThreadExecutor();
 
-		int i = 0;
+		i = 0;
 		long startTime = System.currentTimeMillis();
 		while (tasksCall.hasNext() && ((System.currentTimeMillis() - startTime) < 12000)) {
 			FutureTask<JSONObject> futureTask = new FutureTask<>(() -> tasksCall.next().call());
@@ -89,25 +91,26 @@ public class TestRunner {
 			try {
 				executor.execute(futureTask);
 				JSONObject ExecResult = futureTask.get(12000, TimeUnit.MILLISECONDS); 
+                ExecResult.put((String) ExecResult.get("name"), testCasesJson.getJSONObject(i+""));
+				
 				results.put(i + "", ExecResult);
 				i++;
 			} catch (TimeoutException e) {
 				System.err.println("Execution timed out");
 				futureTask.cancel(true); // cancel the task
 				JSONObject resultObject = new JSONObject();
-				resultObject.put("status", false);
+				resultObject.put("Result", false);
                 resultObject.put("message", "Execution timed out: 12000ms");
                 resultObject.put("logs", "");
-
-				results.put(i + "", resultObject);
+				results.put("test"+i+"", resultObject);
 				break;
 			} catch (InterruptedException | ExecutionException e) {
 				JSONObject resultObject = new JSONObject();
-				resultObject.put("status", false);
+				resultObject.put("Result", false);
                 resultObject.put("message", "Run time exception: "+e);
                 resultObject.put("logs", "");
-
-				results.put(i + "", resultObject);
+                resultObject.put("test"+i, testCasesJson.getJSONObject(i+""));
+				results.put("test"+i+"", resultObject);
 				break;
 			}
 

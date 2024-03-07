@@ -224,7 +224,7 @@ public class ClanDAO {
 		try {
 			PreparedStatement pstmt = connection.prepareStatement(Query.getClanIDFromMailID);
 			pstmt.setString(1, mailID);
-			
+			System.out.println(pstmt.toString());
 			ResultSet rs = pstmt.executeQuery();
 			if(rs.next()) {
 				logger.info("Fetch clanID by Mail ID:"+mailID);
@@ -458,7 +458,7 @@ public class ClanDAO {
 	}
 
 
-	public JSONObject getClanDetails(String mailID) throws Exception {
+	public JSONObject getClanDetails(String adminID) throws Exception {
 		/*
 		 * Needed Details: 
 		 * For each members: Member name, score, clan position, mailID
@@ -466,12 +466,14 @@ public class ClanDAO {
 		 */
 		
 		try {
-			String clanID = getClanId(mailID);
+			String clanID = getClanId(adminID);
 			
+			logger.info("Fetching all clan details by admin:"+adminID+" clan:"+clanID);
+
 			JSONObject clanData = new JSONObject();
 			// getting members of clan
 			PreparedStatement pstmt = connection.prepareStatement(Query.GetClanDetails);
-			pstmt.setString(1, mailID);
+			pstmt.setString(1, adminID);
 			ResultSet res = pstmt.executeQuery();
 			JSONArray clanMembers = new JSONArray();
 			while(res.next()) {
@@ -479,6 +481,8 @@ public class ClanDAO {
 				member.put("memberName", res.getString("userName"));
 				member.put("score", res.getInt("score"));
 				member.put("role", res.getString("role"));
+				member.put("profile", "https://coders-io.zcodeusers.in/images/"+res.getString("userName")+".jpg");
+
 
 				clanMembers.put(member);
 			}
@@ -629,42 +633,13 @@ public class ClanDAO {
 				clanDetailsObj.put("admin", rs.getString("ClanRelation.mailID"));
 				clanDetailsArray.put(clanDetailsObj);
 			}
-			
+			return clanDetailsArray;
 		}
 		catch(Exception e) {
 			throw new Exception("Can't fetch details for clan");
 		}
-		return clanDetailsArray;
+		
 	}
-
-
-	public JSONArray getClanMembersDetails(String adminID) {
-		
-		JSONArray clanMemberDetails = new JSONArray();
-		
-		try {
-			
-			PreparedStatement pstmt = connection.prepareStatement(Query.getClanMembersAndScores);
-			pstmt.toString(1, adminID);
-			
-			ResultSet rs = pstmt.executeQuery();
-			
-			while(rs.next()) {
-				JSONObject memberDetails = new JSONObject();
-				
-				memberDetails.put("clanMember", rs.getString("ClanRelation.mailID"));
-				memberDetails.put("score", rs.getString("total_score"));
-				clanMemberDetails.put(memberDetails);
-			}
-		}
-		catch(Exception e) {
-			logger.error("Can't fememberDetailstch details of clan members");
-			throw new Exception("Can't fetch details of clan members");
-		}
-		
-		return clanMemberDetails;
-	}
-
 
 
 }

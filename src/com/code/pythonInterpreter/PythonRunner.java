@@ -39,13 +39,13 @@ public class PythonRunner{
 				String result = function.asString();
 				boolean iscrt = (jsonobj.get("output")).equals(result);
 				resultjson.put("Result", iscrt);
-				resultjson.put("output", jsonobj.get("output"));
+				resultjson.put("output", result);
 			}
 			else if(jsonobj.get("output") instanceof Integer){
 				int result = function.asInt();
 				boolean iscrt = jsonobj.getInt("output") == result;
 				resultjson.put("Result", iscrt);
-				resultjson.put("output", jsonobj.getInt("output"));
+				resultjson.put("output", result);
 			}
 			resultjson.put("Print", outputStream.toString());
 		} catch (Exception e) {

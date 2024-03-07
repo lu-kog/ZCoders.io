@@ -61,7 +61,8 @@ INSERT INTO Session (sessionID, mailID, loggedTime) VALUES ('56fbd67e-0945-4747-
 -- (66423152, 'jeyrajesh@gmail.com', 'Member'),
 -- (66423152, 'amos@gmail.com', 'Member'),
 -- (66423152, 'kumaravel@gmail.com', 'Member'),
--- (66423152, 'mahalakshmi@gmail.com', 'Member');
+-- (66423152, 'mahalakshmi@gmail.com', 'Member'),
+-- (66423152, 'charu07@gmail.com', 'Member');
 
 -- INSERT INTO ClanRelation (clanID, mailID, role) VALUES
 -- (78320745, 'mathimaran@gmail.com', 'Member'),
@@ -327,3 +328,5 @@ insert into Solutions values('87654321', 'vasanth.albert@zohocorp.com', '4598667
 insert into Solutions values('23456789', 'vasanth.albert@zohocorp.com', '56873465', 'testing', 1,'2023-08-07', 'COMPLETED', 'PRACTICE');
 insert into Solutions values('34567890', 'vasanth.albert@zohocorp.com', '42887152', 'testing', 1,'2023-08-07', 'COMPLETED', 'PRACTICE');
 
+INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('sun.a@zohocorp.com', 'iamsun', '2024-03-07', '2024-03-07');
+INSERT INTO Login (mailID, passwd) VALUES ('sun.a@zohocorp.com', '$2a$10$xZzNQo8vuMc8W08QQnPrNuH134wiuz9uijNZaSYyTnqcgJFohGxt.');

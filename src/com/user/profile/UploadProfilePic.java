@@ -94,6 +94,10 @@ package com.user.profile;
 import java.io.*;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import javax.servlet.annotation.*;
 
 @WebServlet("/v1/UploadProfilePic")
@@ -107,7 +111,7 @@ public class UploadProfilePic extends HttpServlet {
             InputStream inputStream = filePart.getInputStream();
             
             // Specify the file path where you want to store the image on your server
-            String filePath = "/home/workspace/Coders.io/webapps/Demo/images/"+username+".png";
+            String filePath = "/home/workspace/Coders.io/webapps/Demo/images/"+username+".jpg";
             
             File file = new File(filePath);
             file.createNewFile();
@@ -120,11 +124,21 @@ public class UploadProfilePic extends HttpServlet {
                     outputStream.write(buffer, 0, bytesRead);
                 }
             }
-            
+            JSONObject json = new JSONObject();
+            json.put("status","200");
+            response.getWriter().write(json.toString());
             System.out.println("Image stored successfully at: " + filePath);
         } catch (Exception e) {
             e.printStackTrace();
-            response.getWriter().println("Error occurred: " + e.getMessage());
+            JSONObject json = new JSONObject();
+            try {
+                json.put("status","400");
+            } catch (JSONException e1) {
+                // TODO Auto-generated catch block
+                e1.printStackTrace();
+            }
+            response.getWriter().write(json.toString());
+            // response.getWriter().println("Error occurred: " + e.getMessage());
         }
     }
 }

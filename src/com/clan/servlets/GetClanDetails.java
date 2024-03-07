@@ -23,6 +23,7 @@ import com.user.UserDAO;
 import utils.CommonLogger;
 import utils.JSON;
 
+
 /**
  * Servlet implementation class GetClanDetails
  */
@@ -59,19 +60,19 @@ public class GetClanDetails extends HttpServlet {
 		 */
 		
 		Logger logger = new CommonLogger(GetClanDetails.class).getLogger();
-		String user = request.getParameter("user");
 		String ownMail = request.getParameter("mailID");
-		boolean flag = user.equals(ownMail);
+		String adminID = request.getParameter("adminID");
+		boolean flag = ownMail.equals(adminID);
 		try {
-			JSONObject clanDetails = ClanDAO.getObj().getClanDetails(user);
+			JSONObject clanDetails = ClanDAO.getObj().getClanDetails(adminID);
 			System.out.println("clanDetails"+clanDetails);
 			JSONObject respJson = new JSONObject();
 			respJson.put("statuscode", 200);
 			respJson.put("isOwnPage", flag);
 			if (flag) {
 				// get role of clan
-				String clanID = ClanDAO.getObj().getClanId(ownMail);
-				String role = ClanDAO.getObj().getClanRole(ownMail, clanID);
+				String clanID = ClanDAO.getObj().getClanId(adminID);
+				String role = ClanDAO.getObj().getClanRole(adminID, clanID);
 				
 				// give access to controll clan
 				List<Cookie> cookies = new ArrayList<Cookie>();

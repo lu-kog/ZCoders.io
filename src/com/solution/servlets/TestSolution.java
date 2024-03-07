@@ -120,6 +120,7 @@ public class TestSolution extends HttpServlet {
 					JSONObject resJsonObject = pyRunner.runner(solution);
 					resultJson.put("result",resJsonObject);
 				}
+				System.out.print("Output");
 				System.out.print(resultJson);
 				response.getWriter().write(resultJson.toString());
 			} else {

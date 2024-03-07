@@ -20,16 +20,18 @@ public class TestCase {
     private Class<?>[] parameterTypes;
     private Object expectedOutput;
     private Object targetObject;
-
+    private JSONObject testcase;
+    private int testNum;
     private static ThreadLocal<ByteArrayOutputStream> baos = new ThreadLocal<>();
     private static ThreadLocal<PrintStream> printStream = new ThreadLocal<>();
 
-    public TestCase(Object targetObject, String methodName, Object expectedOutput, Object... parameters) {
+    public TestCase(Object targetObject, String methodName,JSONObject testcase, Object expectedOutput, int testNum, Object... parameters) {
         this.targetObject = targetObject;
         this.methodName = methodName;
         this.parameters = parameters;
         this.parameterTypes = new Class<?>[parameters.length];
         this.expectedOutput = expectedOutput;
+        this.testcase = testcase;
     }
 
     public Callable<JSONObject> toCallable() {
@@ -63,12 +65,13 @@ public class TestCase {
                 logger.info(isPass);
 
                 if (isPass) {
-                    resultObject.put("status", isPass);
+                    resultObject.put("Result", isPass);
                     resultObject.put("logs", logs);
                     resultObject.put("time", "Completed in: " + duration + " ms");
 
                 } else {
-                    resultObject.put("status", isPass);
+                    resultObject.put("Result", isPass);
+                    resultObject.put("output", result);
                     resultObject.put("message",
                             String.format("Test Failed: Expected %s, got %s", expectedOutput, result));
                     resultObject.put("logs", logs);
@@ -80,12 +83,13 @@ public class TestCase {
             	baos.remove();
             	printStream.remove();
             }
+            resultObject.put("name","test"+testNum);
             return resultObject;
         };
     }
 
     public static boolean compareObjects(Object a, Object b) {
-        if (a == b) {
+        if (a == b && !(a instanceof String) && !(b instanceof String) ) {
             return true;
         } else if (a.getClass().isArray() && b.getClass().isArray()) {
             return comparePrimitiveArrays(a, b);

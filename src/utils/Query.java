@@ -185,4 +185,6 @@ public class Query {
     public static final String getLanguageID = "Select l_ID from Languages where lang_name=?;";
 
 	public static final String getClansAndScores = "select clanName, COALESCE(SUM(Users.score), 0) AS total_score, ClanRelation.mailID from Clan left join ClanRelation on Clan.clanID = ClanRelation.clanID left join Users on ClanRelation.mailID = Users.mailID where role like '%ADMIN%' group by Clan.clanName order by total_score desc";
+
+	
 }
