@@ -18,7 +18,7 @@ import utils.JSON;
 /**
  * Servlet implementation class sendClanRequest
  */
-@WebServlet("/sendClanRequest")
+@WebServlet("/v1/sendClanRequest")
 public class sendClanRequest extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

@@ -1,2 +1,5 @@
-def reverse(word):
-	return word[0:1]
+def sum_array(a):
+    total = 0
+    for num in a:
+        total += num
+    return total

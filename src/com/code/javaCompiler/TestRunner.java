@@ -1,6 +1,10 @@
 package com.code.javaCompiler;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.PrintStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.security.spec.ECField;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -82,7 +86,8 @@ public class TestRunner {
 		JSONObject results = new JSONObject();
 		Iterator<Callable<JSONObject>> tasksCall = tasks.iterator();
 		ExecutorService executor = Executors.newSingleThreadExecutor();
-
+		System.out.println("Code Current");
+		System.out.println(readFromFile("/home/workspace/Coders.io/src/tmp/vsr/kata.java"));
 		i = 0;
 		long startTime = System.currentTimeMillis();
 		while (tasksCall.hasNext() && ((System.currentTimeMillis() - startTime) < 12000)) {
@@ -126,5 +131,25 @@ public class TestRunner {
 
 		return results;
 
+	}
+
+
+	public String readFromFile(String filepath) throws Exception {
+		File codeFile = new File(filepath);
+		if (!codeFile.exists()) {
+			logger.error("File not found - "+filepath);
+			throw new Exception("File not found!");
+		}
+		
+		StringBuilder content = new StringBuilder();
+		try {
+            Files.readAllLines(Paths.get(filepath)).forEach(line -> content.append(line).append("\n"));
+            return content.toString();
+        } catch (IOException e) {
+        logger.error("Can't read from "+filepath+": "+e);
+            throw new Exception("Error reading from file.");
+        }
+
+		
 	}
 }

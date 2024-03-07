@@ -35,13 +35,19 @@ public class PythonRunner{
 			PyObject pyFunction = interpreter.get(definitionName);
 			PyObject function = pyFunction.__call__(new PyObject[] {});
 			if(jsonobj.get("output") instanceof String){
-				System.out.println(jsonobj);
 				String result = function.asString();
 				boolean iscrt = (jsonobj.get("output")).equals(result);
 				resultjson.put("Result", iscrt);
 				resultjson.put("output", result);
 			}
-			else if(jsonobj.get("output") instanceof Integer){
+			else if(jsonobj.get("output") instanceof Boolean){
+				String result = function.asString();
+				System.out.println(result);
+				boolean iscrt = jsonobj.getString("output") == result;
+				resultjson.put("Result", iscrt);
+				resultjson.put("output", result);
+			}
+			else if(!(jsonobj.get("output") instanceof String)){
 				int result = function.asInt();
 				boolean iscrt = jsonobj.getInt("output") == result;
 				resultjson.put("Result", iscrt);

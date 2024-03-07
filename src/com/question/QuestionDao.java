@@ -19,6 +19,7 @@ import com.user.User;
 import utils.CommonLogger;
 import utils.DB;
 import utils.Query;
+import utils.sqlFile;
 
 
 public class QuestionDao {
@@ -497,21 +498,24 @@ public class QuestionDao {
         pstmt.setString(9,"NOTAPPROVED");
         System.out.println(pstmt.toString());
         if(pstmt.executeUpdate()==1){
+            sqlFile.append(pstmt.toString());
             List<Tag> tags = question.getTags();
             for(Tag tag:tags){
                 query = Query.getTagId;
                 pstmt = DB.getConnection().prepareStatement(query);
                 pstmt.setString(1,tag.getTag());
-        System.out.println(pstmt.toString());
+                System.out.println(pstmt.toString());
                 ResultSet rs = pstmt.executeQuery();
                 if(rs.next()){
+                    sqlFile.append(pstmt.toString());
                     int tagID = rs.getInt("Tag_ID");
                     query = Query.insertTagRelation;
                     pstmt = DB.getConnection().prepareStatement(query);
                     pstmt.setString(1,question.getQuestionID());
                     pstmt.setInt(2,tagID);
-        System.out.println(pstmt.toString());
+                    System.out.println(pstmt.toString());
                     pstmt.executeUpdate();
+                    sqlFile.append(pstmt.toString());
                 }
             }
             List<Language> languages = question.getLanguage();
@@ -520,9 +524,10 @@ public class QuestionDao {
                 System.out.println(language.getLanguageName());
                 pstmt = DB.getConnection().prepareStatement(query);
                 pstmt.setString(1,language.getLanguageName());
-        System.out.println(pstmt.toString());
+                System.out.println(pstmt.toString());
                 ResultSet rs = pstmt.executeQuery();
                 if(rs.next()){
+                    sqlFile.append(pstmt.toString());
                     int langID = rs.getInt("l_ID");
                     query = Query.insertLanguageRelation;
                     pstmt = DB.getConnection().prepareStatement(query);
@@ -536,8 +541,9 @@ public class QuestionDao {
                     pstmt.setString(3,pythonSyntax);
                     }
                     pstmt.setString(4,"");
-        System.out.println(pstmt.toString()+"kdfmboik");
+                    System.out.println(pstmt.toString()+"kdfmboik");
                     pstmt.executeUpdate();
+                    sqlFile.append(pstmt.toString());
                 }
             }
         }

@@ -13,7 +13,7 @@ INSERT INTO Login (mailID, passwd) VALUES ('vasanth.albert@zohocorp.com', '$2a$1
 INSERT INTO Session (sessionID, mailID, loggedTime) VALUES ('56fbd67e-0945-4747-8c06-594f9971ecdc', 'vasanth.albert@zohocorp.com', '2024-02-29 22:25:28.455');
 
 
--- INSERT INTO Users (mailID, userName, Datejoined) VALUES 
+INSERT INTO Users (mailID, userName, Datejoined) VALUES 
 -- ('sorimuthu@gmail.com', 'Sorimuthu', '2024-03-06'),
 -- ('vijila@gmail.com', 'Vijila', '2024-03-06'),
 -- ('abitha@gmail.com', 'Abitha', '2024-03-06'),
@@ -21,12 +21,12 @@ INSERT INTO Session (sessionID, mailID, loggedTime) VALUES ('56fbd67e-0945-4747-
 -- ('bangalore@gmail.com', 'Bangalore', '2024-03-06'),
 -- ('elango@gmail.com', 'Elango', '2024-03-06'),
 -- ('gopika@gmail.com', 'Gopika', '2024-03-06'),
--- ('indhu@gmail.com', 'Indhu', '2024-03-06'),
--- ('indirajith@gmail.com', 'Indirajith', '2024-03-06'),
--- ('jeyrajesh@gmail.com', 'Jey Rajesh', '2024-03-06'),
--- ('amos@gmail.com', 'Amos', '2024-03-06'),
--- ('kumaravel@gmail.com', 'Kumaravel', '2024-03-06'),
--- ('mahalakshmi@gmail.com', 'Mahalakshmi', '2024-03-06'),
+('indhu@gmail.com', 'Indhu', '2024-03-06'),
+('indirajith@gmail.com', 'Indirajith', '2024-03-06'),
+('jeyrajesh@gmail.com', 'Jey Rajesh', '2024-03-06'),
+('amos@gmail.com', 'Amos', '2024-03-06'),
+('kumaravel@gmail.com', 'Kumaravel', '2024-03-06'),
+('mahalakshmi@gmail.com', 'Mahalakshmi', '2024-03-06');
 -- ('mathimaran@gmail.com', 'Mathimaran', '2024-03-06'),
 -- ('naveenbabu@gmail.com', 'Naveen Babu', '2024-03-06'),
 -- ('padma@gmail.com', 'Padma', '2024-03-06'),
@@ -42,9 +42,9 @@ INSERT INTO Session (sessionID, mailID, loggedTime) VALUES ('56fbd67e-0945-4747-
 -- ('ulaga@gmail.com', 'Ulaga', '2024-03-06');
 
 
--- INSERT INTO Clan(clanID, clanName, Admin) VALUES('66423152', 'coders', 'krishnagokul810@gmail.com'), ('78320745', 'Zoho Schools', 'vasanth.albert@zohocorp.com'), ('40378295', 'Zsttk', 'charu07@gmail.com'), ('93820754', 'CringeSquad', 'tharan@gmail.com');
+INSERT INTO Clan(clanID, clanName, Admin) VALUES('66423152', 'coders', 'krishnagokul810@gmail.com'), ('78320745', 'Zoho Schools', 'vasanth.albert@zohocorp.com'), ('40378295', 'Zsttk', 'charu07@gmail.com'), ('93820754', 'CringeSquad', 'tharan@gmail.com');
 
--- INSERT INTO ClanRelation(clanID, mailID, role) VALUES('66423152', 'krishnagokul810@gmail.com', 'ADMIN');
+INSERT INTO ClanRelation(clanID, mailID, role) VALUES('66423152', 'krishnagokul810@gmail.com', 'ADMIN');
 -- INSERT INTO ClanRelation (clanID, mailID, role) VALUES ('40378295', 'charu07@gmail.com', 'ADMIN'), ('78320745', 'vasanth.albert@zohocorp.com', 'ADMIN'),('93820754','tharan@gmail.com','ADMIN');
 
 -- INSERT INTO ClanRelation (clanID, mailID, role) VALUES
@@ -55,14 +55,14 @@ INSERT INTO Session (sessionID, mailID, loggedTime) VALUES ('56fbd67e-0945-4747-
 --     -> (93820754, 'elango@gmail.com', 'Member'),
 --     -> (93820754, 'gopika@gmail.com', 'Member');
 
--- INSERT INTO ClanRelation (clanID, mailID, role) VALUES
--- (66423152, 'indhu@gmail.com', 'Member'),
--- (66423152, 'indirajith@gmail.com', 'Member'),
--- (66423152, 'jeyrajesh@gmail.com', 'Member'),
--- (66423152, 'amos@gmail.com', 'Member'),
--- (66423152, 'kumaravel@gmail.com', 'Member'),
--- (66423152, 'mahalakshmi@gmail.com', 'Member'),
--- (66423152, 'charu07@gmail.com', 'Member');
+INSERT INTO ClanRelation (clanID, mailID, role) VALUES
+(66423152, 'indhu@gmail.com', 'Member'),
+(66423152, 'indirajith@gmail.com', 'Member'),
+(66423152, 'jeyrajesh@gmail.com', 'Member'),
+(66423152, 'amos@gmail.com', 'Member'),
+(66423152, 'kumaravel@gmail.com', 'Member'),
+(66423152, 'mahalakshmi@gmail.com', 'Member'),
+(66423152, 'charu07@gmail.com', 'Member');
 
 -- INSERT INTO ClanRelation (clanID, mailID, role) VALUES
 -- (78320745, 'mathimaran@gmail.com', 'Member'),
@@ -330,3 +330,37 @@ insert into Solutions values('34567890', 'vasanth.albert@zohocorp.com', '4288715
 
 INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('sun.a@zohocorp.com', 'iamsun', '2024-03-07', '2024-03-07');
 INSERT INTO Login (mailID, passwd) VALUES ('sun.a@zohocorp.com', '$2a$10$xZzNQo8vuMc8W08QQnPrNuH134wiuz9uijNZaSYyTnqcgJFohGxt.');
+INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJSON,levelID,Author,status) VALUES ('44414555', 'FLAMES', '
+FLAMES game is a method to find out the status of a love relationship. Entering two names will give you the outcome of a relationship between them.
+
+To get the outcome,  
+First, cross out all letters the names have in common.  
+Second, remove the cross out letter on both names.  
+Third, get the count of the characters that are left.  
+Fourth, given the word FLAMES, with each letter, starting from the left, count up to the number you got in the previous step and return to the F on the left with each pass.  
+Finally, the letter you land on has a word that it stands for in the acronym 'flames'.
+', '    F = Friendship
+    L = Love
+    A = Affection
+    M = Marriage
+    E = Enemies
+    S = Siblings', 'flames', '{"22":{"output":"Enemies","params":{"0":"Nikhil","1":"Alisha"}},"23":{"output":"Friendship","params":{"0":"Omkar","1":"Bhakti"}},"24":{"output":"Friendship","params":{"0":"Pranav","1":"Charita"}},"25":{"output":"Friendship","params":{"0":"Qadir","1":"Dipti"}},"26":{"output":"Enemies","params":{"0":"Rahul","1":"Esha"}},"27":{"output":"Friendship","params":{"0":"Sachin","1":"Falguni"}},"28":{"output":"Marriage","params":{"0":"Tarun","1":"Gunjan"}},"10":{"output":"Siblings","params":{"0":"Bhuvan","1":"Kavya"}},"11":{"output":"Love","params":{"0":"Chetan","1":"Anjali"}},"12":{"output":"Love","params":{"0":"Dev","1":"Priya"}},"13":{"output":"Friendship","params":{"0":"Eshan","1":"Riya"}},"14":{"output":"Enemies","params":{"0":"Farhan","1":"Sania"}},"15":{"output":"Love","params":{"0":"Girish","1":"Tanvi"}},"16":{"output":"Friendship","params":{"0":"Harish","1":"Uma"}},"17":{"output":"Love","params":{"0":"Ishan","1":"Vidya"}},"18":{"output":"Love","params":{"0":"Jai","1":"Wendy"}},"19":{"output":"Marriage","params":{"0":"Karan","1":"Xena"}},"0":{"output":"Affection","params":{"0":"Krish","1":"Hermione"}},"1":{"output":"Friendship","params":{"0":"rajesh","1":"indrajith"}},"2":{"output":"Siblings","params":{"0":"WEPISCISZ","1":"VFB"}},"3":{"output":"Friendship","params":{"0":"Vasanth","1":"ida"}},"4":{"output":"Enemies","params":{"0":"Tharan","1":"Zameema Barwin"}},"5":{"output":"Siblings","params":{"0":"Sorimuthu","1":"Keerthy suresh"}},"6":{"output":"Enemies","params":{"0":"Indirajith","1":"Komi"}},"7":{"output":"Affection","params":{"0":"Charu priyan","1":"Charu Priya"}},"8":{"output":"Love","params":{"0":"Ragavan","1":"Ragavi"}},"9":{"output":"Enemies","params":{"0":"Aarav","1":"Meera"}},"20":{"output":"Marriage","params":{"0":"Lokesh","1":"Yasmin"}},"21":{"output":"Enemies","params":{"0":"Manav","1":"Zara"}}}', 2, 'krishnagokul810@gmail.com', 'NOTAPPROVED')
+Select l_ID from Languages where lang_name='Java';
+insert into LanguageRelation values(1,'44414555','public class kata{
+	public static String flames(String male, String female){
+		return "Friendship";
+	}
+}','');
+Select l_ID from Languages where lang_name='Python';
+insert into LanguageRelation values(2,'44414555','def flames(male, female):
+	return "Friendship"','');
+INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJSON,levelID,Author,status) VALUES ('83648469', 'Is a letter?', '
+Write a function??`isItLetter`, which tells us if a given character is an uppercase or lowercase letter.
+', '
+', 'is_it_letter', '{"11":{"output":"true","params":{"0":"x"}},"12":{"output":"true","params":{"0":"B"}},"13":{"output":"false","params":{"0":"1"}},"14":{"output":"false","params":{"0":"@"}},"15":{"output":"false","params":{"0":"\n"}},"16":{"output":"false","params":{"0":"!"}},"17":{"output":"true","params":{"0":"k"}},"18":{"output":"true","params":{"0":"Y"}},"19":{"output":"true","params":{"0":"f"}},"0":{"output":"true","params":{"0":"a"}},"1":{"output":"true","params":{"0":"Z"}},"2":{"output":"true","params":{"0":"m"}},"3":{"output":"true","params":{"0":"Q"}},"4":{"output":"false","params":{"0":"5"}},"5":{"output":"false","params":{"0":"#"}},"6":{"output":"false","params":{"0":" "}},"7":{"output":"false","params":{"0":"}"}},"8":{"output":"false","params":{"0":"["}},"9":{"output":"true","params":{"0":"g"}},"10":{"output":"true","params":{"0":"P"}}}', 1, 'krishnagokul810@gmail.com', 'NOTAPPROVED')
+Select Tag_ID from Tags where Tag_name='FUNDAMENTALS';
+INSERT into TagsRelation values('83648469',4);
+Select l_ID from Languages where lang_name='Python';
+insert into LanguageRelation values(2,'83648469','def is_it_letter(s):
+    return true','');
+insert into ClanRequest(clanID, mailID) values('66423152', 'indirajith@gmail.com');
