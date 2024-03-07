@@ -1,0 +1,86 @@
+2024-03-07 06:06:10 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
+2024-03-07 06:06:10 ERROR GetClanDetails:91 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 06:23:44 ERROR DB:37 - nullError on sql: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-03-07 06:23:44 ERROR DB:37 - nullError on sql: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-03-07 06:23:44 ERROR DB:37 - nullError on sql: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-03-07 06:23:44 ERROR QuestionDao:106 - can't fetch Question details for this question
+2024-03-07 06:23:44 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
+2024-03-07 06:25:08 ERROR QuestionDao:106 - can't fetch Question details for this question
+2024-03-07 06:25:08 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
+2024-03-07 06:25:09 ERROR QuestionDao:106 - can't fetch Question details for this question
+2024-03-07 06:25:09 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
+2024-03-07 06:25:22 ERROR DB:37 - nullError on sql: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-03-07 06:25:22 ERROR LoginValidationFilter:79 - java.lang.NullPointerException
+2024-03-07 06:25:53 ERROR QuestionDao:106 - can't fetch Question details for this question
+2024-03-07 06:25:53 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
+2024-03-07 06:25:53 ERROR DB:37 - nullError on sql: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-03-07 06:25:53 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.NullPointerException
+2024-03-07 06:25:53 ERROR GetClanDetails:91 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 06:26:32 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.NullPointerException
+2024-03-07 06:26:32 ERROR GetClanDetails:91 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 06:26:32 ERROR QuestionDao:106 - can't fetch Question details for this question
+2024-03-07 06:26:32 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
+2024-03-07 06:26:42 ERROR QuestionDao:106 - can't fetch Question details for this question
+2024-03-07 06:26:42 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
+2024-03-07 06:26:47 ERROR QuestionDao:106 - can't fetch Question details for this question
+2024-03-07 06:26:47 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
+2024-03-07 06:26:49 ERROR QuestionDao:106 - can't fetch Question details for this question
+2024-03-07 06:26:49 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
+2024-03-07 06:26:54 ERROR QuestionDao:106 - can't fetch Question details for this question
+2024-03-07 06:26:54 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
+2024-03-07 06:26:58 ERROR QuestionDao:106 - can't fetch Question details for this question
+2024-03-07 06:26:58 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
+2024-03-07 06:27:03 ERROR QuestionDao:106 - can't fetch Question details for this question
+2024-03-07 06:27:03 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
+2024-03-07 06:27:08 ERROR QuestionDao:106 - can't fetch Question details for this question
+2024-03-07 06:27:08 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
+2024-03-07 06:27:12 ERROR QuestionDao:106 - can't fetch Question details for this question
+2024-03-07 06:27:12 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
+2024-03-07 06:27:14 ERROR QuestionDao:106 - can't fetch Question details for this question
+2024-03-07 06:27:14 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
+2024-03-07 06:27:15 ERROR QuestionDao:106 - can't fetch Question details for this question
+2024-03-07 06:27:15 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
+2024-03-07 06:35:02 ERROR DB:37 - nullError on sql: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-03-07 06:35:02 ERROR DB:37 - nullError on sql: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-03-07 06:35:07 ERROR DB:37 - nullError on sql: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-03-07 06:35:07 ERROR LoginValidationFilter:79 - java.lang.NullPointerException
+2024-03-07 06:35:20 ERROR DB:37 - nullError on sql: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-03-07 06:35:20 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.NullPointerException
+2024-03-07 06:35:20 ERROR GetClanDetails:91 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 06:35:21 ERROR DB:37 - nullError on sql: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-03-07 06:35:21 ERROR QuestionDao:106 - can't fetch Question details for this question
+2024-03-07 06:35:21 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
+2024-03-07 06:35:23 ERROR GetAllClans:45 - Failed to fetch user details for clan
+2024-03-07 06:35:24 ERROR DB:37 - nullError on sql: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-03-07 06:35:24 ERROR LoginValidationFilter:79 - java.lang.NullPointerException
+2024-03-07 06:35:39 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.NullPointerException
+2024-03-07 06:35:39 ERROR GetClanDetails:91 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 06:35:39 ERROR QuestionDao:106 - can't fetch Question details for this question
+2024-03-07 06:35:39 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
+2024-03-07 06:36:00 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.NullPointerException
+2024-03-07 06:36:00 ERROR GetClanDetails:91 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 06:36:01 ERROR QuestionDao:106 - can't fetch Question details for this question
+2024-03-07 06:36:01 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
+2024-03-07 06:36:14 ERROR GetAllClans:45 - Failed to fetch user details for clan
