@@ -35,6 +35,7 @@ public class PythonRunner{
 			PyObject pyFunction = interpreter.get(definitionName);
 			PyObject function = pyFunction.__call__(new PyObject[] {});
 			if(jsonobj.get("output") instanceof String){
+				System.out.println("String");
 				String result = function.asString();
 				boolean iscrt = (jsonobj.get("output")).equals(result);
 				resultjson.put("Result", iscrt);
@@ -47,7 +48,8 @@ public class PythonRunner{
 				resultjson.put("Result", iscrt);
 				resultjson.put("output", result);
 			}
-			else if(!(jsonobj.get("output") instanceof String)){
+			else{
+				System.out.println("Integer");
 				int result = function.asInt();
 				boolean iscrt = jsonobj.getInt("output") == result;
 				resultjson.put("Result", iscrt);

@@ -9,6 +9,7 @@ import java.util.concurrent.ExecutionException;
 import org.apache.tomcat.util.json.ParseException;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.python.antlr.PythonParser.return_stmt_return;
 import org.python.icu.util.BytesTrie.Entry;
 import org.python.icu.util.BytesTrie.Iterator;
 import org.python.util.PythonInterpreter;
@@ -55,27 +56,28 @@ public class PythonRunnerDAO {
 					+ "	try:\n"
 					+ "";
 				JSONObject jsonobj1 = jsonobj.getJSONObject("params");
-				Iterator itr = (Iterator) jsonobj1.keys();
-				String params = "";
-				while(itr.hasNext()){
-					System.out.println(itr.next());
-					// params+=getAsParam(itr.next());
+				int j=0;
+				String param = "";
+				while(j<jsonobj1.length()){
+					// System.out.println(itr.next());
+					System.out.println(jsonobj1.get(j+""));
+					param+=getAsParam(jsonobj1.get(j+""));
+				j++;
 				}
-				// String param = "";
-				// func+="		return "+solution.getQuestion().getfunctionName()+"(\""+jsonobj1.get("0")+"\")\n"
-				// 	+ "	except Exception as err:\n"
-				// 	+ "		raise Exception(traceback.format_exc())\n"
-				// 	+ "";
-			// 	System.out.println(func);
-			// 	interpreter.exec(func);
-		    // 	ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-		    // 	PrintStream printStream = new PrintStream(outputStream);
-			// 	interpreter.setOut(printStream);
-			// 	pr = new PythonRunner("test"+i,jsonobj,outputStream,interpreter,solution);
-			// 	pr.run();
-			// 	pr.resultjson.put("test"+i, jsonobj);
-			// 	resultJson = pr.resultjson;
-			// 	result.add(resultJson);
+				func+="		return "+solution.getQuestion().getfunctionName()+"("+param+")\n"
+					+ "	except Exception as err:\n"
+					+ "		raise Exception(traceback.format_exc())\n"
+					+ "";
+				System.out.println(func);
+				interpreter.exec(func);
+		    	ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+		    	PrintStream printStream = new PrintStream(outputStream);
+				interpreter.setOut(printStream);
+				pr = new PythonRunner("test"+i,jsonobj,outputStream,interpreter,solution);
+				pr.run();
+				pr.resultjson.put("test"+i, jsonobj);
+				resultJson = pr.resultjson;
+				result.add(resultJson);
 			} catch (Exception e) {
 				e.printStackTrace();
 				JSONObject resultjson = new JSONObject();
@@ -87,9 +89,22 @@ public class PythonRunnerDAO {
         return result;
 	}
 
-    private String getAsParam(Entry next) {
-		int a = next.value;
-		return "";
+    private String getAsParam(Object object) {
+		String a = "";
+			if(object.toString().indexOf("[")>=0){
+				a += object+"";
+				System.out.println(a+"skdenfuisjhdbuvjh");
+			}
+			else if(object instanceof String){
+				a+="\""+object+"\"";
+			}
+			else if(object instanceof Boolean){
+			}
+			else if(!(object instanceof String)){
+				return object+"";
+			}
+			System.out.println(a+ "   sok");
+			return a;
     }
 	
 }

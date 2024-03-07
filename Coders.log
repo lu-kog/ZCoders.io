@@ -24821,3 +24821,1239 @@
 2024-03-07 22:24:25 INFO  DB:34 - DB connection created!
 2024-03-07 22:24:41 INFO  sendClanRequest:50 - indirajith@gmail.com sending join request to clan:66423152
 2024-03-07 22:24:41 INFO  ClanDAO:353 - Join request sent to clanID:66423152 for user:indirajith@gmail.com
+2024-03-07 23:07:41 ERROR DB:37 - nullError on sql: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-03-07 23:07:41 ERROR DB:37 - nullError on sql: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-03-07 23:09:15 INFO  DB:34 - DB connection created!
+2024-03-07 23:09:15 INFO  TestSolution:76 - solution : def sum_array(a):
+    total = 0
+    for num in a:
+        total += num
+    return total
+2024-03-07 23:09:15 INFO  SolutionDao:78 - com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE Solutions SET Sol = 'def sum_array(a):
+    total = 0
+    for num in a:
+        total += num
+    return total' WHERE Sol_ID = '31081659'
+2024-03-07 23:09:15 INFO  SolutionDao:82 - for this solution updationfalse
+2024-03-07 23:09:15 INFO  SolutionDao:88 - update the solution to the database successfully!!
+2024-03-07 23:09:15 INFO  SolutionDao:89 - false
+2024-03-07 23:09:15 INFO  TestSolution:81 - false
+2024-03-07 23:09:15 ERROR TestSolution:127 - something went wrong for the problem
+2024-03-07 23:09:15 ERROR TestSolution:132 - something went wrong for the problemjava.lang.Exception: something went wrong for the problem
+2024-03-07 23:09:38 INFO  DB:34 - DB connection created!
+2024-03-07 23:09:38 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:09:38 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:09:38 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-07 23:09:41 INFO  QuestionDao:48 - 42887152 is a valid question.
+2024-03-07 23:09:41 INFO  validQuestion:81 - the Question is valid!!!
+2024-03-07 23:09:41 INFO  QuestionDao:124 - getting informations
+2024-03-07 23:09:41 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:09:41 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:09:41 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:09:41 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:09:41 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-07 23:09:41 INFO  QuestionDetailsServlet:102 - Question details fecth successfully
+2024-03-07 23:09:42 INFO  QuestionDao:48 - 42887152 is a valid question.
+2024-03-07 23:09:42 INFO  validQuestion:81 - the Question is valid!!!
+2024-03-07 23:09:42 INFO  QuestionDao:124 - getting informations
+2024-03-07 23:09:42 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:09:42 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:09:42 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:09:42 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:09:42 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-07 23:09:42 INFO  QuestionDetailsServlet:102 - Question details fecth successfully
+2024-03-07 23:10:51 INFO  DB:34 - DB connection created!
+2024-03-07 23:10:58 ERROR ClanDAO:308 - bangalore@gmail.com not available in the clan
+2024-03-07 23:10:58 INFO  DB:55 - value:CringeSquad - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT clanName FROM Clan WHERE clanName like 'CringeSquad'
+2024-03-07 23:10:58 INFO  DB:55 - value:05504416 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT clanID FROM Clan WHERE clanID like '05504416'
+2024-03-07 23:10:58 ERROR ClanDAO:77 - SQL query exception on creating a clan: 05504416 user:bangalore@gmail.com error:java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`Coders`.`Clan`, CONSTRAINT `Clan_ibfk_1` FOREIGN KEY (`Admin`) REFERENCES `Users` (`mailID`))
+2024-03-07 23:11:33 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:11:33 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:11:33 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-07 23:13:25 INFO  DB:55 - value:bangalore@gmail.com - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT mailID FROM Users WHERE mailID like 'bangalore@gmail.com'
+2024-03-07 23:13:25 INFO  DB:55 - value:Bangalore - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT userName FROM Users WHERE userName like 'Bangalore'
+2024-03-07 23:13:52 INFO  DB:55 - value:bangalore@gmail.com - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT mailID FROM Users WHERE mailID like 'bangalore@gmail.com'
+2024-03-07 23:13:52 INFO  DB:55 - value:Bangalore - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT userName FROM Users WHERE userName like 'Bangalore'
+2024-03-07 23:13:52 INFO  SignupValidationFilter:96 - Valid user credentials: bangalore@gmail.com passwd:bangalore07# username:Bangalore
+2024-03-07 23:13:52 INFO  UserDAO:48 - New Account going to create for bangalore@gmail.com useName:Bangalore
+2024-03-07 23:13:52 INFO  UserDAO:69 - new account created successfully.
+2024-03-07 23:13:52 INFO  UserDAO:97 - Fetch password by Mail ID:bangalore@gmail.com
+2024-03-07 23:13:52 INFO  UserDAO:100 - check password$2a$10$ArqdJCQK11GTtD90Ei0mq.RUBPwE663IOVtrgdtWskKwH0a27iHPq
+2024-03-07 23:13:52 INFO  DB:55 - value:f8ead91a-c159-4431-b648-adb94ac294cd - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID FROM Session WHERE sessionID like 'f8ead91a-c159-4431-b648-adb94ac294cd'
+2024-03-07 23:13:52 INFO  UserDAO:129 - new session created successfully.
+2024-03-07 23:13:52 INFO  LoginUser:81 - Login successfull! 200 :bangalore@gmail.com
+2024-03-07 23:14:25 INFO  DB:55 - value:bangalore@gmail.com - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT mailID FROM Users WHERE mailID like 'bangalore@gmail.com'
+2024-03-07 23:14:25 INFO  LoginValidationFilter:71 - Login credentials passed:bangalore@gmail.com pass:bangalore07#
+2024-03-07 23:14:25 ERROR UserDAO:522 - Streak not maintained
+2024-03-07 23:14:25 INFO  UserDAO:97 - Fetch password by Mail ID:bangalore@gmail.com
+2024-03-07 23:14:25 INFO  UserDAO:100 - check password$2a$10$ArqdJCQK11GTtD90Ei0mq.RUBPwE663IOVtrgdtWskKwH0a27iHPq
+2024-03-07 23:14:25 INFO  DB:55 - value:8d0254cc-da7d-47bb-9dfb-1c5d6c76455d - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID FROM Session WHERE sessionID like '8d0254cc-da7d-47bb-9dfb-1c5d6c76455d'
+2024-03-07 23:14:25 INFO  UserDAO:129 - new session created successfully.
+2024-03-07 23:14:25 INFO  LoginUser:81 - Login successfull! 200 :bangalore@gmail.com
+2024-03-07 23:15:12 ERROR ClanDAO:308 - bangalore@gmail.com not available in the clan
+2024-03-07 23:15:12 INFO  DB:55 - value:CringeSquad - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT clanName FROM Clan WHERE clanName like 'CringeSquad'
+2024-03-07 23:15:12 INFO  DB:55 - value:58119654 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT clanID FROM Clan WHERE clanID like '58119654'
+2024-03-07 23:15:12 INFO  ClanDAO:65 - Clan created: 58119654 by bangalore@gmail.com
+2024-03-07 23:15:12 INFO  ClanDAO:142 - bangalore@gmail.com joined clan: 58119654
+2024-03-07 23:15:12 INFO  ClanDAO:606 - Role changed for user:bangalore@gmail.com clan:58119654 role:ADMIN
+2024-03-07 23:17:18 INFO  sendClanRequest:50 - bangalore@gmail.com sending join request to clan:58119654
+2024-03-07 23:17:18 INFO  ClanDAO:353 - Join request sent to clanID:58119654 for user:bangalore@gmail.com
+2024-03-07 23:20:26 INFO  sendClanRequest:50 - charu07@gmail.com sending join request to clan:58119654
+2024-03-07 23:20:26 INFO  ClanDAO:353 - Join request sent to clanID:58119654 for user:charu07@gmail.com
+2024-03-07 23:20:53 INFO  sendClanRequest:50 - krish001@gmail.com sending join request to clan:58119654
+2024-03-07 23:20:53 ERROR ClanDAO:361 - Error sending join request to clanID:58119654 for user:krish001@gmail.com error:java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`Coders`.`ClanRequest`, CONSTRAINT `ClanRequest_ibfk_2` FOREIGN KEY (`mailID`) REFERENCES `Users` (`mailID`) ON DELETE CASCADE ON UPDATE CASCADE)
+2024-03-07 23:21:09 INFO  sendClanRequest:50 - nhcas91@ sending join request to clan:58119654
+2024-03-07 23:21:09 ERROR ClanDAO:361 - Error sending join request to clanID:58119654 for user:nhcas91@ error:java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`Coders`.`ClanRequest`, CONSTRAINT `ClanRequest_ibfk_2` FOREIGN KEY (`mailID`) REFERENCES `Users` (`mailID`) ON DELETE CASCADE ON UPDATE CASCADE)
+2024-03-07 23:22:30 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:22:30 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:22:30 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:22:34 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:22:34 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:22:34 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:22:44 ERROR ClanDAO:378 - Failed to delete previous requests of clanID:66423152 for user:bangalore01@gmail.com
+2024-03-07 23:22:44 ERROR ClanDAO:382 - Error sending join request to clanID:66423152 for user:bangalore01@gmail.com error:java.lang.Exception: Failed to delete join requests of clan.
+2024-03-07 23:22:50 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:22:50 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:22:50 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:23:04 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:23:04 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:23:04 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:23:18 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:23:18 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:23:18 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:24:03 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:24:03 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:24:03 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:24:05 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:24:05 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:24:05 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:24:08 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:24:08 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:24:08 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:25:01 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:25:01 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:25:01 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:25:01 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-07 23:25:01 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:25:01 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:25:01 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-07 23:25:32 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:25:32 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:25:32 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:25:32 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-07 23:25:32 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:25:32 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:25:32 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-07 23:26:25 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:26:25 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:26:25 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:26:25 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-07 23:26:25 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:26:25 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:26:25 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-07 23:26:59 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:26:59 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:26:59 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:26:59 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-07 23:26:59 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:26:59 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:26:59 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-07 23:27:56 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:27:56 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:27:56 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:27:56 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-07 23:27:56 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-07 23:27:56 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-07 23:27:56 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-07 23:34:02 INFO  sendClanRequest:50 - amos@gmail sending join request to clan:58119654
+2024-03-07 23:34:02 ERROR ClanDAO:361 - Error sending join request to clanID:58119654 for user:amos@gmail error:java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`Coders`.`ClanRequest`, CONSTRAINT `ClanRequest_ibfk_2` FOREIGN KEY (`mailID`) REFERENCES `Users` (`mailID`) ON DELETE CASCADE ON UPDATE CASCADE)
+2024-03-07 23:34:21 INFO  sendClanRequest:50 - amos@gmail.com sending join request to clan:58119654
+2024-03-07 23:34:21 INFO  ClanDAO:353 - Join request sent to clanID:58119654 for user:amos@gmail.com
+2024-03-07 23:39:21 INFO  DB:34 - DB connection created!
+2024-03-07 23:39:29 INFO  ClanDAO:527 - amos@gmail.com's request is still exists in this clan:58119654
+2024-03-07 23:39:29 ERROR ClanDAO:402 - krishnagokul810@gmail.com is not a co_admin of clan:58119654
+2024-03-07 23:39:29 ERROR AcceptRequestValidation:81 - Error on Accepting clan join request java.lang.Exception: Invalid request! You are not admin of the clan.
+2024-03-07 23:39:49 INFO  ClanDAO:527 - amos@gmail.com's request is still exists in this clan:58119654
+2024-03-07 23:39:49 ERROR ClanDAO:402 - banglore@gmail.com is not a co_admin of clan:58119654
+2024-03-07 23:39:49 ERROR AcceptRequestValidation:81 - Error on Accepting clan join request java.lang.Exception: Invalid request! You are not admin of the clan.
+2024-03-07 23:40:01 INFO  ClanDAO:527 - amos@gmail.com's request is still exists in this clan:58119654
+2024-03-07 23:40:01 ERROR ClanDAO:308 - amos@gmail.com not available in the clan
+2024-03-07 23:40:01 INFO  ClanDAO:375 - Previous requests deleted on clanID:58119654 for user:amos@gmail.com
+2024-03-07 23:40:01 INFO  ClanDAO:142 - amos@gmail.com joined clan: 58119654
+2024-03-07 23:40:27 INFO  sendClanRequest:50 - amos@gmail.com sending join request to clan:58119654
+2024-03-07 23:40:27 INFO  ClanDAO:353 - Join request sent to clanID:58119654 for user:amos@gmail.com
+2024-03-07 23:41:01 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:41:01 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:41:01 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:41:01 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-07 23:41:57 INFO  sendClanRequest:50 - amos@gmail.com sending join request to clan:58119654
+2024-03-07 23:41:57 INFO  ClanDAO:353 - Join request sent to clanID:58119654 for user:amos@gmail.com
+2024-03-07 23:43:00 INFO  sendClanRequest:50 - amos@gmail.com sending join request to clan:58119654
+2024-03-07 23:43:00 INFO  ClanDAO:353 - Join request sent to clanID:58119654 for user:amos@gmail.com
+2024-03-07 23:43:01 INFO  sendClanRequest:50 - amos@gmail.com sending join request to clan:58119654
+2024-03-07 23:43:01 INFO  ClanDAO:353 - Join request sent to clanID:58119654 for user:amos@gmail.com
+2024-03-07 23:43:03 INFO  sendClanRequest:50 - amos@gmail.com sending join request to clan:58119654
+2024-03-07 23:43:03 INFO  ClanDAO:353 - Join request sent to clanID:58119654 for user:amos@gmail.com
+2024-03-07 23:43:22 INFO  DB:34 - DB connection created!
+2024-03-07 23:43:51 INFO  ClanDAO:305 - amos@gmail.com available in the clan
+2024-03-07 23:44:17 ERROR ClanDAO:308 - indirajith@gmail.com not available in the clan
+2024-03-07 23:44:17 INFO  ClanRequestValidation:61 - validating clan request: clan:58119654 mailIDindirajith@gmail.com
+2024-03-07 23:44:17 INFO  DB:55 - value:58119654 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT clanID FROM Clan WHERE clanID like '58119654'
+2024-03-07 23:44:17 INFO  sendClanRequest:50 - indirajith@gmail.com sending join request to clan:58119654
+2024-03-07 23:44:17 INFO  ClanDAO:353 - Join request sent to clanID:58119654 for user:indirajith@gmail.com
+2024-03-07 23:45:16 INFO  ClanDAO:527 - indirajith@gmail.com's request is still exists in this clan:58119654
+2024-03-07 23:45:16 ERROR ClanDAO:308 - indirajith@gmail.com not available in the clan
+2024-03-07 23:45:16 INFO  ClanDAO:375 - Previous requests deleted on clanID:58119654 for user:indirajith@gmail.com
+2024-03-07 23:45:16 INFO  ClanDAO:142 - indirajith@gmail.com joined clan: 58119654
+2024-03-07 23:46:25 ERROR ClanDAO:308 - jeyrajesh@gmail.com not available in the clan
+2024-03-07 23:46:25 INFO  ClanRequestValidation:61 - validating clan request: clan:58119654 mailIDjeyrajesh@gmail.com
+2024-03-07 23:46:25 INFO  DB:55 - value:58119654 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT clanID FROM Clan WHERE clanID like '58119654'
+2024-03-07 23:46:25 INFO  sendClanRequest:50 - jeyrajesh@gmail.com sending join request to clan:58119654
+2024-03-07 23:46:25 INFO  ClanDAO:353 - Join request sent to clanID:58119654 for user:jeyrajesh@gmail.com
+2024-03-07 23:46:59 INFO  ClanDAO:527 - jeyrajesh@gmail.com's request is still exists in this clan:58119654
+2024-03-07 23:46:59 ERROR ClanDAO:308 - jeyrajesh@gmail.com not available in the clan
+2024-03-07 23:46:59 INFO  ClanDAO:375 - Previous requests deleted on clanID:58119654 for user:jeyrajesh@gmail.com
+2024-03-07 23:46:59 INFO  ClanDAO:142 - jeyrajesh@gmail.com joined clan: 58119654
+2024-03-07 23:47:23 ERROR ClanDAO:530 - null's request not found in:null
+2024-03-07 23:47:23 ERROR ClanDAO:534 - Error on getting join request of clan:null for user:null error:java.lang.Exception: Request not found! Please contact admin.
+2024-03-07 23:47:23 ERROR AcceptRequestValidation:81 - Error on Accepting clan join request java.lang.Exception: Request not found! Please contact admin.
+2024-03-07 23:47:42 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:47:42 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:47:42 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:47:42 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-07 23:47:44 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:47:44 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:47:44 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:47:45 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-07 23:50:39 INFO  ClanDAO:305 - jeyrajesh@gmail.com available in the clan
+2024-03-07 23:51:30 INFO  ClanDAO:305 - jeyrajesh@gmail.com available in the clan
+2024-03-07 23:51:45 INFO  DB:34 - DB connection created!
+2024-03-07 23:51:45 ERROR ClanDAO:308 - sun@gmail.com not available in the clan
+2024-03-07 23:51:45 INFO  ClanRequestValidation:61 - validating clan request: clan:58119654 mailIDsun@gmail.com
+2024-03-07 23:51:45 INFO  DB:55 - value:58119654 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT clanID FROM Clan WHERE clanID like '58119654'
+2024-03-07 23:51:45 INFO  sendClanRequest:50 - sun@gmail.com sending join request to clan:58119654
+2024-03-07 23:51:46 ERROR ClanDAO:361 - Error sending join request to clanID:58119654 for user:sun@gmail.com error:java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`Coders`.`ClanRequest`, CONSTRAINT `ClanRequest_ibfk_2` FOREIGN KEY (`mailID`) REFERENCES `Users` (`mailID`) ON DELETE CASCADE ON UPDATE CASCADE)
+2024-03-07 23:51:48 ERROR ClanDAO:308 - sun@gmail.com not available in the clan
+2024-03-07 23:51:48 INFO  ClanRequestValidation:61 - validating clan request: clan:58119654 mailIDsun@gmail.com
+2024-03-07 23:51:48 INFO  DB:55 - value:58119654 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT clanID FROM Clan WHERE clanID like '58119654'
+2024-03-07 23:51:48 INFO  sendClanRequest:50 - sun@gmail.com sending join request to clan:58119654
+2024-03-07 23:51:48 ERROR ClanDAO:361 - Error sending join request to clanID:58119654 for user:sun@gmail.com error:java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`Coders`.`ClanRequest`, CONSTRAINT `ClanRequest_ibfk_2` FOREIGN KEY (`mailID`) REFERENCES `Users` (`mailID`) ON DELETE CASCADE ON UPDATE CASCADE)
+2024-03-07 23:51:54 ERROR ClanDAO:308 - sun@gmail.com not available in the clan
+2024-03-07 23:51:54 INFO  ClanRequestValidation:61 - validating clan request: clan:58119654 mailIDsun@gmail.com
+2024-03-07 23:51:54 INFO  DB:55 - value:58119654 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT clanID FROM Clan WHERE clanID like '58119654'
+2024-03-07 23:51:54 INFO  sendClanRequest:50 - sun@gmail.com sending join request to clan:58119654
+2024-03-07 23:51:54 ERROR ClanDAO:361 - Error sending join request to clanID:58119654 for user:sun@gmail.com error:java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`Coders`.`ClanRequest`, CONSTRAINT `ClanRequest_ibfk_2` FOREIGN KEY (`mailID`) REFERENCES `Users` (`mailID`) ON DELETE CASCADE ON UPDATE CASCADE)
+2024-03-07 23:52:24 ERROR ClanDAO:308 - mahalakshmi@gmail.com not available in the clan
+2024-03-07 23:52:24 INFO  ClanRequestValidation:61 - validating clan request: clan:58119654 mailIDmahalakshmi@gmail.com
+2024-03-07 23:52:24 INFO  DB:55 - value:58119654 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT clanID FROM Clan WHERE clanID like '58119654'
+2024-03-07 23:52:24 INFO  sendClanRequest:50 - mahalakshmi@gmail.com sending join request to clan:58119654
+2024-03-07 23:52:24 INFO  ClanDAO:353 - Join request sent to clanID:58119654 for user:mahalakshmi@gmail.com
+2024-03-07 23:53:01 ERROR ClanDAO:308 - null not available in the clan
+2024-03-07 23:53:01 INFO  ClanRequestValidation:61 - validating clan request: clan:null mailIDnull
+2024-03-07 23:53:01 INFO  DB:55 - value:null - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT clanID FROM Clan WHERE clanID like NULL
+2024-03-07 23:53:36 ERROR ClanDAO:308 - null not available in the clan
+2024-03-07 23:53:36 INFO  ClanRequestValidation:61 - validating clan request: clan:null mailIDnull
+2024-03-07 23:53:36 INFO  DB:55 - value:null - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT clanID FROM Clan WHERE clanID like NULL
+2024-03-07 23:54:12 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:54:12 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:54:12 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:54:13 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-07 23:54:24 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:54:24 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:54:24 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:54:25 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-07 23:54:36 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:54:36 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:54:36 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:54:37 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-07 23:54:40 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:54:40 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:54:40 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:54:41 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-07 23:54:44 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:54:44 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:54:44 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:54:45 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-07 23:57:15 INFO  ClanDAO:305 - jeyrajesh@gmail.com available in the clan
+2024-03-07 23:57:29 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:57:29 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:57:29 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:57:29 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-07 23:57:30 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:57:30 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:57:30 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:57:31 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-07 23:57:32 ERROR ClanDAO:308 - null not available in the clan
+2024-03-07 23:57:32 INFO  ClanRequestValidation:61 - validating clan request: clan:null mailIDnull
+2024-03-07 23:57:32 INFO  DB:55 - value:null - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT clanID FROM Clan WHERE clanID like NULL
+2024-03-07 23:58:06 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-07 23:58:06 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-07 23:58:06 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-07 23:58:06 INFO  ClanDAO:305 - jeyrajesh@gmail.com available in the clan
+2024-03-07 23:58:07 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-08 00:01:46 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:01:46 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:01:46 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-08 00:01:53 INFO  QuestionDao:48 - 56873465 is a valid question.
+2024-03-08 00:01:53 INFO  validQuestion:81 - the Question is valid!!!
+2024-03-08 00:01:53 INFO  QuestionDao:124 - getting informations
+2024-03-08 00:01:53 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:01:53 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:01:53 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:01:53 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:01:53 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 00:01:53 INFO  QuestionDetailsServlet:102 - Question details fecth successfully
+2024-03-08 00:01:53 INFO  QuestionDao:48 - 56873465 is a valid question.
+2024-03-08 00:01:53 INFO  validQuestion:81 - the Question is valid!!!
+2024-03-08 00:01:53 INFO  QuestionDao:124 - getting informations
+2024-03-08 00:01:53 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:01:53 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:01:53 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:01:53 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:01:53 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 00:01:53 INFO  QuestionDetailsServlet:102 - Question details fecth successfully
+2024-03-08 00:02:01 INFO  SolutionDao:156 - no of solution is 0
+2024-03-08 00:02:01 INFO  DB:55 - value:41190615 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT Sol_ID FROM Solutions WHERE Sol_ID like '41190615'
+2024-03-08 00:02:01 INFO  train:85 - inserting new Solution:41190615 mail:vasanth.albert@zohocorp.com question:56873465 langID2
+2024-03-08 00:02:01 INFO  SolutionDao:190 - fecth funcName is successfully!!!
+2024-03-08 00:02:01 INFO  QuestionDao:124 - getting informations
+2024-03-08 00:02:01 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:02:01 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:02:01 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:02:01 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:02:01 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 00:02:01 INFO  QuestionDao:124 - getting informations
+2024-03-08 00:02:01 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:02:01 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:02:01 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:02:01 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:02:01 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 00:02:01 INFO  QuestionDao:124 - getting informations
+2024-03-08 00:02:01 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:02:01 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:02:01 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:02:01 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:02:01 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 00:02:01 INFO  SolutionDao:269 - List of Solution fecth successfully!!!!
+2024-03-08 00:02:01 INFO  train:143 - 56873465 Question details fecth successfully: {"functionDetails":"def sum_array(a)","questionID":"56873465","solID":"41190615","languages":["Java","Python"],"submit":2,"level":{"score":2,"levelID":1,"levelName":"8Kyu"},"author":{"mailID":"charu07@gmail.com","userName":"charu07"},"details":{"description":"Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.","tags":["Arrays"]},"questionName":"Sum Arrays","pastSolution":[{"Details":{"description":"Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.","example":"Examples Input: [1, 5.2, 4, 0, -1]\nOutput: 9.2\n\nInput: []\nOutput: 0\n\n Input: [-2.398]\nOutput: -2.398\n\n","tags":["Arrays"]},"languages":["Java","Python"],"noOfCOmpleted":2,"submit":2,"solution":"double total = 0;\n    if(numbers.length == 0 || numbers == null)return total;\n    for(double number : numbers){\n      total+=number;\n    }\n    return total;","QName":"Sum Arrays","StatusCode":"200","QID":"56873465","user":{"mailID":"charu07@gmail.com","userName":"charu07"},"attempt":1,"status":"COMPLETED"},{"Details":{"description":"Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.","example":"Examples Input: [1, 5.2, 4, 0, -1]\nOutput: 9.2\n\nInput: []\nOutput: 0\n\n Input: [-2.398]\nOutput: -2.398\n\n","tags":["Arrays"]},"languages":["Java","Python"],"noOfCOmpleted":2,"submit":2,"solution":"testing","QName":"Sum Arrays","StatusCode":"200","QID":"56873465","user":{"mailID":"charu07@gmail.com","userName":"charu07"},"attempt":1,"status":"COMPLETED"}],"attempt":1,"statusCode":"200"}
+2024-03-08 00:02:48 INFO  TestSolution:76 - solution : def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total
+2024-03-08 00:02:48 INFO  SolutionDao:78 - com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE Solutions SET Sol = 'def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total' WHERE Sol_ID = '41190615'
+2024-03-08 00:02:48 INFO  SolutionDao:82 - for this solution updationtrue
+2024-03-08 00:02:48 INFO  SolutionDao:88 - update the solution to the database successfully!!
+2024-03-08 00:02:48 INFO  SolutionDao:89 - true
+2024-03-08 00:02:48 INFO  TestSolution:81 - true
+2024-03-08 00:02:48 INFO  QuestionDao:124 - getting informations
+2024-03-08 00:02:48 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:02:48 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:02:48 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:02:48 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:02:48 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 00:02:48 INFO  SolutionDao:241 - fecth the solution details successfully!!!!
+2024-03-08 00:02:48 INFO  TestSolution:94 - Test solution JSON response Successfully!!!
+2024-03-08 00:09:53 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-08 00:09:53 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-08 00:09:53 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-08 00:09:53 INFO  ClanDAO:305 - jeyrajesh@gmail.com available in the clan
+2024-03-08 00:09:53 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-08 00:09:53 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:09:53 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:09:53 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-08 00:10:29 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-08 00:10:32 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-08 00:10:38 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-08 00:11:31 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-08 00:11:31 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-08 00:11:31 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-08 00:11:31 INFO  ClanDAO:305 - jeyrajesh@gmail.com available in the clan
+2024-03-08 00:11:31 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-08 00:11:31 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:11:31 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:11:31 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-08 00:13:10 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-08 00:13:12 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-08 00:14:33 INFO  DB:34 - DB connection created!
+2024-03-08 00:15:11 INFO  DB:34 - DB connection created!
+2024-03-08 00:15:17 INFO  TestSolution:76 - solution : def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total
+2024-03-08 00:15:17 INFO  SolutionDao:78 - com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE Solutions SET Sol = 'def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total' WHERE Sol_ID = '41190615'
+2024-03-08 00:15:17 INFO  SolutionDao:82 - for this solution updationtrue
+2024-03-08 00:15:17 INFO  SolutionDao:88 - update the solution to the database successfully!!
+2024-03-08 00:15:17 INFO  SolutionDao:89 - true
+2024-03-08 00:15:17 INFO  TestSolution:81 - true
+2024-03-08 00:15:17 INFO  QuestionDao:124 - getting informations
+2024-03-08 00:15:17 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:15:17 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:15:17 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:15:17 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:15:17 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 00:15:17 INFO  SolutionDao:241 - fecth the solution details successfully!!!!
+2024-03-08 00:15:17 INFO  TestSolution:94 - Test solution JSON response Successfully!!!
+2024-03-08 00:17:20 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-08 00:17:20 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-08 00:17:20 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-08 00:17:54 INFO  DB:34 - DB connection created!
+2024-03-08 00:17:55 INFO  TestSolution:76 - solution : def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total
+2024-03-08 00:17:55 INFO  SolutionDao:78 - com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE Solutions SET Sol = 'def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total' WHERE Sol_ID = '41190615'
+2024-03-08 00:17:55 INFO  SolutionDao:82 - for this solution updationtrue
+2024-03-08 00:17:55 INFO  SolutionDao:88 - update the solution to the database successfully!!
+2024-03-08 00:17:55 INFO  SolutionDao:89 - true
+2024-03-08 00:17:55 INFO  TestSolution:81 - true
+2024-03-08 00:17:55 INFO  QuestionDao:124 - getting informations
+2024-03-08 00:17:55 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:17:55 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:17:55 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:17:55 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:17:55 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 00:17:55 INFO  SolutionDao:241 - fecth the solution details successfully!!!!
+2024-03-08 00:17:55 INFO  TestSolution:94 - Test solution JSON response Successfully!!!
+2024-03-08 00:18:18 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-08 00:18:18 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-08 00:18:18 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-08 00:18:19 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-08 00:18:19 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:18:19 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:18:19 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-08 00:18:33 INFO  DB:34 - DB connection created!
+2024-03-08 00:18:34 INFO  TestSolution:76 - solution : def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total
+2024-03-08 00:18:34 INFO  SolutionDao:78 - com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE Solutions SET Sol = 'def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total' WHERE Sol_ID = '41190615'
+2024-03-08 00:18:34 INFO  SolutionDao:82 - for this solution updationtrue
+2024-03-08 00:18:34 INFO  SolutionDao:88 - update the solution to the database successfully!!
+2024-03-08 00:18:34 INFO  SolutionDao:89 - true
+2024-03-08 00:18:34 INFO  TestSolution:81 - true
+2024-03-08 00:18:34 INFO  QuestionDao:124 - getting informations
+2024-03-08 00:18:34 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:18:34 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:18:34 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:18:34 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:18:34 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 00:18:34 INFO  SolutionDao:241 - fecth the solution details successfully!!!!
+2024-03-08 00:18:34 INFO  TestSolution:94 - Test solution JSON response Successfully!!!
+2024-03-08 00:19:34 INFO  DB:34 - DB connection created!
+2024-03-08 00:19:35 INFO  TestSolution:76 - solution : def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total
+2024-03-08 00:19:35 INFO  SolutionDao:78 - com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE Solutions SET Sol = 'def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total' WHERE Sol_ID = '41190615'
+2024-03-08 00:19:35 INFO  SolutionDao:82 - for this solution updationtrue
+2024-03-08 00:19:35 INFO  SolutionDao:88 - update the solution to the database successfully!!
+2024-03-08 00:19:35 INFO  SolutionDao:89 - true
+2024-03-08 00:19:35 INFO  TestSolution:81 - true
+2024-03-08 00:19:35 INFO  QuestionDao:124 - getting informations
+2024-03-08 00:19:35 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:19:35 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:19:35 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:19:35 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:19:35 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 00:19:35 INFO  SolutionDao:241 - fecth the solution details successfully!!!!
+2024-03-08 00:19:35 INFO  TestSolution:94 - Test solution JSON response Successfully!!!
+2024-03-08 00:20:58 INFO  DB:34 - DB connection created!
+2024-03-08 00:20:58 INFO  TestSolution:76 - solution : def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total
+2024-03-08 00:20:58 INFO  SolutionDao:78 - com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE Solutions SET Sol = 'def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total' WHERE Sol_ID = '41190615'
+2024-03-08 00:20:58 INFO  SolutionDao:82 - for this solution updationtrue
+2024-03-08 00:20:58 INFO  SolutionDao:88 - update the solution to the database successfully!!
+2024-03-08 00:20:58 INFO  SolutionDao:89 - true
+2024-03-08 00:20:58 INFO  TestSolution:81 - true
+2024-03-08 00:20:58 INFO  QuestionDao:124 - getting informations
+2024-03-08 00:20:58 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:20:58 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:20:58 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:20:58 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:20:58 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 00:20:58 INFO  SolutionDao:241 - fecth the solution details successfully!!!!
+2024-03-08 00:20:58 INFO  TestSolution:94 - Test solution JSON response Successfully!!!
+2024-03-08 00:23:23 INFO  DB:34 - DB connection created!
+2024-03-08 00:23:24 INFO  TestSolution:76 - solution : def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total
+2024-03-08 00:23:24 INFO  SolutionDao:78 - com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE Solutions SET Sol = 'def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total' WHERE Sol_ID = '41190615'
+2024-03-08 00:23:24 INFO  SolutionDao:82 - for this solution updationtrue
+2024-03-08 00:23:24 INFO  SolutionDao:88 - update the solution to the database successfully!!
+2024-03-08 00:23:24 INFO  SolutionDao:89 - true
+2024-03-08 00:23:24 INFO  TestSolution:81 - true
+2024-03-08 00:23:24 INFO  QuestionDao:124 - getting informations
+2024-03-08 00:23:24 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:23:24 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:23:24 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:23:24 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:23:24 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 00:23:24 INFO  SolutionDao:241 - fecth the solution details successfully!!!!
+2024-03-08 00:23:24 INFO  TestSolution:94 - Test solution JSON response Successfully!!!
+2024-03-08 00:29:18 INFO  DB:34 - DB connection created!
+2024-03-08 00:29:20 INFO  TestSolution:76 - solution : def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total
+2024-03-08 00:29:20 INFO  SolutionDao:78 - com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE Solutions SET Sol = 'def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total' WHERE Sol_ID = '41190615'
+2024-03-08 00:29:20 INFO  SolutionDao:82 - for this solution updationtrue
+2024-03-08 00:29:20 INFO  SolutionDao:88 - update the solution to the database successfully!!
+2024-03-08 00:29:20 INFO  SolutionDao:89 - true
+2024-03-08 00:29:20 INFO  TestSolution:81 - true
+2024-03-08 00:29:20 INFO  QuestionDao:124 - getting informations
+2024-03-08 00:29:20 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:29:20 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:29:20 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:29:20 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:29:20 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 00:29:20 INFO  SolutionDao:241 - fecth the solution details successfully!!!!
+2024-03-08 00:29:20 INFO  TestSolution:94 - Test solution JSON response Successfully!!!
+2024-03-08 00:30:43 INFO  DB:34 - DB connection created!
+2024-03-08 00:30:46 INFO  TestSolution:76 - solution : def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total
+2024-03-08 00:30:46 INFO  SolutionDao:78 - com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE Solutions SET Sol = 'def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total' WHERE Sol_ID = '41190615'
+2024-03-08 00:30:46 INFO  SolutionDao:82 - for this solution updationtrue
+2024-03-08 00:30:46 INFO  SolutionDao:88 - update the solution to the database successfully!!
+2024-03-08 00:30:46 INFO  SolutionDao:89 - true
+2024-03-08 00:30:46 INFO  TestSolution:81 - true
+2024-03-08 00:30:46 INFO  QuestionDao:124 - getting informations
+2024-03-08 00:30:46 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:30:46 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:30:46 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:30:46 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:30:46 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 00:30:46 INFO  SolutionDao:241 - fecth the solution details successfully!!!!
+2024-03-08 00:30:46 INFO  TestSolution:94 - Test solution JSON response Successfully!!!
+2024-03-08 00:32:19 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-08 00:32:19 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:32:19 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-08 00:32:19 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:32:19 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-08 00:32:19 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:32:19 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:32:19 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-08 00:33:30 INFO  DB:34 - DB connection created!
+2024-03-08 00:33:30 INFO  TestSolution:76 - solution : def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total
+2024-03-08 00:33:30 INFO  SolutionDao:78 - com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE Solutions SET Sol = 'def sum_array(a):
+	total=0
+	for i in a:
+		total+=a
+	return total' WHERE Sol_ID = '41190615'
+2024-03-08 00:33:30 INFO  SolutionDao:82 - for this solution updationtrue
+2024-03-08 00:33:30 INFO  SolutionDao:88 - update the solution to the database successfully!!
+2024-03-08 00:33:30 INFO  SolutionDao:89 - true
+2024-03-08 00:33:30 INFO  TestSolution:81 - true
+2024-03-08 00:33:31 INFO  QuestionDao:124 - getting informations
+2024-03-08 00:33:31 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:33:31 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:33:31 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:33:31 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:33:31 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 00:33:31 INFO  SolutionDao:241 - fecth the solution details successfully!!!!
+2024-03-08 00:33:31 INFO  TestSolution:94 - Test solution JSON response Successfully!!!
+2024-03-08 00:33:55 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:33:55 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:33:55 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-08 00:38:42 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:38:42 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:38:42 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-08 00:39:07 ERROR ClanDAO:234 - Can't get clan for this user:charu07@gmail.com
+2024-03-08 00:39:07 ERROR ClanDAO:240 - Error in getting clan id by mail:charu07@gmail.com error:java.lang.Exception: User not in any clan.
+2024-03-08 00:39:07 ERROR GetClanDetails:92 - Error on fetching clan detailsjava.lang.Exception: Oops! Error on fetching clan details
+2024-03-08 00:39:44 INFO  TestSolution:76 - solution : def sum_array(a):
+	total=0
+    print(a)
+	return total
+2024-03-08 00:39:44 INFO  SolutionDao:78 - com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE Solutions SET Sol = 'def sum_array(a):
+	total=0
+    print(a)
+	return total' WHERE Sol_ID = '41190615'
+2024-03-08 00:39:44 INFO  SolutionDao:82 - for this solution updationtrue
+2024-03-08 00:39:44 INFO  SolutionDao:88 - update the solution to the database successfully!!
+2024-03-08 00:39:44 INFO  SolutionDao:89 - true
+2024-03-08 00:39:44 INFO  TestSolution:81 - true
+2024-03-08 00:39:44 INFO  QuestionDao:124 - getting informations
+2024-03-08 00:39:44 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:39:44 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:39:44 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:39:44 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:39:44 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 00:39:44 INFO  SolutionDao:241 - fecth the solution details successfully!!!!
+2024-03-08 00:39:44 INFO  TestSolution:94 - Test solution JSON response Successfully!!!
+2024-03-08 00:39:53 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:39:53 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:39:53 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-08 00:40:05 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:40:05 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 00:40:05 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-08 00:40:05 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-08 00:40:06 INFO  TestSolution:76 - solution : def sum_array(a):
+	total=0
+	print(a)
+	return total
+2024-03-08 00:40:06 INFO  SolutionDao:78 - com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE Solutions SET Sol = 'def sum_array(a):
+	total=0
+	print(a)
+	return total' WHERE Sol_ID = '41190615'
+2024-03-08 00:40:06 INFO  SolutionDao:82 - for this solution updationtrue
+2024-03-08 00:40:06 INFO  SolutionDao:88 - update the solution to the database successfully!!
+2024-03-08 00:40:06 INFO  SolutionDao:89 - true
+2024-03-08 00:40:06 INFO  TestSolution:81 - true
+2024-03-08 00:40:06 INFO  QuestionDao:124 - getting informations
+2024-03-08 00:40:06 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 00:40:06 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 00:40:06 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 00:40:06 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 00:40:06 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 00:40:06 INFO  SolutionDao:241 - fecth the solution details successfully!!!!
+2024-03-08 00:40:06 INFO  TestSolution:94 - Test solution JSON response Successfully!!!
+2024-03-08 01:32:28 INFO  DB:34 - DB connection created!
+2024-03-08 01:32:50 INFO  TestSolution:76 - solution : def sum_array(a):
+	total=0
+	for i in a:
+		print(i)
+	return total
+2024-03-08 01:32:50 INFO  SolutionDao:78 - com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE Solutions SET Sol = 'def sum_array(a):
+	total=0
+	for i in a:
+		print(i)
+	return total' WHERE Sol_ID = '41190615'
+2024-03-08 01:32:50 INFO  SolutionDao:82 - for this solution updationtrue
+2024-03-08 01:32:50 INFO  SolutionDao:88 - update the solution to the database successfully!!
+2024-03-08 01:32:50 INFO  SolutionDao:89 - true
+2024-03-08 01:32:50 INFO  TestSolution:81 - true
+2024-03-08 01:32:50 INFO  QuestionDao:124 - getting informations
+2024-03-08 01:32:50 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:32:50 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:32:50 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:32:50 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:32:50 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 01:32:50 INFO  SolutionDao:241 - fecth the solution details successfully!!!!
+2024-03-08 01:32:50 INFO  TestSolution:94 - Test solution JSON response Successfully!!!
+2024-03-08 01:35:45 INFO  TestSolution:76 - solution : def sum_array(a):
+	total=0
+	for i in a:
+		total+=i
+	return total
+2024-03-08 01:35:45 INFO  SolutionDao:78 - com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE Solutions SET Sol = 'def sum_array(a):
+	total=0
+	for i in a:
+		total+=i
+	return total' WHERE Sol_ID = '41190615'
+2024-03-08 01:35:45 INFO  SolutionDao:82 - for this solution updationtrue
+2024-03-08 01:35:45 INFO  SolutionDao:88 - update the solution to the database successfully!!
+2024-03-08 01:35:45 INFO  SolutionDao:89 - true
+2024-03-08 01:35:45 INFO  TestSolution:81 - true
+2024-03-08 01:35:45 INFO  QuestionDao:124 - getting informations
+2024-03-08 01:35:45 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:35:45 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:35:45 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:35:45 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:35:45 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 01:35:45 INFO  SolutionDao:241 - fecth the solution details successfully!!!!
+2024-03-08 01:35:45 INFO  TestSolution:94 - Test solution JSON response Successfully!!!
+2024-03-08 01:35:59 INFO  sumbitServlet:53 - questionID for submission: 56873465
+2024-03-08 01:35:59 INFO  QuestionDao:124 - getting informations
+2024-03-08 01:35:59 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:35:59 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:35:59 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:35:59 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:35:59 INFO  QuestionDao:156 - Question details return successfully!!!!!
+2024-03-08 01:35:59 INFO  SolutionDao:302 - List of Solution fecth successfully!!!!
+2024-03-08 01:35:59 INFO  sumbitServlet:144 - Question details && solution fetched successfully
+2024-03-08 01:35:59 ERROR UserDAO:573 - Streak does not increased for the user vasanth.albert@zohocorp.com
+2024-03-08 01:35:59 INFO  UserDAO:485 - Score updated successfully for user with mailID: vasanth.albert@zohocorp.com
+2024-03-08 01:42:22 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:42:22 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:42:22 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-08 01:42:25 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:42:25 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:42:25 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-08 01:42:46 INFO  DB:55 - value:charu07@gmail.com - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT mailID FROM Users WHERE mailID like 'charu07@gmail.com'
+2024-03-08 01:42:46 INFO  LoginValidationFilter:71 - Login credentials passed:charu07@gmail.com pass:charu0718#
+2024-03-08 01:42:46 ERROR UserDAO:522 - Streak not maintained
+2024-03-08 01:42:46 INFO  UserDAO:97 - Fetch password by Mail ID:charu07@gmail.com
+2024-03-08 01:42:46 INFO  UserDAO:100 - check password$2a$10$3U4KHiDOSaiqgHXf9RDbaeJzAcplsVpYdxas50NUda/HcIbpt8NlW
+2024-03-08 01:42:46 INFO  DB:55 - value:c5df65c6-3670-4f6e-9ea8-b18fbfcae7a6 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID FROM Session WHERE sessionID like 'c5df65c6-3670-4f6e-9ea8-b18fbfcae7a6'
+2024-03-08 01:42:46 INFO  UserDAO:129 - new session created successfully.
+2024-03-08 01:42:46 INFO  LoginUser:81 - Login successfull! 200 :charu07@gmail.com
+2024-03-08 01:42:48 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:42:48 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:42:48 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-08 01:43:16 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:43:16 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:43:16 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-08 01:43:16 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-08 01:43:40 INFO  ClanDAO:305 - jeyrajesh@gmail.com available in the clan
+2024-03-08 01:44:02 INFO  DB:34 - DB connection created!
+2024-03-08 01:44:07 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:44:07 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-08 01:44:07 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:44:07 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:44:07 INFO  AllQuestionDetails:99 - All Question details fetched successfully
+2024-03-08 01:44:11 INFO  ClanDAO:305 - jeyrajesh@gmail.com available in the clan
+2024-03-08 01:47:17 INFO  GetAllClans:39 - Fetch user details for clan successfully
+2024-03-08 01:47:17 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:185 - List of languages fecth successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:207 - List of Tags fecth successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:228 - fecth count the Attempted for a question successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:253 - fecth count the completed for a question successfully!!!!
+2024-03-08 01:47:17 INFO  QuestionDao:100 - Question details fecth successfully!!!!!
+2024-03-08 01:47:17 INFO  AllQuestionDetails:99 - All Question details fetched successfully

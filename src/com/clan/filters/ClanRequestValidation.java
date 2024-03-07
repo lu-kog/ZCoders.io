@@ -24,7 +24,7 @@ import utils.JSON;
 /**
  * Servlet Filter implementation class ClanRequestValidation
  */
-// @WebFilter("/sendClanRequest")
+@WebFilter("/v1/sendClanRequest")
 public class ClanRequestValidation extends HttpFilter implements Filter {
        
     private static final long serialVersionUID = 1L;

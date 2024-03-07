@@ -23,7 +23,7 @@ import utils.JSON;
 /**
  * Servlet Filter implementation class AcceptRequestValidation
  */
-@WebFilter("/acceptClanRequest")
+@WebFilter("/v1/acceptClanRequest")
 public class AcceptRequestValidation extends HttpFilter implements Filter {
        
     private static final long serialVersionUID = 1L;
