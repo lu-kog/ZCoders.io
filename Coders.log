@@ -84,3 +84,9 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 2024-03-07 06:36:01 ERROR QuestionDao:106 - can't fetch Question details for this question
 2024-03-07 06:36:01 ERROR AllQuestionDetails:102 - Something went wrong while fetching question details: can't fecth Question details for this question
 2024-03-07 06:36:14 ERROR GetAllClans:45 - Failed to fetch user details for clan
+2024-03-07 12:29:05 ERROR DB:37 - nullError on sql: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-03-07 12:29:05 ERROR DB:37 - nullError on sql: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.

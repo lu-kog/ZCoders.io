@@ -1,0 +1,23 @@
+{
+    "java.project.referencedLibraries": {
+        "include": [
+            "/home/workspace/DEPENDENCIES/**/*.jar",
+            "/home/workspace/deployment/**/*.jar",
+            "/home/workspace/Coders.io/**/*.jar",
+            "/home/workspace/deployment/Coders.io/lib/**.jar",
+            "/home/workspace/Coders.io/webapps/Demo/WEB-INF/lib/**.jar"
+        ],
+        "exclude": []
+    },
+    "java.configuration.runtimes": [
+        {
+            "path": "/usr/lib/jvm/java-11-openjdk-amd64",
+            "default": true,
+            "name": "JavaSE-11"
+        }
+    ],
+    "java.project.outputPath": ".cide_bin",
+    "java.project.sourcePaths": [
+        "src"
+    ]
+}
