@@ -1,6 +1,7 @@
 package com.code.javaCompiler;
 
 import java.io.PrintStream;
+import java.security.spec.ECField;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -66,11 +67,10 @@ public class TestRunner {
 			while (paramKeys.hasNext()) {
 				paramsValues.add(params.get((String) paramKeys.next()));
 			}
-
-			TestCase newCase = new TestCase(obj, methodName,(JSONObject) testCasesJson.get(i+""), expectedOutput, i, paramsValues.toArray());
+			i++;	
+			TestCase newCase = new TestCase(obj, methodName,(JSONObject) testCasesJson.get((i-1)+""), expectedOutput, i, paramsValues.toArray());
 
 			testCases.add(newCase);
-			i++;
 		}
 
 		List<Callable<JSONObject>> tasks = testCases.stream()
@@ -91,9 +91,11 @@ public class TestRunner {
 			try {
 				executor.execute(futureTask);
 				JSONObject ExecResult = futureTask.get(12000, TimeUnit.MILLISECONDS); 
-                ExecResult.put((String) ExecResult.get("name"), testCasesJson.getJSONObject(i+""));
+				logger.info("Test Case "+ ExecResult.get("name")+" Result:"+ExecResult);
+
+                ExecResult.put("test"+i , testCasesJson.getJSONObject(i+""));
 				
-				results.put(i + "", ExecResult);
+				results.put("test"+i + "", ExecResult);
 				i++;
 			} catch (TimeoutException e) {
 				System.err.println("Execution timed out");

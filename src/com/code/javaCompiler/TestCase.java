@@ -83,6 +83,7 @@ public class TestCase {
             	baos.remove();
             	printStream.remove();
             }
+            logger.info("Test Case Number  =  "+testNum);
             resultObject.put("name","test"+testNum);
             return resultObject;
         };
