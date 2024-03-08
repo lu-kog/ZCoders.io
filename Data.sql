@@ -42,9 +42,14 @@ INSERT INTO Users (mailID, userName, Datejoined) VALUES
 -- ('ulaga@gmail.com', 'Ulaga', '2024-03-06');
 
 
-INSERT INTO Clan(clanID, clanName, Admin) VALUES('66423152', 'coders', 'krishnagokul810@gmail.com'), ('78320745', 'Zoho Schools', 'vasanth.albert@zohocorp.com'), ('40378295', 'Zsttk', 'charu07@gmail.com'), ('93820754', 'CringeSquad', 'tharan@gmail.com');
+-- INSERT INTO Clan(clanID, clanName, Admin) VALUES('66423152', 'coders', 'krishnagokul810@gmail.com'), ('78320745', 'Zoho Schools', 'vasanth.albert@zohocorp.com'), ('40378295', 'Zsttk', 'charu07@gmail.com'), ('93820754', 'CringeSquad', 'tharan@gmail.com');
 
+-- insert into ClanRelation(clanID, mailID, role) values ('58119654', 'amos@gmail.com', 'MEMBER'), ('58119654', 'indhu@gmail.com', 'MEMBER'), ('58119654','indirajith@gmail.com', 'MEMBER'), ('58119654','jeyrajesh@gmail.com', 'MEMBER');
+
+-- insert into ClanRelation(clanID, mailID, role) values ('58119654', '');
+INSERT INTO Clan(clanID, clanName, Admin) VALUES('66423152', 'coders', 'krishnagokul810@gmail.com');
 INSERT INTO ClanRelation(clanID, mailID, role) VALUES('66423152', 'krishnagokul810@gmail.com', 'ADMIN');
+-- insert into Clan (clanID, clanName, Admin) values ('58119654', 'CringeSquad', 'bangalore@gmail.com');
 -- INSERT INTO ClanRelation (clanID, mailID, role) VALUES ('40378295', 'charu07@gmail.com', 'ADMIN'), ('78320745', 'vasanth.albert@zohocorp.com', 'ADMIN'),('93820754','tharan@gmail.com','ADMIN');
 
 -- INSERT INTO ClanRelation (clanID, mailID, role) VALUES
@@ -62,8 +67,8 @@ INSERT INTO ClanRelation (clanID, mailID, role) VALUES
 (66423152, 'amos@gmail.com', 'Member'),
 (66423152, 'kumaravel@gmail.com', 'Member'),
 (66423152, 'mahalakshmi@gmail.com', 'Member'),
-(66423152, 'charu07@gmail.com', 'Member');
-
+(66423152, 'charu07@gmail.com', 'Member'),
+(66423152,'charu07@gmail.com','MEMBER');
 -- INSERT INTO ClanRelation (clanID, mailID, role) VALUES
 -- (78320745, 'mathimaran@gmail.com', 'Member'),
 -- (78320745, 'naveenbabu@gmail.com', 'Member'),
@@ -131,7 +136,7 @@ INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJS
     }
 }',1,"charu07@gmail.com", 'APPROVED');
     
-INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJSON,levelID,Author,status) values ("45986677","Sum of positive",'You get an array of numbers, return the sum of all of the positives ones.','Example [1,-4,7,12] => 1 + 7 + 12 = 20','positive_sum','{
+INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJSON,levelID,Author,status) values ("45986677","Sum Of Positive",'You get an array of numbers, return the sum of all of the positives ones.','Example [1,-4,7,12] => 1 + 7 + 12 = 20','positive_sum','{
     "0": {
         "params": {"0": []},
         "output": 0
@@ -175,7 +180,7 @@ INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJS
 }',2,"krishnagokul810@gmail.com", 'APPROVED');
 
 INSERT INTO Questions (Q_ID, Q_name, description, example, functionString, testcaseJSON, levelID, Author, status) 
-VALUES ("42887152", "reverse the string", 'You get a string, return its reverse.', 'Example "codewars" => "srawedoc"', 'reverse',
+VALUES ("42887152", "Reverse The String", 'You get a string, return its reverse.', 'Example "codewars" => "srawedoc"', 'reverse',
 '{
     "0": {
         "params": { "0": "hello" },
@@ -223,7 +228,8 @@ VALUES ("42887152", "reverse the string", 'You get a string, return its reverse.
     }
 }', 1, "charu07@gmail.com", 'APPROVED');
 
-INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJSON,levelID,Author,status) values ("54281620","check if it is even",'You get a number, return a boolean whether the number is even','Example 453 => false','isEven','
+INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJSON,levelID,Author,status) values ("54281620","Check If It Is Even",'You get a number, return a boolean whether the number is even','Example 453 => false','isEven','
+    {
     "0": {
         "params": {"0": Integer.MAX_VALUE},
         "output": false
@@ -265,9 +271,9 @@ INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJS
         "output": true
     }
 											
-',2,"charu07@gmail.com", 'APPROVED');
+}',2,"charu07@gmail.com", 'APPROVED');
 
-INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJSON,levelID,Author,status) values ("27624322","findLargestOfArray",'You get an array of numbers, return largest of all.','Example [1,-4,7,12] => 12','findLargest','"0": {
+INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJSON,levelID,Author,status) values ("27624322","Find Largest Of An Array",'You get an array of numbers, return largest of all.','Example [1,-4,7,12] => 12','findLargest','{"0": {
         "params": {"0": [5, 7, 1, 8, 4]},
         "output": 8
     },
@@ -302,7 +308,7 @@ INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJS
     "8": {
         "params": {"0": [123, 456, 789]},
         "output": 789
-    }',2,"charu07@gmail.com", 'APPROVED');
+    }}',2,"charu07@gmail.com", 'APPROVED');
 INSERT into TagsRelation values('56873465', 1);
 INSERT into TagsRelation values('45986677', 1);
 INSERT into TagsRelation values('42887152', 5);
@@ -317,6 +323,8 @@ insert into LanguageRelation values(1, '45986677', 'public static int positive_s
 insert into LanguageRelation values(2, '45986677', 'def positive_sum(arr)', '');
 insert into LanguageRelation values(1, '42887152', 'public static int reverse(String word)', '');
 insert into LanguageRelation values(2, '42887152', 'def reverse(word)', '');
+insert into LanguageRelation values(2, '27624322', 'def findLargest(a):','');
+insert into LanguageRelation values(2, '54281620', 'def isEven(num):','');
 
 insert into Solutions values('12345678', 'vasanth.albert@zohocorp.com', '56873465', 'double total = 0;
     if(numbers.length == 0 || numbers == null)return total;
@@ -338,29 +346,27 @@ First, cross out all letters the names have in common.
 Second, remove the cross out letter on both names.  
 Third, get the count of the characters that are left.  
 Fourth, given the word FLAMES, with each letter, starting from the left, count up to the number you got in the previous step and return to the F on the left with each pass.  
-Finally, the letter you land on has a word that it stands for in the acronym 'flames'.
+Finally, the letter you land on has a word that it stands for in the acronym "flames".
 ', '    F = Friendship
     L = Love
     A = Affection
     M = Marriage
     E = Enemies
-    S = Siblings', 'flames', '{"22":{"output":"Enemies","params":{"0":"Nikhil","1":"Alisha"}},"23":{"output":"Friendship","params":{"0":"Omkar","1":"Bhakti"}},"24":{"output":"Friendship","params":{"0":"Pranav","1":"Charita"}},"25":{"output":"Friendship","params":{"0":"Qadir","1":"Dipti"}},"26":{"output":"Enemies","params":{"0":"Rahul","1":"Esha"}},"27":{"output":"Friendship","params":{"0":"Sachin","1":"Falguni"}},"28":{"output":"Marriage","params":{"0":"Tarun","1":"Gunjan"}},"10":{"output":"Siblings","params":{"0":"Bhuvan","1":"Kavya"}},"11":{"output":"Love","params":{"0":"Chetan","1":"Anjali"}},"12":{"output":"Love","params":{"0":"Dev","1":"Priya"}},"13":{"output":"Friendship","params":{"0":"Eshan","1":"Riya"}},"14":{"output":"Enemies","params":{"0":"Farhan","1":"Sania"}},"15":{"output":"Love","params":{"0":"Girish","1":"Tanvi"}},"16":{"output":"Friendship","params":{"0":"Harish","1":"Uma"}},"17":{"output":"Love","params":{"0":"Ishan","1":"Vidya"}},"18":{"output":"Love","params":{"0":"Jai","1":"Wendy"}},"19":{"output":"Marriage","params":{"0":"Karan","1":"Xena"}},"0":{"output":"Affection","params":{"0":"Krish","1":"Hermione"}},"1":{"output":"Friendship","params":{"0":"rajesh","1":"indrajith"}},"2":{"output":"Siblings","params":{"0":"WEPISCISZ","1":"VFB"}},"3":{"output":"Friendship","params":{"0":"Vasanth","1":"ida"}},"4":{"output":"Enemies","params":{"0":"Tharan","1":"Zameema Barwin"}},"5":{"output":"Siblings","params":{"0":"Sorimuthu","1":"Keerthy suresh"}},"6":{"output":"Enemies","params":{"0":"Indirajith","1":"Komi"}},"7":{"output":"Affection","params":{"0":"Charu priyan","1":"Charu Priya"}},"8":{"output":"Love","params":{"0":"Ragavan","1":"Ragavi"}},"9":{"output":"Enemies","params":{"0":"Aarav","1":"Meera"}},"20":{"output":"Marriage","params":{"0":"Lokesh","1":"Yasmin"}},"21":{"output":"Enemies","params":{"0":"Manav","1":"Zara"}}}', 2, 'krishnagokul810@gmail.com', 'NOTAPPROVED')
-Select l_ID from Languages where lang_name='Java';
+    S = Siblings', 'flames', '{"22":{"output":"Enemies","params":{"0":"Nikhil","1":"Alisha"}},"23":{"output":"Friendship","params":{"0":"Omkar","1":"Bhakti"}},"24":{"output":"Friendship","params":{"0":"Pranav","1":"Charita"}},"25":{"output":"Friendship","params":{"0":"Qadir","1":"Dipti"}},"26":{"output":"Enemies","params":{"0":"Rahul","1":"Esha"}},"27":{"output":"Friendship","params":{"0":"Sachin","1":"Falguni"}},"28":{"output":"Marriage","params":{"0":"Tarun","1":"Gunjan"}},"10":{"output":"Siblings","params":{"0":"Bhuvan","1":"Kavya"}},"11":{"output":"Love","params":{"0":"Chetan","1":"Anjali"}},"12":{"output":"Love","params":{"0":"Dev","1":"Priya"}},"13":{"output":"Friendship","params":{"0":"Eshan","1":"Riya"}},"14":{"output":"Enemies","params":{"0":"Farhan","1":"Sania"}},"15":{"output":"Love","params":{"0":"Girish","1":"Tanvi"}},"16":{"output":"Friendship","params":{"0":"Harish","1":"Uma"}},"17":{"output":"Love","params":{"0":"Ishan","1":"Vidya"}},"18":{"output":"Love","params":{"0":"Jai","1":"Wendy"}},"19":{"output":"Marriage","params":{"0":"Karan","1":"Xena"}},"0":{"output":"Affection","params":{"0":"Krish","1":"Hermione"}},"1":{"output":"Friendship","params":{"0":"rajesh","1":"indrajith"}},"2":{"output":"Siblings","params":{"0":"WEPISCISZ","1":"VFB"}},"3":{"output":"Friendship","params":{"0":"Vasanth","1":"ida"}},"4":{"output":"Enemies","params":{"0":"Tharan","1":"Zameema Barwin"}},"5":{"output":"Siblings","params":{"0":"Sorimuthu","1":"Keerthy suresh"}},"6":{"output":"Enemies","params":{"0":"Indirajith","1":"Komi"}},"7":{"output":"Affection","params":{"0":"Charu priyan","1":"Charu Priya"}},"8":{"output":"Love","params":{"0":"Ragavan","1":"Ragavi"}},"9":{"output":"Enemies","params":{"0":"Aarav","1":"Meera"}},"20":{"output":"Marriage","params":{"0":"Lokesh","1":"Yasmin"}},"21":{"output":"Enemies","params":{"0":"Manav","1":"Zara"}}}', 2, 'krishnagokul810@gmail.com', 'APPROVED');
 insert into LanguageRelation values(1,'44414555','public class kata{
 	public static String flames(String male, String female){
 		return "Friendship";
 	}
 }','');
-Select l_ID from Languages where lang_name='Python';
 insert into LanguageRelation values(2,'44414555','def flames(male, female):
 	return "Friendship"','');
 INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJSON,levelID,Author,status) VALUES ('83648469', 'Is a letter?', '
 Write a function??`isItLetter`, which tells us if a given character is an uppercase or lowercase letter.
 ', '
 ', 'is_it_letter', '{"11":{"output":"true","params":{"0":"x"}},"12":{"output":"true","params":{"0":"B"}},"13":{"output":"false","params":{"0":"1"}},"14":{"output":"false","params":{"0":"@"}},"15":{"output":"false","params":{"0":"\n"}},"16":{"output":"false","params":{"0":"!"}},"17":{"output":"true","params":{"0":"k"}},"18":{"output":"true","params":{"0":"Y"}},"19":{"output":"true","params":{"0":"f"}},"0":{"output":"true","params":{"0":"a"}},"1":{"output":"true","params":{"0":"Z"}},"2":{"output":"true","params":{"0":"m"}},"3":{"output":"true","params":{"0":"Q"}},"4":{"output":"false","params":{"0":"5"}},"5":{"output":"false","params":{"0":"#"}},"6":{"output":"false","params":{"0":" "}},"7":{"output":"false","params":{"0":"}"}},"8":{"output":"false","params":{"0":"["}},"9":{"output":"true","params":{"0":"g"}},"10":{"output":"true","params":{"0":"P"}}}', 1, 'krishnagokul810@gmail.com', 'NOTAPPROVED')
-Select Tag_ID from Tags where Tag_name='FUNDAMENTALS';
+
 INSERT into TagsRelation values('83648469',4);
-Select l_ID from Languages where lang_name='Python';
+
 insert into LanguageRelation values(2,'83648469','def is_it_letter(s):
     return true','');
 insert into ClanRequest(clanID, mailID) values('66423152', 'indirajith@gmail.com');
@@ -371,7 +377,7 @@ insert into ClanRelation (clanID, mailID) values('58119654', 'bangalore@gmail.co
 insert into ClanRequest(clanID, mailID) values('58119654', 'bangalore@gmail.com');
 insert into ClanRequest(clanID, mailID) values('58119654', 'charu07@gmail.com');
 insert into ClanRequest(clanID, mailID) values('58119654', 'amos@gmail.com');
-delete from ClanRequest where clanID like '58119654' and mailID like 'amos@gmail.com';
+
 insert into ClanRelation (clanID, mailID) values('58119654', 'amos@gmail.com');
 insert into ClanRequest(clanID, mailID) values('58119654', 'amos@gmail.com');
 insert into ClanRequest(clanID, mailID) values('58119654', 'amos@gmail.com');
@@ -385,3 +391,4 @@ insert into ClanRequest(clanID, mailID) values('58119654', 'jeyrajesh@gmail.com'
 delete from ClanRequest where clanID like '58119654' and mailID like 'jeyrajesh@gmail.com';
 insert into ClanRelation (clanID, mailID) values('58119654', 'jeyrajesh@gmail.com');
 insert into ClanRequest(clanID, mailID) values('58119654', 'mahalakshmi@gmail.com');
+insert into ClanRequest(clanID, mailID) values('58119654', 'kumaravel@gmail.com');

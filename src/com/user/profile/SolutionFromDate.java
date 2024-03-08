@@ -60,7 +60,7 @@ public class SolutionFromDate extends HttpServlet {
 			e.printStackTrace();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// e.printStackTrace();
 		}
 
 	}

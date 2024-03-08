@@ -104,6 +104,7 @@ public class UserDAO {
 				throw new Exception("Something went wrong! Please contact admin.");
 			}
 		} catch (Exception e) {
+			e.printStackTrace();
 			logger.error("Error in getting passwd by mail:" + mailID + " error:" + e);
 			throw new Exception("Oops! Something went wrong.");
 		}
@@ -456,6 +457,53 @@ public class UserDAO {
 		}
 	}
 
+
+	public String getScoreFromMailID(String mailID) throws Exception {
+		
+		String score = null;
+		try {
+			PreparedStatement statement = connection.prepareStatement(Query.getScoreFromMailID);
+			statement.setString(1, mailID);
+			ResultSet result = statement.executeQuery();
+			
+			if (result.next()) {
+                score = result.getString("score");
+                return score;
+			}else {
+				throw new Exception("User not found!");
+			}		
+			
+		} catch (Exception e) {
+			throw new Exception(e.getMessage());
+		}
+	}
+
+
+
+	public String getClanNameFromMailID(String mailID) throws Exception {
+		
+		String clanName = null;
+		try {
+			PreparedStatement statement = connection.prepareStatement(Query.getClanNameFromMailID);
+			statement.setString(1, mailID);
+			ResultSet result = statement.executeQuery();
+			
+			if (result.next()) {
+    			clanName = result.getString("clanName");
+    			logger.info("clanName " + clanName);
+    			return clanName;
+			} else {
+    			throw new Exception("User not found!");
+			}
+	
+			
+		} catch (Exception e) {
+			throw new Exception(e.getMessage());
+		}
+	}
+
+
+
 	public JSONObject createJSON(User user) throws Exception {
 			JSONObject userdDetails = new JSONObject();
 			userdDetails.put("mailID", user.getMailID());
@@ -501,7 +549,7 @@ public class UserDAO {
 				LocalDate date = null;
             
 				while(res.next()) {
-					date = LocalDate.parse(res.getString(1));
+					date = LocalDate.parse(res.getString("Streakdate"));
 				
 				}
 			
@@ -520,7 +568,6 @@ public class UserDAO {
 						if(res3 == 1) {
 							// 	//streak not maintained
 							logger.error("Streak not maintained");
-							// return false;
 							
 						}
 					}
@@ -542,7 +589,7 @@ public class UserDAO {
 	}
 
 
-	public boolean increaseStreakCount(String user) throws Exception {
+	public void increaseStreakCount(String user) throws Exception {
     int streak = 0;
     
     try {
@@ -555,8 +602,8 @@ public class UserDAO {
         LocalDate date = null;
         
         while (res.next()) {
-            streak = res.getInt(2);
-            date = LocalDate.parse(res.getString(1));
+            streak = res.getInt("streak");
+            date = LocalDate.parse(res.getString("Streakdate"));
         }
 
         if (date.plusDays(streak).equals(currdate)) {
@@ -567,7 +614,7 @@ public class UserDAO {
             
             if (res2 == 1) {
                 logger.info("Streak increased for the user " + user);
-                return true;
+                
             }
         } else {
             logger.error("Streak does not increased for the user " + user);
@@ -585,8 +632,33 @@ public class UserDAO {
         throw new Exception("something went wrong please try again");
     }
     
-    return false;
+    
 }
 
+
+	// public boolean isAdmin(String mailID){
+
+	// 	try{
+	// 		String clanID = ClanDAO.getObj().getClanId(mailID);
+	// 		PreparedStatement pstmt = connection.PreparedStatement(Query.getClanRole);
+	// 		pstmt.setString(1, mailID);
+	// 		pstmt.setString(2, clanID);
+
+	// 		ResultSet rs = pstmt.executeQuery();
+
+	// 		if(rs.next()){
+	// 			if(rs.getString("role").equals("ADMIN")){
+	// 				return true;
+	// 			}
+	// 		}
+	// 	}
+	// 	catch(Exception e){
+			
+	// 		logger.error("Error occured: " + e);
+	// 		throw new Exception("Error in getClanRole "+e.getMessage());
+	// 	}
+
+	// 	return false;
+	// }
 
 }

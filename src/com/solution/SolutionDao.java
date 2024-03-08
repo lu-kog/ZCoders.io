@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -443,6 +444,18 @@ public class SolutionDao {
 		pstmt.setString(2,solId);
 
 		return pstmt.executeUpdate()==1;
+	}
+
+	public JSONArray getSolutionsDates(String mailId) throws SQLException {
+		JSONArray solutionsDateJsonArray = new JSONArray();
+		String query = Query.getSolutionDates;
+		PreparedStatement pstmt = DB.getConnection().prepareStatement(query);
+		pstmt.setString(1, mailId);
+		ResultSet rs = pstmt.executeQuery();
+		while (rs.next()) {
+			solutionsDateJsonArray.put(rs.getString(1));
+		}
+		return solutionsDateJsonArray;
 	}
 
 }

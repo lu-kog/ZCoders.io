@@ -142,7 +142,11 @@ public class sumbitServlet extends HttpServlet {
 		   		json.put("AllSolution", solutionJSON);
 			    // Write JSON string to response
 			    logger.info("Question details && solution fetched successfully");
+
+				//increse streak
 				UserDAO.getObj().increaseStreakCount(mailID);
+
+				//increase score
 				UserDAO.getObj().updateScore(levelID, mailID);
 			    response.getWriter().write(json.toString());
 		}
@@ -164,18 +168,19 @@ public class sumbitServlet extends HttpServlet {
 	// 	// TODO Auto-generated method stub
 	// 	doGet(request, response);
 	// }
-	public static void main(String[] args){
-		try{
-		//  QuestionDao questionDAO=new QuestionDao();
-        //  SolutionDao solutionDao=new SolutionDao();
-		 boolean st=UserDAO.getObj().increaseStreakCount("charu07@gmail.com");
-		System.out.println(st);
-		}
-		catch (Exception e) {
-			System.out.println(e.getMessage());
-			// TODO: handle exception
-		}
-	}
+	// public static void main(String[] args){
+	// 	try{
+	// 	//  QuestionDao questionDAO=new QuestionDao();
+    //     //  SolutionDao solutionDao=new SolutionDao();
+	// 	 boolean st=UserDAO.getObj().increaseStreakCount("charu07@gmail.com");
+
+	// 	System.out.println(st);
+	// 	}
+	// 	catch (Exception e) {
+	// 		System.out.println(e.getMessage());
+	// 		// TODO: handle exception
+	// 	}
+	// }
 
 }
 

@@ -127,7 +127,7 @@ public class QuestionDao {
                     questionDetails.setDescription(resultSet.getString("description"));
                     questionDetails.setExample(resultSet.getString("example"));
                     questionDetails.setfunctionName(resultSet.getString("functionString"));
-                    System.out.println(resultSet.getString("testcaseJSON"));
+                    System.out.println(resultSet.getString("testcaseJSON") + "kjnesujcvnsn");
                     questionDetails.setTestCases(new JSONObject(resultSet.getString("testcaseJSON")));
                     Level level = new Level(resultSet.getInt("levelID"), resultSet.getString("level_name"), resultSet.getInt("score"));
                     questionDetails.setLevel(level);

@@ -64,6 +64,8 @@ public class PythonRunnerDAO {
 					param+=getAsParam(jsonobj1.get(j+""));
 				j++;
 				}
+				System.out.println("Parameter : "+param);
+				System.out.println("Parameter : "+param.substring(0, param.length()-1));
 				func+="		return "+solution.getQuestion().getfunctionName()+"("+param+")\n"
 					+ "	except Exception as err:\n"
 					+ "		raise Exception(traceback.format_exc())\n"
@@ -104,7 +106,7 @@ public class PythonRunnerDAO {
 				return object+"";
 			}
 			System.out.println(a+ "   sok");
-			return a;
+			return a+",";
     }
 	
 }

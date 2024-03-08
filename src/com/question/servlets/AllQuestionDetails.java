@@ -17,6 +17,7 @@ import com.question.Language;
 import com.question.Question;
 import com.question.QuestionDao;
 import com.question.Tag;
+import com.solution.SolutionDao;
 
 import utils.CommonLogger;
 import utils.JSON;
@@ -42,6 +43,7 @@ public class AllQuestionDetails extends HttpServlet {
 	 */
     QuestionDao questionDao=new QuestionDao();
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	String mailId = request.getParameter("mailID");
 	  try {
 		    List<Question> questionDetailsList = questionDao.fetchAllQuestionDetails();
 			System.out.println(questionDetailsList.size());
@@ -92,13 +94,15 @@ public class AllQuestionDetails extends HttpServlet {
 		    JSONObject responseJson = new JSONObject();
 		    responseJson.put("StatusCode", "200");
 		    responseJson.put("questions", questionsArray);
-
+		    responseJson.put("streakDates", SolutionDao.getObj().getSolutionsDates(mailId));
+			System.out.println(responseJson.toString());
 		    System.out.println(responseJson.toString());
 
 		    // Write JSON string to response
 		    logger.info("All Question details fetched successfully");
 		    response.getWriter().write(responseJson.toString());
 		} catch (Exception e) {
+			e.printStackTrace();
 		    logger.error("Something went wrong while fetching question details: " + e.getMessage());
 		    JSONObject errorResponse = JSON.Create(400, e.getMessage());
 			 response.getWriter().write(errorResponse.toString());

@@ -12,6 +12,8 @@ public class Query {
 	
 	public static final String getCountOfCompletedSolutions = "select count(*) as CompletedSolutions from Solutions where status like 'COMPLETED' and mailID like ?;";
 		
+	public static final String getScoreFromMailID = "select score from Users where mailID like ?";
+
 	public static final String getFullUserData = "select userName,score,streak,Datejoined,Streakdate,Ace_badge,Conquer_badge,Crown_badge,mailID from Users where mailID like ?";
 	
 	public static final String getHashedPasswd = ";";
@@ -23,6 +25,8 @@ public class Query {
 	public static final String deleteClanByAdmin = "delete from Clan where clanID like ?;";
 
 	public static final String getClanIDFromMailID = "select clanID from ClanRelation where mailID like ?;";
+
+	public static final String getClanNameFromMailID = "SELECT Clan.clanName FROM ClanRelation JOIN Clan ON Clan.clanID = ClanRelation.clanID WHERE ClanRelation.mailID LIKE ?";
 
 	public static final String checkAdminOfClanByAdminID = "select * from Clan where clanID like ? and Admin like ?;";
 
@@ -185,6 +189,8 @@ public class Query {
     public static final String getLanguageID = "Select l_ID from Languages where lang_name=?;";
 
 	public static final String getClansAndScores = "select clanName, COALESCE(SUM(Users.score), 0) AS total_score, ClanRelation.mailID from Clan left join ClanRelation on Clan.clanID = ClanRelation.clanID left join Users on ClanRelation.mailID = Users.mailID where role like '%ADMIN%' group by Clan.clanName order by total_score desc";
+
+	public static final String getSolutionDates = "select solDate from Solutions where mailID like ?";
 
 	
 }

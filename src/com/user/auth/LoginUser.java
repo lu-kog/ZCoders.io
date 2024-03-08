@@ -71,13 +71,20 @@ public class LoginUser extends HttpServlet {
 				cookies.add(new Cookie("sessionID", sessionID));
 				cookies.forEach(x-> response.addCookie(x));
 
+				String score = UserDAO.getObj().getScoreFromMailID(mailID);
 				String userName = UserDAO.getObj().getUserNameFromMailID(mailID);
+				String clanName = UserDAO.getObj().getClanNameFromMailID(mailID);
+				// boolean isAdmin = UserDAO.getObj().isAdmin(mailID);
 				JSONObject respObject = new JSONObject();
 				
 		        respObject.put("statuscode", 200);
 				respObject.put("sessionID", sessionID);
 				respObject.put("mailID", mailID);
 				respObject.put("userName", userName);
+				respObject.put("clanName", clanName);
+				respObject.put("score", score);
+				// respObject.put("isAdmin", isAdmin);
+
 		        logger.info("Login successfull! 200 :"+mailID);
 		        response.getWriter().write(respObject.toString());
 			}else {
@@ -85,6 +92,7 @@ public class LoginUser extends HttpServlet {
 				response.getWriter().write(errJson.toString());
 			}
 		} catch (Exception e) {
+			e.printStackTrace();
 			logger.info("check this error :" + e);
 			JSONObject errJson = JSON.Create(400, "Something went wrong! Please re-login.");
 			response.getWriter().write(errJson.toString());

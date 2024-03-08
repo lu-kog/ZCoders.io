@@ -4,6 +4,7 @@ import java.io.ByteArrayOutputStream;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.python.antlr.base.boolop;
 import org.python.core.PyObject;
 import org.python.util.PythonInterpreter;
 
@@ -34,6 +35,7 @@ public class PythonRunner{
 //					"/home/vasanth-zstk361/Downloads/Coders.io/src/main/webapp/python/problems/evenOrOdd/evenOrOdd_test.py");
 			PyObject pyFunction = interpreter.get(definitionName);
 			PyObject function = pyFunction.__call__(new PyObject[] {});
+			System.out.println("Output : "+jsonobj.get("output") + "   "+jsonobj.get("output").getClass().getName());
 			if(jsonobj.get("output") instanceof String){
 				System.out.println("String");
 				String result = function.asString();
@@ -42,9 +44,10 @@ public class PythonRunner{
 				resultjson.put("output", result);
 			}
 			else if(jsonobj.get("output") instanceof Boolean){
-				String result = function.asString();
+				// function.
+				boolean result = function.__nonzero__();
 				System.out.println(result);
-				boolean iscrt = jsonobj.getString("output") == result;
+				boolean iscrt = ((boolean) jsonobj.get("output")) == result;
 				resultjson.put("Result", iscrt);
 				resultjson.put("output", result);
 			}
