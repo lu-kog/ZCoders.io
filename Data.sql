@@ -14,43 +14,40 @@ INSERT INTO Session (sessionID, mailID, loggedTime) VALUES ('56fbd67e-0945-4747-
 
 
 INSERT INTO Users (mailID, userName, Datejoined) VALUES 
--- ('sorimuthu@gmail.com', 'Sorimuthu', '2024-03-06'),
--- ('vijila@gmail.com', 'Vijila', '2024-03-06'),
--- ('abitha@gmail.com', 'Abitha', '2024-03-06'),
--- ('arun@gmail.com', 'Arun', '2024-03-06'),
--- ('bangalore@gmail.com', 'Bangalore', '2024-03-06'),
--- ('elango@gmail.com', 'Elango', '2024-03-06'),
--- ('gopika@gmail.com', 'Gopika', '2024-03-06'),
+('sorimuthu@gmail.com', 'Sorimuthu', '2024-03-06'),
+('vijila@gmail.com', 'Vijila', '2024-03-06'),
+('abitha@gmail.com', 'Abitha', '2024-03-06'),
+('arun@gmail.com', 'Arun', '2024-03-06'),
+ ('bangalore@gmail.com', 'Bangalore', '2024-03-06'),
+ ('elango@gmail.com', 'Elango', '2024-03-06'),
+ ('gopika@gmail.com', 'Gopika', '2024-03-06'),
 ('indhu@gmail.com', 'Indhu', '2024-03-06'),
 ('indirajith@gmail.com', 'Indirajith', '2024-03-06'),
 ('jeyrajesh@gmail.com', 'Jey Rajesh', '2024-03-06'),
 ('amos@gmail.com', 'Amos', '2024-03-06'),
 ('kumaravel@gmail.com', 'Kumaravel', '2024-03-06'),
-('mahalakshmi@gmail.com', 'Mahalakshmi', '2024-03-06');
--- ('mathimaran@gmail.com', 'Mathimaran', '2024-03-06'),
--- ('naveenbabu@gmail.com', 'Naveen Babu', '2024-03-06'),
--- ('padma@gmail.com', 'Padma', '2024-03-06'),
--- ('piravin@gmail.com', 'Piravin', '2024-03-06'),
--- ('rabi@gmail.com', 'Rabi', '2024-03-06'),
--- ('ragavi@gmail.com', 'Ragavi', '2024-03-06'),
--- ('rahul@gmail.com', 'Rahul', '2024-03-06'),
--- ('santhiya@gmail.com', 'Santhiya', '2024-03-06'),
--- ('saranesh@gmail.com', 'Saranesh', '2024-03-06'),
--- ('sun@gmail.com', 'Sun', '2024-03-06'),
--- ('tharan@gmail.com', 'Tharan', '2024-03-06'),
--- ('sundari@gmail.com', 'Sundari', '2024-03-06'),
--- ('ulaga@gmail.com', 'Ulaga', '2024-03-06');
+('mahalakshmi@gmail.com', 'Mahalakshmi', '2024-03-06'),
+('mathimaran@gmail.com', 'Mathimaran', '2024-03-06'),
+('naveenbabu@gmail.com', 'Naveen Babu', '2024-03-06'),
+('padma@gmail.com', 'Padma', '2024-03-06'),
+('piravin@gmail.com', 'Piravin', '2024-03-06'),
+('rabi@gmail.com', 'Rabi', '2024-03-06'),
+('ragavi@gmail.com', 'Ragavi', '2024-03-06'),
+('rahul@gmail.com', 'Rahul', '2024-03-06'),
+('santhiya@gmail.com', 'Santhiya', '2024-03-06'),
+('saranesh@gmail.com', 'Saranesh', '2024-03-06'),
+('sun@gmail.com', 'Sun', '2024-03-06'),
+('tharan@gmail.com', 'Tharan', '2024-03-06'),
+('sundari@gmail.com', 'Sundari', '2024-03-06'),
+('ulaga@gmail.com', 'Ulaga', '2024-03-06');
 
 
--- INSERT INTO Clan(clanID, clanName, Admin) VALUES('66423152', 'coders', 'krishnagokul810@gmail.com'), ('78320745', 'Zoho Schools', 'vasanth.albert@zohocorp.com'), ('40378295', 'Zsttk', 'charu07@gmail.com'), ('93820754', 'CringeSquad', 'tharan@gmail.com');
+INSERT INTO Clan(clanID, clanName, Admin) VALUES('78320745', 'Zoho Schools', 'vasanth.albert@zohocorp.com'), ('40378295', 'Zsttk', 'bangalore@gmail.com'), ('93820754', 'CringeSquad', 'tharan@gmail.com');
 
--- insert into ClanRelation(clanID, mailID, role) values ('58119654', 'amos@gmail.com', 'MEMBER'), ('58119654', 'indhu@gmail.com', 'MEMBER'), ('58119654','indirajith@gmail.com', 'MEMBER'), ('58119654','jeyrajesh@gmail.com', 'MEMBER');
+insert into ClanRelation(clanID, mailID, role) values ('78320745', 'vasanth.albert@zohocorp.com', 'ADMIN'), ('40378295', 'bangalore@gmail.com', 'ADMIN'), ('93820754','tharan@gmail.com', 'ADMIN');
 
--- insert into ClanRelation(clanID, mailID, role) values ('58119654', '');
 INSERT INTO Clan(clanID, clanName, Admin) VALUES('66423152', 'coders', 'krishnagokul810@gmail.com');
 INSERT INTO ClanRelation(clanID, mailID, role) VALUES('66423152', 'krishnagokul810@gmail.com', 'ADMIN');
--- insert into Clan (clanID, clanName, Admin) values ('58119654', 'CringeSquad', 'bangalore@gmail.com');
--- INSERT INTO ClanRelation (clanID, mailID, role) VALUES ('40378295', 'charu07@gmail.com', 'ADMIN'), ('78320745', 'vasanth.albert@zohocorp.com', 'ADMIN'),('93820754','tharan@gmail.com','ADMIN');
 
 -- INSERT INTO ClanRelation (clanID, mailID, role) VALUES
 --     -> (93820754, 'sorimuthu@gmail.com', 'Member'),
@@ -67,7 +64,6 @@ INSERT INTO ClanRelation (clanID, mailID, role) VALUES
 (66423152, 'amos@gmail.com', 'Member'),
 (66423152, 'kumaravel@gmail.com', 'Member'),
 (66423152, 'mahalakshmi@gmail.com', 'Member'),
-(66423152, 'charu07@gmail.com', 'Member'),
 (66423152,'charu07@gmail.com','MEMBER');
 -- INSERT INTO ClanRelation (clanID, mailID, role) VALUES
 -- (78320745, 'mathimaran@gmail.com', 'Member'),
@@ -231,12 +227,12 @@ VALUES ("42887152", "Reverse The String", 'You get a string, return its reverse.
 INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJSON,levelID,Author,status) values ("54281620","Check If It Is Even",'You get a number, return a boolean whether the number is even','Example 453 => false','isEven','
     {
     "0": {
-        "params": {"0": Integer.MAX_VALUE},
+        "params": {"0": 89437},
         "output": false
     },
     "1": {
-        "params": {"0": Integer.MIN_VALUE},
-        "output": false
+        "params": {"0": 9586},
+        "output": true
     },
     "2": {
         "params": {"0": -1},
@@ -245,7 +241,7 @@ INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJS
     "3": {
         "params": {"0": 1},
         "output": false
-    }
+    },
     "4": {
         "params": {"0": 9},
         "output": false
@@ -365,30 +361,31 @@ Write a function??`isItLetter`, which tells us if a given character is an upperc
 ', '
 ', 'is_it_letter', '{"11":{"output":"true","params":{"0":"x"}},"12":{"output":"true","params":{"0":"B"}},"13":{"output":"false","params":{"0":"1"}},"14":{"output":"false","params":{"0":"@"}},"15":{"output":"false","params":{"0":"\n"}},"16":{"output":"false","params":{"0":"!"}},"17":{"output":"true","params":{"0":"k"}},"18":{"output":"true","params":{"0":"Y"}},"19":{"output":"true","params":{"0":"f"}},"0":{"output":"true","params":{"0":"a"}},"1":{"output":"true","params":{"0":"Z"}},"2":{"output":"true","params":{"0":"m"}},"3":{"output":"true","params":{"0":"Q"}},"4":{"output":"false","params":{"0":"5"}},"5":{"output":"false","params":{"0":"#"}},"6":{"output":"false","params":{"0":" "}},"7":{"output":"false","params":{"0":"}"}},"8":{"output":"false","params":{"0":"["}},"9":{"output":"true","params":{"0":"g"}},"10":{"output":"true","params":{"0":"P"}}}', 1, 'krishnagokul810@gmail.com', 'NOTAPPROVED')
 
-INSERT into TagsRelation values('83648469',4);
+-- INSERT into TagsRelation values('83648469',4);
 
-insert into LanguageRelation values(2,'83648469','def is_it_letter(s):
-    return true','');
-insert into ClanRequest(clanID, mailID) values('66423152', 'indirajith@gmail.com');
-INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('bangalore@gmail.com', 'Bangalore', '2024-03-07', '2024-03-07');
-INSERT INTO Login (mailID, passwd) VALUES ('bangalore@gmail.com', '$2a$10$ArqdJCQK11GTtD90Ei0mq.RUBPwE663IOVtrgdtWskKwH0a27iHPq');
-insert into Clan (clanID, clanName, Admin) values('58119654', 'CringeSquad', 'bangalore@gmail.com');
-insert into ClanRelation (clanID, mailID) values('58119654', 'bangalore@gmail.com');
-insert into ClanRequest(clanID, mailID) values('58119654', 'bangalore@gmail.com');
-insert into ClanRequest(clanID, mailID) values('58119654', 'charu07@gmail.com');
-insert into ClanRequest(clanID, mailID) values('58119654', 'amos@gmail.com');
+-- insert into LanguageRelation values(2,'83648469','def is_it_letter(s):
+--     return true','');
+-- insert into ClanRequest(clanID, mailID) values('66423152', 'indirajith@gmail.com');
+-- INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('bangalore@gmail.com', 'Bangalore', '2024-03-07', '2024-03-07');
+-- INSERT INTO Login (mailID, passwd) VALUES ('bangalore@gmail.com', '$2a$10$ArqdJCQK11GTtD90Ei0mq.RUBPwE663IOVtrgdtWskKwH0a27iHPq');
+-- insert into Clan (clanID, clanName, Admin) values('58119654', 'CringeSquad', 'bangalore@gmail.com');
+-- insert into ClanRelation (clanID, mailID) values('58119654', 'bangalore@gmail.com');
+-- insert into ClanRequest(clanID, mailID) values('58119654', 'bangalore@gmail.com');
+-- insert into ClanRequest(clanID, mailID) values('58119654', 'charu07@gmail.com');
+-- insert into ClanRequest(clanID, mailID) values('58119654', 'amos@gmail.com');
 
-insert into ClanRelation (clanID, mailID) values('58119654', 'amos@gmail.com');
-insert into ClanRequest(clanID, mailID) values('58119654', 'amos@gmail.com');
-insert into ClanRequest(clanID, mailID) values('58119654', 'amos@gmail.com');
-insert into ClanRequest(clanID, mailID) values('58119654', 'amos@gmail.com');
-insert into ClanRequest(clanID, mailID) values('58119654', 'amos@gmail.com');
-insert into ClanRequest(clanID, mailID) values('58119654', 'amos@gmail.com');
-insert into ClanRequest(clanID, mailID) values('58119654', 'indirajith@gmail.com');
-delete from ClanRequest where clanID like '58119654' and mailID like 'indirajith@gmail.com';
-insert into ClanRelation (clanID, mailID) values('58119654', 'indirajith@gmail.com');
-insert into ClanRequest(clanID, mailID) values('58119654', 'jeyrajesh@gmail.com');
-delete from ClanRequest where clanID like '58119654' and mailID like 'jeyrajesh@gmail.com';
-insert into ClanRelation (clanID, mailID) values('58119654', 'jeyrajesh@gmail.com');
-insert into ClanRequest(clanID, mailID) values('58119654', 'mahalakshmi@gmail.com');
-insert into ClanRequest(clanID, mailID) values('58119654', 'kumaravel@gmail.com');
+-- insert into ClanRelation (clanID, mailID) values('58119654', 'amos@gmail.com');
+-- insert into ClanRequest(clanID, mailID) values('58119654', 'indirajith@gmail.com');
+-- delete from ClanRequest where clanID like '58119654' and mailID like 'indirajith@gmail.com';
+-- insert into ClanRelation (clanID, mailID) values('58119654', 'indirajith@gmail.com');
+-- insert into ClanRequest(clanID, mailID) values('58119654', 'jeyrajesh@gmail.com');
+-- delete from ClanRequest where clanID like '58119654' and mailID like 'jeyrajesh@gmail.com';
+-- insert into ClanRelation (clanID, mailID) values('58119654', 'jeyrajesh@gmail.com');
+-- insert into ClanRequest(clanID, mailID) values('58119654', 'mahalakshmi@gmail.com');
+INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('singatamizhan2005@gmail.com', 'Dragon_Blaze', '2024-03-09', '2024-03-09');
+INSERT INTO Login (mailID, passwd) VALUES ('singatamizhan2005@gmail.com', '$2a$10$Xm4dK4J40sEePT1DrlYNneZdViOyUQgutiTGTZjVxgF78JszW2ss.');
+insert into ClanRequest(clanID, mailID) values('66423152', 'santhiya@gmail.com');
+insert into ClanRequest(clanID, mailID) values('66423152', 'vijila@gmail.com');
+insert into ClanRequest(clanID, mailID) values('66423152', 'sorimuthu@gmail.com');
+insert into ClanRequest(clanID, mailID) values('66423152', 'rabi@gmail.com');
+insert into ClanRequest(clanID, mailID) values('66423152', 'ragavi@gmail.com');

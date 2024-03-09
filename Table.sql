@@ -52,8 +52,9 @@ CREATE table Clan
 CREATE table ClanRelation
 (
 	clanID varchar(8),
-	mailID varchar(50) NOT NULL UNIQUE,
+	mailID varchar(50) NOT NULL,
 	role enum('CO_ADMIN', 'MEMBER', 'ADMIN') default 'MEMBER',
+	PRIMARY KEY (mailID, clanID),
 	FOREIGN KEY(clanID) REFERENCES Clan(clanID) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY(mailID) REFERENCES Users(mailID) ON DELETE CASCADE ON UPDATE CASCADE
 );
@@ -63,6 +64,7 @@ CREATE table ClanRequest
 (
 	clanID varchar(8),
 	mailID varchar(30),
+	PRIMARY KEY (clanID, mailID),
 	FOREIGN KEY(clanID) REFERENCES Clan(clanID) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY(mailID) REFERENCES Users(mailID) ON DELETE CASCADE ON UPDATE CASCADE
 );
@@ -134,14 +136,20 @@ CREATE table TagsRelation
 	FOREIGN KEY(Tag_ID) REFERENCES Tags(Tag_ID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE table Tournament
+CREATE TABLE Tournament
 (
-	mailID varchar(30) unique,
-	Start_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	End_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	Q_ID varchar(8),
-	FOREIGN KEY(Q_ID) REFERENCES Questions(Q_ID),
-	FOREIGN KEY(mailID) REFERENCES Users(mailID) 
+    mailID VARCHAR(30) UNIQUE,
+    Join_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    Submit_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    Date DATE,
+    Code TEXT,
+	Score double, 
+    Q_ID VARCHAR(8),
+	Execution_time TIME,
+    FOREIGN KEY(Q_ID) REFERENCES Questions(Q_ID),
+    FOREIGN KEY(mailID) REFERENCES Users(mailID)
 );
+
+
 
 	

@@ -9,6 +9,8 @@ import java.util.Objects;
 import java.util.concurrent.Callable;
 
 import org.apache.log4j.Logger;
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import utils.CommonLogger;
@@ -121,7 +123,7 @@ public class TestCase {
         return Arrays.deepEquals((Object[]) a, (Object[]) b);
     }
 
-    private static void convertParametersType(Object[] params, Class<?>[] paramTypes) {
+    private static void convertParametersType(Object[] params, Class<?>[] paramTypes) throws JSONException {
 
         for (int i = 0; i < params.length; i++) {
             Object parameter = params[i];
@@ -151,6 +153,15 @@ public class TestCase {
             } else if (parameterType == Short.class) {
                 params[i] = (short) parameter;
                 paramTypes[i] = short.class;
+            } else if(parameterType == JSONArray.class){
+                System.out.println("skjdbhgu    Arrays");
+                parameter = (JSONArray) parameter;
+                Object[] arr = new Object[((JSONArray) parameter).length()];
+                for(int j=0;j<((JSONArray) parameter).length();j++){
+                    arr[j] = ((JSONArray) parameter).get(j);
+                }
+                params[i] = arr;
+                paramTypes[i] = int[].class;
             } else {
 				paramTypes[i] = parameterType;
 			}

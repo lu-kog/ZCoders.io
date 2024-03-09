@@ -152,4 +152,12 @@ public class TestRunner {
 
 		
 	}
+	public static void main(String[] args) {
+		try {
+            Class<?> cls = Class.forName("tmp.vsr.kata");
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+	}
 }

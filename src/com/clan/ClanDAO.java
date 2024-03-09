@@ -488,27 +488,33 @@ public class ClanDAO {
 
 				clanMembers.put(member);
 			}
+			
 			logger.info("All members of clan:"+clanID+" fetched successfully!");
 			
 			// getting requests of a clan
 			pstmt = connection.prepareStatement(Query.GetAllRequestsOfClan);
 			pstmt.setString(1, clanID);
-			ResultSet resuts = pstmt.executeQuery();
+			ResultSet results = pstmt.executeQuery();
 			JSONArray requests = new JSONArray();
-			while(resuts.next()) {
+
+			System.out.println(results.next());
+
+			while(results.next()) {
+				System.out.println("clan result");
 				JSONObject req = new JSONObject();
-				req.put("name", resuts.getString("userName"));
-				req.put("mailID", resuts.getInt("mailID"));
-				req.put("score", resuts.getString("score"));
-				req.put("strike", resuts.getString("strike"));
+				req.put("name", results.getString("userName"));
+				req.put("mailID", results.getInt("mailID"));
+				req.put("score", results.getString("score"));
+				req.put("streak", results.getString("streak"));
 
 				requests.put(req);
 			}
 			logger.info("clan requests obtained for "+clanID);
-			
+			String userRole=getClanRole(adminID,clanID);
 			clanData.put("clanID", clanID);
 			clanData.put("members", clanMembers);
 			clanData.put("joinRequests", requests);
+			clanData.put("currentUserRole",userRole);
 			System.out.println("clanData"+clanData);
 			return clanData;
 		} catch (Exception e) {
@@ -627,12 +633,14 @@ public class ClanDAO {
 			PreparedStatement pstmt = connection.prepareStatement(Query.getClansAndScores);
 			
 			ResultSet rs = pstmt.executeQuery();
-			
+			String mailID = null;
+
 			while(rs.next()) {
 				JSONObject clanDetailsObj = new JSONObject();
 				clanDetailsObj.put("clanName", rs.getString("clanName"));
 				clanDetailsObj.put("score", rs.getString("total_score"));
-				clanDetailsObj.put("admin", rs.getString("ClanRelation.mailID"));
+				mailID = rs.getString("ClanRelation.mailID");
+				clanDetailsObj.put("mailID", mailID);
 				clanDetailsArray.put(clanDetailsObj);
 			}
 			return clanDetailsArray;
