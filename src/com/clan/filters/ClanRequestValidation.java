@@ -9,6 +9,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpFilter;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
@@ -52,12 +53,14 @@ public class ClanRequestValidation extends HttpFilter implements Filter {
 		try {
 	        // Check if user is already in any clan
 	        String userID = request.getParameter("mailID");
+			String clanID = request.getParameter("clanID");
 	        if (alreadyInClan(userID)) {
 	            throw new Exception("User is already in a clan.");
 	        }
 
 	        // Check if clanID is valid
-	        String clanID = request.getParameter("clanID");
+	        
+			System.out.println("clanID"+request.getParameter("clanID") + "   "+ userID);
 	        logger.info("validating clan request: clan:"+clanID+" mailID"+userID);
 	        
 	        if (!isValidClanID(clanID)) {

@@ -21,7 +21,7 @@ import utils.JSON;
 /**
  * Servlet Filter implementation class UserLeftFromClanFilter
  */
-// @WebFilter("/LeftFromClan")
+ @WebFilter("/v1/LeftFromClan")
 public class UserLeftFromClanFilter extends HttpFilter {
        
     private static final long serialVersionUID = 1L;
@@ -29,6 +29,7 @@ public class UserLeftFromClanFilter extends HttpFilter {
 	/**
      * @see HttpFilter#HttpFilter()
      */
+	 
     public UserLeftFromClanFilter() {
         super();
         // TODO Auto-generated constructor stub

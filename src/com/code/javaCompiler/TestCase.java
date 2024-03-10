@@ -27,7 +27,8 @@ public class TestCase {
     private static ThreadLocal<ByteArrayOutputStream> baos = new ThreadLocal<>();
     private static ThreadLocal<PrintStream> printStream = new ThreadLocal<>();
 
-    public TestCase(Object targetObject, String methodName,JSONObject testcase, Object expectedOutput, int testNum, Object... parameters) {
+    public TestCase(Object targetObject, String methodName, JSONObject testcase, Object expectedOutput, int testNum,
+            Object... parameters) {
         this.targetObject = targetObject;
         this.methodName = methodName;
         this.parameters = parameters;
@@ -62,14 +63,14 @@ public class TestCase {
                 String logs = baos.get().toString();
 
                 boolean isPass = compareObjects(expectedOutput, result);
-                long duration = (endTime - startTime) / 1_000_000;
+                long duration = (endTime - startTime);
 
                 logger.info(isPass);
 
                 if (isPass) {
                     resultObject.put("Result", isPass);
                     resultObject.put("logs", logs);
-                    resultObject.put("time", "Completed in: " + duration + " ms");
+                    resultObject.put("time", "Completed in: " + duration + " ns");
 
                 } else {
                     resultObject.put("Result", isPass);
@@ -80,20 +81,21 @@ public class TestCase {
                 }
 
             } catch (Exception e) {
-                e.printStackTrace();;
+                e.printStackTrace();
+                ;
                 logger.error(e);
-            } finally{
-            	baos.remove();
-            	printStream.remove();
+            } finally {
+                baos.remove();
+                printStream.remove();
             }
-            logger.info("Test Case Number  =  "+testNum);
-            resultObject.put("name","test"+testNum);
+            logger.info("Test Case Number  =  " + testNum);
+            resultObject.put("name", "test" + testNum);
             return resultObject;
         };
     }
 
-    public static boolean compareObjects(Object a, Object b) {
-        if (a == b && !(a instanceof String) && !(b instanceof String) ) {
+    public boolean compareObjects(Object a, Object b) {
+        if (a == b && !(a instanceof String) && !(b instanceof String)) {
             return true;
         } else if (a.getClass().isArray() && b.getClass().isArray()) {
             return comparePrimitiveArrays(a, b);
@@ -119,19 +121,26 @@ public class TestCase {
 
     }
 
-    private static boolean comparePrimitiveArrays(Object a, Object b) {
+    private boolean comparePrimitiveArrays(Object a, Object b) {
         return Arrays.deepEquals((Object[]) a, (Object[]) b);
     }
 
-    private static void convertParametersType(Object[] params, Class<?>[] paramTypes) throws JSONException {
+    private void convertParametersType(Object[] params, Class<?>[] paramTypes) throws JSONException {
 
         for (int i = 0; i < params.length; i++) {
             Object parameter = params[i];
             Class<?> parameterType = parameter.getClass();
 
-            if (parameterType == Integer.class) {
+            if (parameterType == JSONArray.class) {
+                this.parameters[i] = convertJsonArrayIntoObjectArray((JSONArray) parameter);
+                parameter = this.parameters[i];
+                paramTypes[i] = getPrimitiveArrayClassType(parameter, i);
+            } else if (parameterType == Integer.class) {
                 params[i] = (int) parameter;
                 paramTypes[i] = int.class;
+            } else if (parameter instanceof String) {
+                params[i] = (String) parameter;
+                paramTypes[i] = String.class;
             } else if (parameterType == Boolean.class) {
                 params[i] = (boolean) parameter;
                 paramTypes[i] = boolean.class;
@@ -153,20 +162,113 @@ public class TestCase {
             } else if (parameterType == Short.class) {
                 params[i] = (short) parameter;
                 paramTypes[i] = short.class;
-            } else if(parameterType == JSONArray.class){
-                System.out.println("skjdbhgu    Arrays");
-                parameter = (JSONArray) parameter;
-                Object[] arr = new Object[((JSONArray) parameter).length()];
-                for(int j=0;j<((JSONArray) parameter).length();j++){
-                    arr[j] = ((JSONArray) parameter).get(j);
-                }
-                params[i] = arr;
-                paramTypes[i] = int[].class;
             } else {
-				paramTypes[i] = parameterType;
-			}
+                paramTypes[i] = parameterType;
+            }
 
         }
+
+    }
+
+    public Class<?> getPrimitiveArrayClassType(Object param, int index) {
+
+        Object[] objArray = ((Object[]) param);
+        Object firstValue = objArray[0];
+
+        if (firstValue instanceof Integer) {
+            int[] intArray = new int[objArray.length];
+
+            for (int i = 0; i < objArray.length; i++) {
+                intArray[i] = (int) objArray[i];
+            }
+            this.parameters[index] = intArray;
+
+            return int[].class;
+        } else if (firstValue instanceof String) {
+            String[] stringArray = new String[objArray.length];
+
+            for (int i = 0; i < objArray.length; i++) {
+                stringArray[i] = (String) objArray[i];
+            }
+            this.parameters[index] = stringArray;
+
+            return String[].class;
+        } else if (firstValue instanceof Boolean) {
+            Boolean[] booleanArray = new Boolean[objArray.length];
+
+            for (int i = 0; i < objArray.length; i++) {
+                booleanArray[i] = (Boolean) objArray[i];
+            }
+            this.parameters[index] = booleanArray;
+
+            return boolean[].class;
+        } else if (firstValue instanceof Byte) {
+            byte[] byteArray = new byte[objArray.length];
+
+            for (int i = 0; i < objArray.length; i++) {
+                byteArray[i] = (Byte) objArray[i];
+            }
+            this.parameters[index] = byteArray;
+
+            return byte[].class;
+        } else if (firstValue instanceof Character) {
+            char[] charArray = new char[objArray.length];
+
+            for (int i = 0; i < objArray.length; i++) {
+                charArray[i] = (Character) objArray[i];
+            }
+            this.parameters[index] = charArray;
+
+            return char[].class;
+        } else if (firstValue instanceof Double) {
+            double[] doubleArray = new double[objArray.length];
+
+            for (int i = 0; i < objArray.length; i++) {
+                doubleArray[i] = (Double) objArray[i];
+            }
+            this.parameters[index] = doubleArray;
+
+            return double[].class;
+        } else if (firstValue instanceof Float) {
+            float[] floatArray = new float[objArray.length];
+
+            for (int i = 0; i < objArray.length; i++) {
+                floatArray[i] = (Float) objArray[i];
+            }
+            this.parameters[index] = floatArray;
+
+            return float[].class;
+        } else if (firstValue instanceof Long) {
+            long[] longArray = new long[objArray.length];
+
+            for (int i = 0; i < objArray.length; i++) {
+                longArray[i] = (Long) objArray[i];
+            }
+            this.parameters[index] = longArray;
+
+            return long[].class;
+        } else if (firstValue instanceof Short) {
+            short[] shortArray = new short[objArray.length];
+
+            for (int i = 0; i < objArray.length; i++) {
+                shortArray[i] = (Short) objArray[i];
+            }
+            this.parameters[index] = shortArray;
+
+            return short[].class;
+        } else {
+            return param.getClass();
+        }
+    }
+
+    public Object[] convertJsonArrayIntoObjectArray(JSONArray paramArray) throws JSONException {
+        Object[] objectArray = new Object[paramArray.length()];
+
+        for (int i = 0; i < paramArray.length(); i++) {
+            objectArray[i] = paramArray.get(i);
+        }
+
+        return objectArray;
 
     }
 

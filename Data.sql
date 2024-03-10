@@ -321,6 +321,7 @@ insert into LanguageRelation values(1, '42887152', 'public static int reverse(St
 insert into LanguageRelation values(2, '42887152', 'def reverse(word)', '');
 insert into LanguageRelation values(2, '27624322', 'def findLargest(a):','');
 insert into LanguageRelation values(2, '54281620', 'def isEven(num):','');
+insert into LanguageRelation values(1, '54281620', 'public class kata{\n\tpublic static boolean isEven(int num){\n\n}\n}','');
 
 insert into Solutions values('12345678', 'vasanth.albert@zohocorp.com', '56873465', 'double total = 0;
     if(numbers.length == 0 || numbers == null)return total;
@@ -389,3 +390,86 @@ insert into ClanRequest(clanID, mailID) values('66423152', 'vijila@gmail.com');
 insert into ClanRequest(clanID, mailID) values('66423152', 'sorimuthu@gmail.com');
 insert into ClanRequest(clanID, mailID) values('66423152', 'rabi@gmail.com');
 insert into ClanRequest(clanID, mailID) values('66423152', 'ragavi@gmail.com');
+insert into ClanRequest(clanID, mailID) values('66423152', 'sun.a@zohocorp.com');
+insert into ClanRequest(clanID, mailID) values('66423152', 'padma@gmail.com');
+insert into LanguageRelation values(2,'73867922','def calculateFactorial(n):
+    # Your code here
+    pass','');
+INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJSON,levelID,Author,status) VALUES ('65781017', 'Count Vowels', '
+You need to write a function that counts the number of vowels in a given string. Only consider the English alphabet vowels (a, e, i, o, u), and ignore case sensitivity.
+', 'Example (Input --> Output)
+
+"hello" --> 2
+"World" --> 1
+', 'countVowels', '{"11":{"output":1,"params":{"0":"Swift"}},"12":{"output":3,"params":{"0":"JavaScript"}},"13":{"output":0,"params":{"0":"HTML & CSS"}},"14":{"output":0,"params":{"0":"PHP"}},"15":{"output":2,"params":{"0":"GoLang"}},"16":{"output":1,"params":{"0":"Rust"}},"17":{"output":2,"params":{"0":"Kotlin"}},"18":{"output":2,"params":{"0":"Scala"}},"19":{"output":1,"params":{"0":"Perl"}},"0":{"output":2,"params":{"0":"hello"}},"1":{"output":1,"params":{"0":"World"}},"2":{"output":3,"params":{"0":"Programming"}},"3":{"output":6,"params":{"0":"Python is awesome"}},"4":{"output":10,"params":{"0":"AEIOUaeiou"}},"5":{"output":5,"params":{"0":"abcdefghijklmnopqrstuvwxyz"}},"6":{"output":0,"params":{"0":""}},"7":{"output":0,"params":{"0":"1234567890"}},"8":{"output":3,"params":{"0":"Java is Fun!"}},"9":{"output":4,"params":{"0":"Ruby on Rails"}},"10":{"output":3,"params":{"0":"C++ Programming"}}}', 2, 'charu07@gmail.com', 'NOTAPPROVED')
+Select l_ID from Languages where lang_name='Java';
+insert into LanguageRelation values(1,'65781017','public class Kata {
+   public static int countVowels(String str) {
+       // Your code here
+   }
+}','');
+Select l_ID from Languages where lang_name='Python';
+insert into LanguageRelation values(2,'65781017','def countVowels(s):
+    # Your code here
+    pass','');
+INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJSON,levelID,Author,status) VALUES ('03819247', 'Find Maximum Number', '
+You need to write a function that finds the maximum number in a given array of integers.
+', 'Example (Input --> Output)
+
+[1, 3, 5, 7, 9] --> 9
+[-10, 0, 20, 30, 40] --> 40
+', 'findMax', '{"11":{"output":1,"params":{"0":[1,1,1,1,1,0,1,1,1,1]}},"12":{"output":10,"params":{"0":[1,2,3,4,5,6,7,8,9,10]}},"13":{"output":10,"params":{"0":[10,9,8,7,6,5,4,3,2,1]}},"14":{"output":9,"params":{"0":[2,5,8,4,7,1,3,6,9]}},"15":{"output":9,"params":{"0":[5,8,9,7,4,6,3,1,2]}},"16":{"output":9,"params":{"0":[9,5,2,7,3,8,1,4,6]}},"17":{"output":9,"params":{"0":[1,3,5,7,9,2,4,6,8]}},"18":{"output":9,"params":{"0":[8,6,4,2,9,7,5,3,1]}},"19":{"output":9,"params":{"0":[5,6,7,8,9,1,2,3,4]}},"0":{"output":9,"params":{"0":[1,3,5,7,9]}},"1":{"output":40,"params":{"0":[-10,0,20,30,40]}},"2":{"output":5,"params":{"0":[5,5,5,5,5]}},"3":{"output":5,"params":{"0":[-5,-3,-1,0,1,3,5]}},"4":{"output":100,"params":{"0":[100,90,80,70,60]}},"5":{"output":0,"params":{"0":[0,0,0,0,0,0,0]}},"6":{"output":5,"params":{"0":[1,2,3,4,5,4,3,2,1]}},"7":{"output":-1,"params":{"0":[-1,-2,-3,-4,-5,-4,-3,-2,-1]}},"8":{"output":1,"params":{"0":[1]}},"9":{"output":-1,"params":{"0":[-1]}},"10":{"output":0,"params":{"0":[0]}}}', 2, 'charu07@gmail.com', 'NOTAPPROVED')
+Select Tag_ID from Tags where Tag_name='Arrays';
+INSERT into TagsRelation values('03819247',1);
+Select l_ID from Languages where lang_name='Java';
+insert into LanguageRelation values(1,'03819247','public class Kata {
+   public static int findMax(int[] nums) {
+       // Your code here
+   }
+}','');
+Select l_ID from Languages where lang_name='Python';
+insert into LanguageRelation values(2,'03819247','def findMax(nums):
+    # Your code here
+    pass','');
+INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJSON,levelID,Author,status) VALUES ('03696605', 'Palindrome Check', '
+You need to write a function that checks whether a given string is a palindrome or not. A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward, ignoring spaces, punctuation, and capitalization.
+', 'Example (Input --> Output)
+
+"radar" --> true
+"Hello" --> false
+', 'isPalindrome', '{"11":{"output":true,"params":{"0":"Step on no pets"}},"12":{"output":true,"params":{"0":"12345678987654321"}},"13":{"output":false,"params":{"0":"Palindrome"}},"14":{"output":true,"params":{"0":"Eva, can I see bees in a cave?"}},"15":{"output":true,"params":{"0":"A Santa lived as a devil at NASA"}},"16":{"output":false,"params":{"0":"This is not a palindrome"}},"17":{"output":true,"params":{"0":"Was it a car or a cat I saw?"}},"18":{"output":true,"params":{"0":"Civic"}},"19":{"output":false,"params":{"0":"Not a palindrome"}},"0":{"output":true,"params":{"0":"radar"}},"1":{"output":false,"params":{"0":"Hello"}},"2":{"output":true,"params":{"0":"racecar"}},"3":{"output":true,"params":{"0":"Able was I, ere I saw Elba"}},"4":{"output":true,"params":{"0":"A man, a plan, a canal, Panama!"}},"5":{"output":true,"params":{"0":"No lemon, no melon"}},"6":{"output":true,"params":{"0":"Was it a car or a cat I saw?"}},"7":{"output":true,"params":{"0":"12321"}},"8":{"output":false,"params":{"0":"12345"}},"9":{"output":false,"params":{"0":"A man a plan a canal panama"}},"10":{"output":true,"params":{"0":"Madam, in Eden I"m Adam"}}}', 2, 'charu07@gmail.com', 'NOTAPPROVED')
+Select l_ID from Languages where lang_name='Java';
+insert into LanguageRelation values(1,'03696605','public class Kata {
+   public static boolean isPalindrome(String str) {
+       // Your code here
+   }
+}','');
+Select l_ID from Languages where lang_name='Python';
+insert into LanguageRelation values(2,'03696605','def isPalindrome(s):
+    # Your code here
+    pass','');
+INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJSON,levelID,Author,status) VALUES ('63393309', 'Sum of Digits', '
+You need to write a function that calculates the sum of the digits of a given integer.
+', 'Example (Input --> Output)
+
+123 --> 6
+4567 --> 22
+', 'sumOfDigits', '{"11":{"output":3,"params":{"0":101010}},"12":{"output":45,"params":{"0":1234567890}},"13":{"output":42,"params":{"0":2468642}},"14":{"output":39,"params":{"0":987654}},"15":{"output":45,"params":{"0":9876543210}},"16":{"output":18,"params":{"0":369}},"17":{"output":25,"params":{"0":123454321}},"18":{"output":25,"params":{"0":13579}},"19":{"output":45,"params":{"0":99999}},"0":{"output":6,"params":{"0":123}},"1":{"output":22,"params":{"0":4567}},"2":{"output":24,"params":{"0":789}},"3":{"output":30,"params":{"0":9876}},"4":{"output":3,"params":{"0":111}},"5":{"output":27,"params":{"0":999}},"6":{"output":1,"params":{"0":1000}},"7":{"output":15,"params":{"0":54321}},"8":{"output":45,"params":{"0":987654321}},"9":{"output":25,"params":{"0":13579}},"10":{"output":6,"params":{"0":111111}}}', 2, 'charu07@gmail.com', 'NOTAPPROVED')
+Select l_ID from Languages where lang_name='Java';
+insert into LanguageRelation values(1,'63393309','public class Kata {
+   public static int sumOfDigits(int n) {
+       // Your code here
+   }
+}','');
+Select l_ID from Languages where lang_name='Python';
+insert into LanguageRelation values(2,'63393309','def sumOfDigits(n):
+    # Your code here
+    pass','');
+insert into ClanRequest(clanID, mailID) values('66423152', 'sundari@gmail.com');
+delete from ClanRequest where clanID like '66423152' and mailID like 'vijila@gmail.com';
+insert into ClanRelation (clanID, mailID) values('66423152', 'vijila@gmail.com');
+insert into ClanRequest(clanID, mailID) values('66423152', 'sundari@gmail.com');
+delete from ClanRequest where clanID like '66423152' and mailID like 'sorimuthu@gmail.com';
+insert into ClanRelation (clanID, mailID) values('66423152', 'sorimuthu@gmail.com');
+delete from ClanRequest where clanID like '66423152' and mailID like 'ragavi@gmail.com';
+insert into ClanRelation (clanID, mailID) values('66423152', 'ragavi@gmail.com');

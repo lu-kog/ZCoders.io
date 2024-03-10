@@ -4,7 +4,7 @@ public class Query {
 
 	public static final String DepromoteAsMember = "";
 	
-	public static final String GetAllRequestsOfClan = "select * from ClanRequest where clanID like ?;";
+	public static final String GetAllRequestsOfClan = "select c.clanID, u.userName, u.mailID, u.score, u.streak from ClanRequest c join Users u on c.mailID = u.mailID where clanID like ?;";
 	
 	public static final String validateSession = "select sessionID from Session where mailID like ?";
 	
@@ -188,9 +188,13 @@ public class Query {
 
     public static final String getLanguageID = "Select l_ID from Languages where lang_name=?;";
 
-	public static final String getClansAndScores = "select clanName, COALESCE(SUM(Users.score), 0) AS total_score, ClanRelation.mailID from Clan left join ClanRelation on Clan.clanID = ClanRelation.clanID left join Users on ClanRelation.mailID = Users.mailID where role like '%ADMIN%' group by Clan.clanName order by total_score desc";
+	public static final String getClansAndScores = "select c.clanID, c.clanName, COALESCE(SUM(Users.score), 0) AS total_score, ClanRelation.mailID from Clan c left join ClanRelation on c.clanID = ClanRelation.clanID left join Users on ClanRelation.mailID = Users.mailID where role like '%ADMIN%' group by c.clanName order by total_score desc;";
 
 	public static final String getSolutionDates = "select solDate from Solutions where mailID like ?";
 
-	
+	public static final String joinTournament = "insert into Tournament (mailID, Start_time, Q_ID, Date) values (?,?,?,?)";
+
+	public static final String submitTournament = "UPDATE Tournament SET Submit_time = ?, Solution = ?, Score = ? WHERE mailID = ?";	
+
+	public static final String leaderBoard = "SELECT mailID FROM Tournament ORDER BY Score DESC";
 }

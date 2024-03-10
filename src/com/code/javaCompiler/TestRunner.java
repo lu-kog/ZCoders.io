@@ -86,8 +86,7 @@ public class TestRunner {
 		JSONObject results = new JSONObject();
 		Iterator<Callable<JSONObject>> tasksCall = tasks.iterator();
 		ExecutorService executor = Executors.newSingleThreadExecutor();
-		System.out.println("Code Current");
-		System.out.println(readFromFile("/home/workspace/Coders.io/src/tmp/vsr/kata.java"));
+
 		i = 0;
 		long startTime = System.currentTimeMillis();
 		while (tasksCall.hasNext() && ((System.currentTimeMillis() - startTime) < 12000)) {
@@ -95,7 +94,7 @@ public class TestRunner {
 
 			try {
 				executor.execute(futureTask);
-				JSONObject ExecResult = futureTask.get(12000, TimeUnit.MILLISECONDS); 
+				JSONObject ExecResult = futureTask.get(3000, TimeUnit.MILLISECONDS); 
 				logger.info("Test Case "+ ExecResult.get("name")+" Result:"+ExecResult);
 
                 ExecResult.put("test"+i , testCasesJson.getJSONObject(i+""));
@@ -107,18 +106,18 @@ public class TestRunner {
 				futureTask.cancel(true); // cancel the task
 				JSONObject resultObject = new JSONObject();
 				resultObject.put("Result", false);
-                resultObject.put("message", "Execution timed out: 12000ms");
+                resultObject.put("message", "Execution timed out: 3000ms");
                 resultObject.put("logs", "");
 				results.put("test"+i+"", resultObject);
 				break;
 			} catch (InterruptedException | ExecutionException e) {
 				JSONObject resultObject = new JSONObject();
 				resultObject.put("Result", false);
-                resultObject.put("message", "Run time exception: "+e);
+                resultObject.put("message", "Exception: "+e);
                 resultObject.put("logs", "");
                 resultObject.put("test"+i, testCasesJson.getJSONObject(i+""));
 				results.put("test"+i+"", resultObject);
-				break;
+				
 			}
 
 			
@@ -126,9 +125,11 @@ public class TestRunner {
 
 
 		System.setOut(originalOut);
-		System.out.println(results);
+		executor.shutdown();
+	
+		long endTime = System.currentTimeMillis();
 		logger.info("All testcases invoked - user:" + userName + " Question - " + questionID);
-
+		results.put("ExecTime", endTime - startTime);
 		return results;
 
 	}

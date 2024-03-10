@@ -1,47 +1,79 @@
 package com.tournament.filters;
 
 import java.io.IOException;
+import java.sql.Timestamp;
 
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import java.time.LocalTime;
 import org.apache.log4j.Logger;
 import org.json.JSONObject;
+import org.python.antlr.PythonParser.return_stmt_return;
 
 import utils.CommonLogger;
 import utils.JSON;
-import com.tournament.TournamentDAO;
+
+@WebFilter("/v1/join")
+public class JoinTournamentFilter extends HttpFilter implements Filter {
+ 
+    public JoinTournamentFilter() {
+        super();
+    }
+
+    public void destroy() {
+    }
+    
+    static Logger logger = new CommonLogger(JoinTournamentFilter.class).getLogger();
+
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+            throws IOException, ServletException {
+
+        
+        Timestamp joinTime = new Timestamp(System.currentTimeMillis());
+        final LocalTime endTime = LocalTime.of(20, 0); // 8:00 PM
 
 
-public class JoinTournament extends HttpServlet {
+        try {
+            String mailID = request.getParameter("mailID");
+            boolean canJoinTournament = isTournamentJoinable(joinTime, endTime);
 
-	static Logger logger = new CommonLogger(JoinTournament.class).getLogger();
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		String mailId = request.getParameter("mailId");
-		String Q_ID = request.getParameter("Q_ID");
-		
-		try {
-			boolean isJoined = TournamentDAO.getObj().isJoin(mailId, Q_ID);
-			
-			if(isJoined) {
-				logger.info(mailId + " joined in the tournament");
-				JSONObject resObj = JSON.Create(200, mailId + " joined in the tournament");
-				response.getWriter().write(resObj.toString());
-			}
-			else {
-				throw new Exception("Sorry! Something went wrong");
-			}
-		}
-		catch(Exception e) {
-			logger.error(mailId + " does not join in the tournament");
-			JSONObject errObj = JSON.Create(400, mailId + " does not join in the tournament");
-			response.getWriter().write(errObj.toString());
-		}
-		
+            boolean alreadyParticipated = checkIfHeAlreadyParticipated(mailID);
+
+            if(alreadyParticipated){
+                throw new Exception("Sorry, You already participated!");
+            }
+            if (canJoinTournament) {
+                chain.doFilter(request, response);
+            } else {
+                JSONObject errRes = JSON.Create(400, "Sorry, can't join the tournament.");
+                response.getWriter().write(errRes.toString());
+            }
+        } catch (Exception e) {
+            logger.error("Error on join tournament filter - ", e);
+            JSONObject errRes = JSON.Create(400,
+                    "Error on joining tournament: " + e.getMessage());
+            response.getWriter().write(errRes.toString());
+        }
+    }
+
+    private boolean checkIfHeAlreadyParticipated(String mailID) {
+        return false;
 	}
 
+	public void init(FilterConfig fConfig) throws ServletException {
+    }
+
+    private boolean isTournamentJoinable(Timestamp joinTime, LocalTime endTime) {
+        LocalTime joinLocalTime = joinTime.toLocalDateTime().toLocalTime();
+        return joinLocalTime.isBefore(endTime);
+    }
 }

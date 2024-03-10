@@ -19,7 +19,7 @@ import utils.JSON;
 /**
  * Servlet implementation class LeftFromClan
  */
-// @WebServlet("/LeftFromClan")
+ @WebServlet("/v1/LeftFromClan")
 public class LeftFromClan extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

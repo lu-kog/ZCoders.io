@@ -497,13 +497,13 @@ public class ClanDAO {
 			ResultSet results = pstmt.executeQuery();
 			JSONArray requests = new JSONArray();
 
-			System.out.println(results.next());
-
+			System.out.println("asdfghjklkjhgfdsdfghjk"+results.next());
+	System.out.println(pstmt.toString());
 			while(results.next()) {
 				System.out.println("clan result");
 				JSONObject req = new JSONObject();
 				req.put("name", results.getString("userName"));
-				req.put("mailID", results.getInt("mailID"));
+				req.put("mailID", results.getString("mailID"));
 				req.put("score", results.getString("score"));
 				req.put("streak", results.getString("streak"));
 
@@ -518,6 +518,7 @@ public class ClanDAO {
 			System.out.println("clanData"+clanData);
 			return clanData;
 		} catch (Exception e) {
+			e.printStackTrace();
 			throw new Exception("Oops! Error on fetching clan details");
 		}
 		
@@ -638,6 +639,7 @@ public class ClanDAO {
 			while(rs.next()) {
 				JSONObject clanDetailsObj = new JSONObject();
 				clanDetailsObj.put("clanName", rs.getString("clanName"));
+				clanDetailsObj.put("clanID", rs.getString("clanID"));
 				clanDetailsObj.put("score", rs.getString("total_score"));
 				mailID = rs.getString("ClanRelation.mailID");
 				clanDetailsObj.put("mailID", mailID);
