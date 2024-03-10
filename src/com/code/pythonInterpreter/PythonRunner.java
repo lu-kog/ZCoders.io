@@ -34,7 +34,9 @@ public class PythonRunner{
 //			interpreter.execfile(
 //					"/home/vasanth-zstk361/Downloads/Coders.io/src/main/webapp/python/problems/evenOrOdd/evenOrOdd_test.py");
 			PyObject pyFunction = interpreter.get(definitionName);
+			long stTime = System.nanoTime();
 			PyObject function = pyFunction.__call__(new PyObject[] {});
+			long endTime = System.nanoTime();
 			System.out.println("Output : "+jsonobj.get("output") + "   "+jsonobj.get("output").getClass().getName());
 			if(jsonobj.get("output") instanceof String){
 				System.out.println("String");
@@ -59,6 +61,7 @@ public class PythonRunner{
 				resultjson.put("output", result);
 			}
 			resultjson.put("Print", outputStream.toString());
+			resultjson.put("Executed In", (endTime-stTime)+"ns");
 		} catch (Exception e) {
 			String error = e.getMessage();
 			resultjson.put("Result", false);

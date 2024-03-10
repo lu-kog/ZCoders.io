@@ -19,7 +19,7 @@ import utils.JSON;
 /**
  * Servlet implementation class DePromoteAsMember
  */
-// @WebServlet("/dePromoteAsMember")
+@WebServlet("/dePromoteAsMember")
 public class DePromoteAsMember extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

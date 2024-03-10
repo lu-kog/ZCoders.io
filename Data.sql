@@ -64,6 +64,7 @@ INSERT INTO ClanRelation (clanID, mailID, role) VALUES
 (66423152, 'amos@gmail.com', 'Member'),
 (66423152, 'kumaravel@gmail.com', 'Member'),
 (66423152, 'mahalakshmi@gmail.com', 'Member'),
+(66423152, 'santhiya@gmail.com', 'Member'),
 (66423152,'charu07@gmail.com','MEMBER');
 -- INSERT INTO ClanRelation (clanID, mailID, role) VALUES
 -- (78320745, 'mathimaran@gmail.com', 'Member'),
@@ -77,7 +78,6 @@ INSERT INTO ClanRelation (clanID, mailID, role) VALUES
 
 -- INSERT INTO ClanRelation (clanID, mailID, role) VALUES
 -- (40378295, 'rahul@gmail.com', 'Member'),
--- (40378295, 'santhiya@gmail.com', 'Member'),
 -- (40378295, 'saranesh@gmail.com', 'Member'),
 -- (40378295, 'sun@gmail.com', 'Member'),
 -- (40378295, 'sundari@gmail.com', 'Member'),

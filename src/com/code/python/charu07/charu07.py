@@ -1,2 +1,2 @@
-def isEven(num):
-	return num%2==0
+def reverse(word):
+	return word[::-1]

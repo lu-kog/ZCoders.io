@@ -23,7 +23,7 @@ import utils.JSON;
 /**
  * Servlet Filter implementation class KickoutUserFromClan
  */
-// @WebFilter("/KickoutMemberFromClan")
+@WebFilter("/KickoutMemberFromClan")
 public class KickoutUserFromClanFilter extends HttpFilter implements Filter {
        
     private static final long serialVersionUID = 1L;

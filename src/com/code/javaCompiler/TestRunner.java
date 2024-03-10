@@ -27,7 +27,7 @@ import utils.JSON;
 
 public class TestRunner {
 	static Logger logger = new CommonLogger(TestRunner.class).getLogger();
-
+	public long executionTime;
 	public JSONObject runner(String userName, String questionID, String methodName, JSONObject testCasesJson)
 			throws Exception {
 		String className = "kata";
@@ -129,7 +129,8 @@ public class TestRunner {
 	
 		long endTime = System.currentTimeMillis();
 		logger.info("All testcases invoked - user:" + userName + " Question - " + questionID);
-		results.put("ExecTime", endTime - startTime);
+		// results.put("ExecTime", endTime - startTime);
+		executionTime = endTime-startTime;
 		return results;
 
 	}

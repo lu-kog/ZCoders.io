@@ -93,9 +93,8 @@ public class TestSolution extends HttpServlet {
 
 				logger.info("Test solution JSON response Successfully!!!");
 				JSONObject resultJson = new JSONObject();
-				System.out.println(solution.getLanguage());
+				
 				if(solution.getLanguage().equals("Java")) {
-					System.out.print("JAva        sdihgioa");
 					Compiler compiler = new Compiler();
 					JSONObject compilation = compiler.compile(solution.getUser().getUserName(), solution.getCode(), "Calculator");
 					boolean isCompiled = compilation.getBoolean("status");
@@ -108,28 +107,29 @@ public class TestSolution extends HttpServlet {
 						// username, solutionID, funcName, testCases - to call test runner
 						JSONObject resJsonObject = (JSONObject) run.runner(solution.getUser().getUserName(), solution.getQuestion().getQuestionID(), solution.getQuestion().getfunctionName(), testCases);
 						resultJson.put("result",resJsonObject);
+					resultJson.put("executionTime", run.executionTime+"ms");
 					}
 					else {
-						throw new Exception("Compilation error!");
+						throw new Exception(compilation.toString());
 					}
 				}
 				else if(solution.getLanguage().equals("Python")) {
-					System.out.println("Python skjdbv");
 					Python pyRunner = new Python();
 					resultJson.put("StatusCode",200);
 					JSONObject resJsonObject = pyRunner.runner(solution);
 					resultJson.put("result",resJsonObject);
+					resultJson.put("executionTime", pyRunner.executionTime+"ms");
 				}
+				
 				System.out.print("Output");
 				System.out.print(resultJson);
 				response.getWriter().write(resultJson.toString());
 			} else {
-				logger.error("something went wrong for the problem");
-				throw new Exception("something went wrong for the problem");
+				logger.error("Language not matched!");
+				throw new Exception("Error on getting language of solution");
 			}
 		} catch (Exception e) {
-			 e.printStackTrace();
-			logger.error("something went wrong for the problem" + e);
+			logger.error("Error on test solution: " + e);
 			JSONObject errorResponse = JSON.Create(400, e.getMessage());
 			response.getWriter().write(errorResponse.toString());
 		}

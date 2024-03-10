@@ -14,6 +14,7 @@ import org.json.JSONObject;
 import com.solution.Solution;
 
 public class Python {
+    public long executionTime;
 	public JSONObject runner(Solution solution) throws IOException, JSONException, ParseException {
 
 		String questionName = "evenOrOdd";
@@ -61,6 +62,7 @@ public class Python {
         	json.put(name+i, pr);
         	i++;
         }
+        executionTime = run.executionTime;
         return (JSONObject)json;
 	}
 }

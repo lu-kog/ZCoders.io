@@ -75,6 +75,6 @@ public class SubmitTournamentFilter extends HttpFilter implements Filter {
     private boolean isSubmissionValid(Timestamp submitTime, LocalTime endTime) {
         
         LocalTime submitLocalTime = submitTime.toLocalDateTime().toLocalTime();
-        return !submitLocalTime.isAfter(endTime);
+        return submitLocalTime.isBefore(endTime);
     }
 }

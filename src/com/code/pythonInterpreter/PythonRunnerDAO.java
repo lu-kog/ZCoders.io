@@ -20,6 +20,7 @@ import com.solution.Solution;
 public class PythonRunnerDAO {
 	JSONObject testCases;
 	Solution solution;
+	long executionTime;
 	public PythonRunnerDAO(JSONObject testCases,Solution solution) {
 		super();
 		this.testCases = testCases;
@@ -29,6 +30,7 @@ public class PythonRunnerDAO {
 	public List<JSONObject> runner() throws ParseException, InterruptedException, ExecutionException, JSONException {
 		List<JSONObject> result = new ArrayList<JSONObject>();
 		System.setProperty("python.import.site", "false");
+		long stTime = System.currentTimeMillis();
 		for(int i=0;i<testCases.length();i++) {
 	    	PythonInterpreter interpreter = new PythonInterpreter();
 			ByteArrayOutputStream errStream = new ByteArrayOutputStream();
@@ -88,6 +90,8 @@ public class PythonRunnerDAO {
 				result.add(resultjson);
 			}
 		}
+		long endTime = System.currentTimeMillis();
+		executionTime = endTime-stTime;
         return result;
 	}
 

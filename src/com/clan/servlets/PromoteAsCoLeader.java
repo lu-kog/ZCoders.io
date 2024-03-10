@@ -19,7 +19,7 @@ import utils.JSON;
 /**
  * Servlet implementation class PromoteAsCoLeader
  */
-// @WebServlet("/AdminAction/promoteAsCoLeader")
+@WebServlet("/AdminAction/promoteAsCoLeader")
 public class PromoteAsCoLeader extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

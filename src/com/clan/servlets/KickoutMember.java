@@ -19,7 +19,7 @@ import utils.JSON;
 /**
  * Servlet implementation class KickoutMember
  */
-// @WebServlet("/KickoutMemberFromClan")
+@WebServlet("/KickoutMemberFromClan")
 public class KickoutMember extends HttpServlet {
 	private static final long serialVersionUID = 1L;
       

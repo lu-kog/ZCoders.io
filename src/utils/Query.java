@@ -2,7 +2,7 @@ package utils;
 
 public class Query {
 
-	public static final String DepromoteAsMember = "";
+	public static final String DepromoteAsMember = "update ClanRelation set role = 'MEMBER' where mailID = ? AND clanID = ?;";
 	
 	public static final String GetAllRequestsOfClan = "select c.clanID, u.userName, u.mailID, u.score, u.streak from ClanRequest c join Users u on c.mailID = u.mailID where clanID like ?;";
 	

@@ -15,7 +15,7 @@ import utils.CommonLogger;
 import utils.JSON;
 import com.tournament.TournamentDAO;
 
-@WebServlet("/v1/join")
+@WebServlet("/v1/joinTournament")
 public class JoinTournament extends HttpServlet {
 
 	static Logger logger = new CommonLogger(JoinTournament.class).getLogger();
@@ -26,7 +26,7 @@ public class JoinTournament extends HttpServlet {
 		String Q_ID = request.getParameter("Q_ID");
 		
 		try {
-			boolean isJoined = TournamentDAO.getObj().isJoin(mailId, Q_ID);
+			boolean isJoined = TournamentDAO.getObj().joinTournament(mailId, Q_ID);
 			
 			if(isJoined) {
 				logger.info(mailId + " joined in the tournament");
