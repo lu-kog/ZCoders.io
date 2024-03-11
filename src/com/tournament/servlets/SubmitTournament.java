@@ -22,11 +22,8 @@ public class SubmitTournament extends HttpServlet {
 		
 		String solution = request.getParameter("Sol_ID");
 		String mailID = request.getParameter("mailID");
-		String timeDifferenceStr = request.getParameter("timeDifference");
-		long timeDifferenceMillis = Long.parseLong(timeDifferenceStr);
-		long timeDifferenceMinutes = timeDifferenceMillis / (1000 * 60);
-		String executionTimeStr = request.getParameter("executionTime");
-		long executionTimeMillis = Long.parseLong(executionTimeStr);
+		double executionTimeMillis = 1.0;
+		long timeDifferenceMinutes = 1;
 
 		double score = calculateScore(timeDifferenceMinutes, executionTimeMillis);
 		
@@ -49,9 +46,12 @@ public class SubmitTournament extends HttpServlet {
 		}
 	}
 	
-	private double calculateScore(long timeDifferenceMinutes, long executionTimeMillis) {
+	private double calculateScore(long timeDifferenceMinutes, double executionTimeMillis) {
 		
 		return timeDifferenceMinutes * executionTimeMillis / 1000000;
 	}
 
+	
+
 }
+

@@ -78,7 +78,7 @@ create table Levels(
 
 CREATE table Questions
 (
-    Q_ID varchar(8)primary key,
+    Q_ID varchar(8) primary key,
     Q_name varchar(100),
     description text,
     example text,
@@ -87,6 +87,7 @@ CREATE table Questions
     levelID tinyint,
     Author varchar(30),
     status enum('APPROVED', 'NOTAPPROVED') default 'NOTAPPROVED',
+	questionType enum('PRACTICE','TOURNAMENT') default 'PRACTICE',
     FOREIGN KEY(Author) REFERENCES Users(mailID),
     FOREIGN KEY(levelID) REFERENCES Levels(levelID)
 );
@@ -115,6 +116,7 @@ CREATE table Solutions
 	Sol text,
 	lang_ID int,
 	solDate date,
+	Execution_time double,
 	status enum('ATTEMPTED', 'COMPLETED'),
 	solvedType enum('PRACTICE','TOURNAMENT'),
 	FOREIGN KEY(lang_ID) REFERENCES Languages(l_ID),
@@ -138,16 +140,21 @@ CREATE table TagsRelation
 
 CREATE TABLE Tournament
 (
-    mailID VARCHAR(30) UNIQUE,
-    Join_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    Submit_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    mailID VARCHAR(30),
+    Join_time TIMESTAMP,
+    Submit_time TIMESTAMP,
     Date DATE,
-    Code TEXT,
-	Score double, 
-    Q_ID VARCHAR(8),
-	Execution_time TIME,
-    FOREIGN KEY(Q_ID) REFERENCES Questions(Q_ID),
-    FOREIGN KEY(mailID) REFERENCES Users(mailID)
+    Sol_ID varchar(8),
+	Score double,
+    FOREIGN KEY(mailID) REFERENCES Users(mailID),
+	FOREIGN KEY(Sol_ID) REFERENCES Solutions(Sol_ID)
+);
+
+
+CREATE TABLE TournamentQuestionRelation(
+	Date DATE primary key,
+	Q_ID varchar(8),
+	FOREIGN KEY(Q_ID) REFERENCES Questions(Q_ID)
 );
 
 

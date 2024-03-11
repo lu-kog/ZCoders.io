@@ -22,7 +22,7 @@ import org.python.antlr.PythonParser.return_stmt_return;
 import utils.CommonLogger;
 import utils.JSON;
 
-@WebFilter("/v1/join")
+@WebFilter("/v1/joinTournament")
 public class JoinTournamentFilter extends HttpFilter implements Filter {
  
     public JoinTournamentFilter() {
@@ -37,14 +37,14 @@ public class JoinTournamentFilter extends HttpFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
 
-        
+        final LocalTime startTime = LocalTime.of(18, 0); // 6:00 PM
         Timestamp joinTime = new Timestamp(System.currentTimeMillis());
         final LocalTime endTime = LocalTime.of(20, 0); // 8:00 PM
 
 
         try {
             String mailID = request.getParameter("mailID");
-            boolean canJoinTournament = isTournamentJoinable(joinTime, endTime);
+            boolean canJoinTournament = isTournamentJoinable(joinTime,startTime , endTime);
 
             boolean alreadyParticipated = checkIfHeAlreadyParticipated(mailID);
 
@@ -72,8 +72,8 @@ public class JoinTournamentFilter extends HttpFilter implements Filter {
 	public void init(FilterConfig fConfig) throws ServletException {
     }
 
-    private boolean isTournamentJoinable(Timestamp joinTime, LocalTime endTime) {
+    private boolean isTournamentJoinable(Timestamp joinTime, LocalTime startTime, LocalTime endTime) {
         LocalTime joinLocalTime = joinTime.toLocalDateTime().toLocalTime();
-        return joinLocalTime.isBefore(endTime);
+        return (joinLocalTime.isBefore(endTime) && joinLocalTime.isAfter(startTime));
     }
 }

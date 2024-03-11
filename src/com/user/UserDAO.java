@@ -449,7 +449,7 @@ public class UserDAO {
                 userName = result.getString("userName");
                 return userName;
 			}else {
-				throw new Exception("User not found!");
+				throw new Exception("name - User not found!");
 			}		
 			
 		} catch (Exception e) {
@@ -470,7 +470,7 @@ public class UserDAO {
                 score = result.getString("score");
                 return score;
 			}else {
-				throw new Exception("User not found!");
+				throw new Exception("sc - User not found!");
 			}		
 			
 		} catch (Exception e) {
@@ -493,7 +493,7 @@ public class UserDAO {
     			logger.info("clanName " + clanName);
     			return clanName;
 			} else {
-    			throw new Exception("User not found!");
+    			throw new Exception("clan - User not found!");
 			}
 	
 			
@@ -633,7 +633,32 @@ public class UserDAO {
     }
     
     
+	
 }
+
+
+	public String getMailIDFromUserName(String userName) throws Exception{
+
+		String mailID = null;
+
+		try{
+			PreparedStatement pstmt = connection.prepareStatement(Query.getMailIDFromUserName);
+			pstmt.setString(1, userName);
+
+			ResultSet rs = pstmt.executeQuery();
+
+			if(rs.next()){
+				logger.info("MailId got successfully.");
+				mailID = rs.getString("mailID");
+			}
+		}
+		catch(Exception e){
+			logger.error("Error on get mailID : " + e);
+			throw new Exception("Failed to get mailID");
+		}
+
+		return mailID;
+	}
 
 
 	// public boolean isAdmin(String mailID){

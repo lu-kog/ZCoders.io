@@ -23,23 +23,16 @@ public class JoinTournament extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String mailId = request.getParameter("mailId");
-		String Q_ID = request.getParameter("Q_ID");
 		
+		JSONObject questionDetails = new JSONObject();
+
 		try {
-			boolean isJoined = TournamentDAO.getObj().joinTournament(mailId, Q_ID);
-			
-			if(isJoined) {
-				logger.info(mailId + " joined in the tournament");
-				JSONObject resObj = JSON.Create(200, mailId + " joined in the tournament");
-				response.getWriter().write(resObj.toString());
-			}
-			else {
-				throw new Exception("Sorry! Something went wrong");
-			}
+			questionDetails = TournamentDAO.getObj().joinTournament(mailId);
+			response.getWriter().write(questionDetails.toString());
 		}
 		catch(Exception e) {
-			logger.error(mailId + " does not join in the tournament");
-			JSONObject errObj = JSON.Create(400, mailId + " does not join in the tournament");
+			logger.error(mailId + " does not join in the tournament"+" error:"+e);
+			JSONObject errObj = JSON.Create(400, mailId + " can't join in the tournament");
 			response.getWriter().write(errObj.toString());
 		}
 		

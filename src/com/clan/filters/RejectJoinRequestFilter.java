@@ -22,7 +22,7 @@ import utils.JSON;
 /**
  * Servlet Filter implementation class RejectJoinRequest
  */
-@WebFilter("/RejectJoinRequest")
+@WebFilter("/v1/RejectJoinRequest")
 public class RejectJoinRequestFilter extends HttpFilter implements Filter {
        
     private static final long serialVersionUID = 1L;

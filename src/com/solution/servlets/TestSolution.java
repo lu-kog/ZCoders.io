@@ -107,7 +107,8 @@ public class TestSolution extends HttpServlet {
 						// username, solutionID, funcName, testCases - to call test runner
 						JSONObject resJsonObject = (JSONObject) run.runner(solution.getUser().getUserName(), solution.getQuestion().getQuestionID(), solution.getQuestion().getfunctionName(), testCases);
 						resultJson.put("result",resJsonObject);
-					resultJson.put("executionTime", run.executionTime+"ms");
+						resultJson.put("executionTime", run.executionTime+"ms");
+						solutionDao.addExecutionTime(run.executionTime,solution.getSolID());
 					}
 					else {
 						throw new Exception(compilation.toString());
@@ -119,6 +120,7 @@ public class TestSolution extends HttpServlet {
 					JSONObject resJsonObject = pyRunner.runner(solution);
 					resultJson.put("result",resJsonObject);
 					resultJson.put("executionTime", pyRunner.executionTime+"ms");
+						solutionDao.addExecutionTime(pyRunner.executionTime,solution.getSolID());
 				}
 				
 				System.out.print("Output");

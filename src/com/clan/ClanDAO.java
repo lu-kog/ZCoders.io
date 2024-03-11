@@ -481,6 +481,7 @@ public class ClanDAO {
 			while(res.next()) {
 				JSONObject member = new JSONObject();
 				member.put("memberName", res.getString("userName"));
+				member.put("memberID",res.getString("mailID"));
 				member.put("score", res.getInt("score"));
 				member.put("role", res.getString("role"));
 				member.put("profile", "https://coders-io.zcodeusers.in/images/"+res.getString("userName")+".jpg");

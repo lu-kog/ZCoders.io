@@ -19,7 +19,7 @@ import utils.JSON;
 /**
  * Servlet implementation class RejectJoinRequest
  */
-// @WebServlet("/RejectJoinRequest")
+@WebServlet("/v1/RejectJoinRequest")
 public class RejectJoinRequest extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

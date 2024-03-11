@@ -9,6 +9,9 @@ import utils.sqlFile;
 import org.apache.log4j.Logger;
 import java.sql.Timestamp;
 import org.json.JSONObject;
+import java.time.Duration;
+import java.time.LocalDateTime;
+
 import java.sql.ResultSet;
 
 public class TournamentDAO {
@@ -23,25 +26,57 @@ public class TournamentDAO {
     }  
 
 
-    public boolean joinTournament(String mailID, String Q_ID) throws Exception {
+    public JSONObject joinTournament(String mailID) throws Exception {
 		 
+		String Q_ID = null;
+
+		JSONObject tournamentQuestionDetails = new JSONObject();
+
 		 try {
-			 PreparedStatement pstmt = connection.prepareStatement(Query.joinTournament);
-			 pstmt.setString(1, mailID);
+
+			PreparedStatement pstmt = connection.prepareStatement(Query.getQuestionsForTournament);
+			java.sql.Date currentDate = new java.sql.Date(System.currentTimeMillis());
+			pstmt.setDate(1, currentDate);
+
+			ResultSet rs = pstmt.executeQuery();
+
+			if(rs.next()){
+				
+				Q_ID = rs.getString("Q_ID");
+			}
+			else{
+				Q_ID = generateTournamentQuestions();
+			}
+			
+			 PreparedStatement pstmt2 = connection.prepareStatement(Query.joinTournament);
+			 pstmt2.setString(1, mailID);
 			 Timestamp currentTimestamp = new Timestamp(System.currentTimeMillis());
-			 pstmt.setTimestamp(2, currentTimestamp);
-			 pstmt.setString(3,Q_ID);
+			 pstmt2.setTimestamp(2, currentTimestamp);
+
+			 pstmt2.setString(3,Q_ID);
 			 
-			 java.sql.Date currentDate = new java.sql.Date(System.currentTimeMillis());
-			 pstmt.setDate(4, currentDate);
+			 java.sql.Date currentDate2 = new java.sql.Date(System.currentTimeMillis());
+			 pstmt2.setDate(4, currentDate2);
 			 
-			 int rs = pstmt.executeUpdate();
+			 int rs2 = pstmt2.executeUpdate();
 			 
-			 if(rs > 0)
+			 if(rs2 > 0)
 			 {
+				 PreparedStatement pstmt3 = connection.prepareStatement(Query.getQuestionDetailsForTournament);
+				 pstmt3.setString(1, Q_ID);
+
+				 ResultSet rs3 = pstmt3.executeQuery();
+
+				if(rs3.next()){
+				 	sqlFile.append(pstmt.toString());
+					
+					tournamentQuestionDetails.put("questionName", rs.getString("Q_name"));
+					tournamentQuestionDetails.put("questionDescription", rs.getString("description"));
+					tournamentQuestionDetails.put("questionSyntax", rs.getString("functionString"));
+				}
+
 				 logger.info(mailID + " joined in the tournament");
-				 sqlFile.append(pstmt.toString());
-				 return true;
+				 
 			 }
 			 
 		 }
@@ -49,7 +84,7 @@ public class TournamentDAO {
 			 logger.error("Error on join tournament : " + e);
 			 throw new Exception("Can't join tournament");
 		 }
-		 return false;
+		 return tournamentQuestionDetails;
 	 }
 
 
@@ -104,5 +139,74 @@ public class TournamentDAO {
 		    
 		    return rankingObject;
 		}
+
+
+
+		public String generateTournamentQuestions() throws Exception{
+
+			String Q_ID = null;
+
+			try{
+				PreparedStatement pstmt = connection.prepareStatement(Query.generateQuestionsForTournament);
+				ResultSet rs = pstmt.executeQuery();
+
+				if(rs.next()){
+					logger.info("Question collected successfully.");
+					Q_ID = rs.getString("Q_ID");
+				}
+				else{
+					logger.error("Failed to collect question.");
+				}
+
+				PreparedStatement pstmt2 = connection.prepareStatement(Query.addQuestionsForTournament);
+				java.sql.Date currentDate = new java.sql.Date(System.currentTimeMillis());
+				pstmt2.setDate(1, currentDate);
+				pstmt2.setString(2, Q_ID);
+
+				int rs1 = pstmt2.executeUpdate();
+
+				if(rs1 > 0){
+					logger.info("Question added successfully");
+					sqlFile.append(pstmt.toString());
+				}
+				else{
+					logger.error("Failed to add question.");
+				}
+			}
+			catch(Exception e){
+				logger.error("Error on generate tournament question : " + e);
+				throw new Exception("Can't generate questions. Please try again!");
+			}
+
+			return Q_ID;
+		}
+
+
+		public long timeDifference(String mailID) throws Exception{
+
+			 long timeDiff = -1; 
+
+			try{
+				PreparedStatement pstmt = connection.prepareStatement("select Join_time from Tournament where mailID = ?");
+				pstmt.setString(1, mailID);
+
+				ResultSet rs = pstmt.executeQuery();
+
+				if(rs.next()){
+					LocalDateTime joinTime = rs.getTimestamp("Join_time").toLocalDateTime();
+                	LocalDateTime currentTime = LocalDateTime.now();
+
+					//calculate time difference
+					Duration duration = Duration.between(joinTime, currentTime);
+                	timeDiff = duration.toMinutes();
+				}
+			}
+			catch(Exception e){
+				logger.error("Error on calculating time : " + e);
+				throw new Exception("Error on calculating time : " + e.getMessage());
+			}
+
+			return timeDiff;
+	}
 
 }

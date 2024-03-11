@@ -9,6 +9,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpFilter;
+import javax.servlet.http.HttpServletResponse;
 
 import utils.CommonLogger;
 import org.apache.log4j.Logger;
@@ -53,26 +54,40 @@ public class LoginValidationFilter extends HttpFilter implements Filter {
 		 * null, "" check, Validate on DB.
 		 * Chain with LoginUser
 		 */
-		
+		HttpServletResponse httpResponse = (HttpServletResponse) response;
+        
+        // Set CORS headers
+        httpResponse.setHeader("Access-Control-Allow-Origin", "*");
+        httpResponse.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+        httpResponse.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+        httpResponse.setHeader("Access-Control-Allow-Credentials", "true");
+        httpResponse.setHeader("Access-Control-Max-Age", "3600");
 		
 
 		Logger logger = new CommonLogger(LoginValidationFilter.class).getLogger();
 	
+		String userName = request.getParameter("userName");
 		String mailID = request.getParameter("mailID");
 	    String passwd = request.getParameter("passwd");
 		System.out.println(mailID+"   " +passwd);
 		try{
-				if (mailID == null || mailID.trim().isEmpty() || passwd == null || passwd.trim().isEmpty() || (!validMailID(mailID))) {
+				if(userName != "" || userName != null || userName != "undefined"){
+					if(validUserName(userName)){
+						mailID = setMailFromUserName(userName);
+						request.setAttribute("mailID", mailID);
+					}
+				}
+				if ((!validMailID(mailID))) {
 
-				Logger.getLogger(LoginValidationFilter.class).error("Login credentials failed:"+mailID+" pass:"+passwd);
-				JSONObject errJson = JSON.Create(401, "Invalid Credentials!");
-				response.getWriter().write(errJson.toString());
-	    	}else {
-				logger.info("Login credentials passed:" + mailID + " pass:" + passwd);
-				UserDAO.getObj().checkStreakCount(mailID);
-				chain.doFilter(request, response);
-				
-			}
+					Logger.getLogger(LoginValidationFilter.class).error("Login credentials failed:"+mailID+" pass:"+passwd);
+					JSONObject errJson = JSON.Create(401, "Invalid Credentials!");
+					response.getWriter().write(errJson.toString());
+				}else {
+					logger.info("Login credentials passed:" + mailID + " pass:" + passwd);
+					UserDAO.getObj().checkStreakCount(mailID);
+					chain.doFilter(request, response);
+					
+				}
 		}
 		catch(Exception e){
 			e.printStackTrace();
@@ -84,8 +99,16 @@ public class LoginValidationFilter extends HttpFilter implements Filter {
 		
 	}
 
+	private String setMailFromUserName(String userName) throws Exception {
+		return UserDAO.getObj().getMailIDFromUserName(userName);
+	}
+
 	private boolean validMailID(String mailID) {
 		return DB.checkValueisExist(mailID, "Users", "mailID");
+	}
+
+	private boolean validUserName(String userName) {
+		return DB.checkValueisExist(userName, "Users", "userName");
 	}
 
 	/**

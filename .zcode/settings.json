@@ -3,7 +3,8 @@
             "/home/workspace/DEPENDENCIES/**/*.jar",
             "/home/workspace/deployment/**/*.jar",
             "/home/workspace/Coders.io/**/*.jar",
-            "/home/workspace/deployment/Coders.io/lib/**.jar"
+            "/home/workspace/deployment/Coders.io/lib/**.jar",
+            "/home/workspace/Coders.io/webapps/Demo/WEB-INF/lib/**.jar"
         ],
         "exclude": []
     },

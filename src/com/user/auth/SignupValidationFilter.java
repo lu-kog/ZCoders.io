@@ -25,7 +25,7 @@ import utils.JSON;
  * Servlet Filter implementation class ValidationFilter
  */
 @WebFilter("/v1/signup")
-public class SignupValidationFilter extends HttpFilter implements Filter {
+public class SignupValidationFilter extends HttpFilter {
        
     /**
      * @see HttpFilter#HttpFilter()
@@ -53,8 +53,16 @@ public class SignupValidationFilter extends HttpFilter implements Filter {
 		 * chain to SignupUser
 		 */
 		
+        HttpServletResponse httpResponse = (HttpServletResponse) response;
+        
+        // Set CORS headers
+        httpResponse.setHeader("Access-Control-Allow-Origin", "*");
+        httpResponse.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+        httpResponse.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+        httpResponse.setHeader("Access-Control-Allow-Credentials", "true");
+        httpResponse.setHeader("Access-Control-Max-Age", "3600");
 		Logger logger = new CommonLogger(SignupValidationFilter.class).getLogger();
-		
+		System.out.println("slkfndjnxdfjon");
 		try {
 			
 			String username = request.getParameter("userName");

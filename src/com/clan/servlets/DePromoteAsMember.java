@@ -19,7 +19,7 @@ import utils.JSON;
 /**
  * Servlet implementation class DePromoteAsMember
  */
-@WebServlet("/dePromoteAsMember")
+@WebServlet("/v1/dePromoteAsMember")
 public class DePromoteAsMember extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -56,8 +56,8 @@ public class DePromoteAsMember extends HttpServlet {
 			boolean isCoAdmin = ClanDAO.getObj().dePromoteAsMember(co_adminID, clanId);
 			
 			if(isCoAdmin) {
-				logger.info(co_adminID + " is promoted as Co-Admin by the Admin " + adminID + " in the " + clanId + " clan.");
-				JSONObject resObj = JSON.Create(200, "Promoted as Co-Admin " + co_adminID);
+				logger.info(co_adminID + " is De-promoted as Member by the Admin " + adminID + " in the " + clanId + " clan.");
+				JSONObject resObj = JSON.Create(200, "De-promoted as Member " + co_adminID);
 				response.getWriter().write(resObj.toString());
 			}
 			else {

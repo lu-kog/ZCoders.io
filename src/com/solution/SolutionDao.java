@@ -458,4 +458,15 @@ public class SolutionDao {
 		return solutionsDateJsonArray;
 	}
 
+    public void addExecutionTime(long executionTime,String solID) throws Exception {
+		String query= Query.setExecutionTime;
+		PreparedStatement pstmt = DB.getConnection().prepareStatement(query);
+		pstmt.setLong(1, executionTime);
+		pstmt.setString(2, solID);
+		int no_of_rows_updated = pstmt.executeUpdate();
+		if(no_of_rows_updated ==0){
+			throw new Exception("Execution Time not updated!!");
+		}
+    }
+
 }
