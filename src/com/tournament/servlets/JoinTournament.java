@@ -31,7 +31,7 @@ public class JoinTournament extends HttpServlet {
 			response.getWriter().write(questionDetails.toString());
 		}
 		catch(Exception e) {
-			logger.error(mailId + " does not join in the tournament"+" error:"+e);
+			logger.error(mailId + " Error on joining tournament - "+" error:"+e);
 			JSONObject errObj = JSON.Create(400, mailId + " can't join in the tournament");
 			response.getWriter().write(errObj.toString());
 		}

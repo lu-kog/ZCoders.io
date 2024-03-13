@@ -59,6 +59,7 @@ public class KickoutMember extends HttpServlet {
 			if(kickOutTheUser) {
 				logger.info(memberID + " is removed from the clan " + clanId + "by Admin "+adminID);
 				JSONObject resObj = JSON.Create(200, "Admin removed the user " + memberID);
+				System.out.println(resObj.toString());
 				response.getWriter().write(resObj.toString());
 			}
 			else {

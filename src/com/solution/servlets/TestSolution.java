@@ -68,6 +68,7 @@ public class TestSolution extends HttpServlet {
 			solId = json.getString("solId");
 			sol = json.getString("solution");
 			System.out.println(sol);
+			logger.info("new solution: "+sol);
 			
 		} catch (JSONException e1) {
 			e1.printStackTrace();
@@ -87,13 +88,14 @@ public class TestSolution extends HttpServlet {
 				solutionJson.put("mailID", solution.getUser().getMailID());
 				solutionJson.put("QID", solution.getQuestion().getQuestionID());
 				solutionJson.put("sol", solution.getCode());
-				solutionJson.put("status", solution.getStatus().toString());
+				solutionJson.put("Solutionstatus", solution.getStatus().toString());
 				solutionJson.put("language", solution.getLanguage());
 				solutionJson.put("solvedType", solution.getSolvedType().toString());
 
 				logger.info("Test solution JSON response Successfully!!!");
 				JSONObject resultJson = new JSONObject();
 				
+				logger.info("written language:"+solution.getLanguage());
 				if(solution.getLanguage().equals("Java")) {
 					Compiler compiler = new Compiler();
 					JSONObject compilation = compiler.compile(solution.getUser().getUserName(), solution.getCode(), "Calculator");
@@ -101,7 +103,7 @@ public class TestSolution extends HttpServlet {
 					logger.info("java code compiled: " + isCompiled);
 					if(isCompiled) {
 						TestRunner run = new TestRunner();
-						resultJson.put("StatusCode",200);
+						resultJson.put("statusCode",200);
 
 						JSONObject testCases = solution.getQuestion().getTestCases();
 						// username, solutionID, funcName, testCases - to call test runner
@@ -116,7 +118,7 @@ public class TestSolution extends HttpServlet {
 				}
 				else if(solution.getLanguage().equals("Python")) {
 					Python pyRunner = new Python();
-					resultJson.put("StatusCode",200);
+					resultJson.put("statusCode",200);
 					JSONObject resJsonObject = pyRunner.runner(solution);
 					resultJson.put("result",resJsonObject);
 					resultJson.put("executionTime", pyRunner.executionTime+"ms");

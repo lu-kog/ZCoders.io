@@ -95,8 +95,7 @@ public class KickoutUserFromClanFilter extends HttpFilter implements Filter {
 
 	private boolean isClanMember(String memberID, String clanID) throws Exception {
 		 String role = ClanDAO.getObj().getClanRole(memberID, clanID);
-		 return role.equals("MEMBER");
-
+		return role.equals("MEMBER") || role.equals("CO_ADMIN");
 	}
 
 	private boolean isAdmin(String clanID, String adminID) throws Exception {

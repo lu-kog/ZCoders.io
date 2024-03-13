@@ -62,7 +62,6 @@ public class QuestionDao {
     
     // Method to fetch all question details from the database
     public List<Question> fetchAllQuestionDetails() throws Exception {
-        System.out.println("sodji");
     	List<Question> QuestionDetails = new ArrayList<>();
         String query = Query.fetchAllQuestionDetails;
         try {
@@ -75,8 +74,9 @@ public class QuestionDao {
                     questionDetails.setDescription(resultSet.getString("description"));
                     Level level = new Level(resultSet.getInt("levelID"), resultSet.getString("level_name"), resultSet.getInt("score"));
                     questionDetails.setLevel(level);
-                    User user=new User(resultSet.getString("Author"),
+                    User user=new User(
                             resultSet.getString("userName"),
+                            resultSet.getString("Author"),
                             resultSet.getInt("score"),
                             resultSet.getInt("streak"));
                     questionDetails.setUser(user);
@@ -127,7 +127,6 @@ public class QuestionDao {
                     questionDetails.setDescription(resultSet.getString("description"));
                     questionDetails.setExample(resultSet.getString("example"));
                     questionDetails.setfunctionName(resultSet.getString("functionString"));
-                    System.out.println(resultSet.getString("testcaseJSON") + "kjnesujcvnsn");
                     questionDetails.setTestCases(new JSONObject(resultSet.getString("testcaseJSON")));
                     Level level = new Level(resultSet.getInt("levelID"), resultSet.getString("level_name"), resultSet.getInt("score"));
                     questionDetails.setLevel(level);
@@ -394,7 +393,7 @@ public class QuestionDao {
                 return json;
     }
 
-     public JSONArray getQuestions(String question_name) throws Exception {
+     public JSONObject getQuestions(String question_name) throws Exception {
 		 
          
 		 JSONArray quesArray = new JSONArray();
@@ -436,8 +435,9 @@ public class QuestionDao {
 		 }
 		 
          logger.info("Kata found:"+quesArray.length());
-
-         return quesArray;
+        JSONObject ques = new JSONObject();
+        ques.put("questions", quesArray);
+         return ques;
 		 
 		
 	 }

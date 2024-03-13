@@ -1,6 +1,8 @@
 package com.tournament.servlets;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,7 +20,6 @@ import com.tournament.TournamentDAO;
 @WebServlet("/v1/leaderboard")
 public class Leaderboard extends HttpServlet {
 
-	
 	static Logger logger = new CommonLogger(Leaderboard.class).getLogger();
 	
     public Leaderboard() {
@@ -27,15 +28,24 @@ public class Leaderboard extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
+	
+		/*
+		* fetch leaderboard from DB
+		* If time ends, increase badge count to winners
+		* 
+		*/
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 		JSONObject ranking = null;
 		
 		try {
+			LocalTime currentTime = LocalTime.now();
+			LocalTime endTime = LocalTime.of(20, 0);
+
+			if(currentTime.isAfter(endTime)){
+				// announce winners;
+				TournamentDAO.getObj().announceWinners();
+			}
 			ranking = TournamentDAO.getObj().leaderBoard();
 			response.getWriter().write(ranking.toString());
 		}
@@ -44,7 +54,10 @@ public class Leaderboard extends HttpServlet {
 			JSONObject errRes = JSON.Create(400, "Unable to retrieve leaderboard data. Please try again later.");
 			response.getWriter().write(errRes.toString());
 		}
-		
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
 	}
 
 }

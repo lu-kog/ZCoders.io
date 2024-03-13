@@ -71,15 +71,15 @@ public class LoginValidationFilter extends HttpFilter implements Filter {
 	    String passwd = request.getParameter("passwd");
 		System.out.println(mailID+"   " +passwd);
 		try{
-				if(userName != "" || userName != null || userName != "undefined"){
+				if(userName != "" && userName != null && userName != "undefined"){
 					if(validUserName(userName)){
 						mailID = setMailFromUserName(userName);
 						request.setAttribute("mailID", mailID);
 					}
+				}else{
+					request.setAttribute("mailID", mailID);
 				}
 				if ((!validMailID(mailID))) {
-
-					Logger.getLogger(LoginValidationFilter.class).error("Login credentials failed:"+mailID+" pass:"+passwd);
 					JSONObject errJson = JSON.Create(401, "Invalid Credentials!");
 					response.getWriter().write(errJson.toString());
 				}else {

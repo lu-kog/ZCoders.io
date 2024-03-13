@@ -88,6 +88,7 @@ public class ClanDAO {
 			PreparedStatement pstmt = connection.prepareStatement(Query.getClanRole);
 			pstmt.setString(1, mailID);
 			pstmt.setString(2, clanID);
+			System.out.println(pstmt.toString());
 			
 			ResultSet rs = pstmt.executeQuery();
 			if(rs.next()) {

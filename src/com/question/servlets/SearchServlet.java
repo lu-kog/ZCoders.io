@@ -16,9 +16,9 @@ import utils.CommonLogger;
 import utils.JSON;
 import com.question.QuestionDao;
 
-@WebServlet("/Search")
+@WebServlet("/v1/Search")
 public class SearchServlet extends HttpServlet {
-	JSONArray FetchedQuestions = new JSONArray();
+	JSONObject FetchedQuestions = new JSONObject();
 	
 	static Logger logger = new CommonLogger(SearchServlet.class).getLogger();
 	
@@ -29,7 +29,6 @@ public class SearchServlet extends HttpServlet {
 		try {
 			FetchedQuestions = QuestionDao.getObj().getQuestions(question_name);
 			logger.info("Questions fetched successfully");
-			JSONObject respJson = JSON.Create(200, FetchedQuestions.length()+"Kata found");
 			response.getWriter().write(FetchedQuestions.toString());
 		}
 		catch(Exception e) {

@@ -80,6 +80,7 @@ public class GetClanDetails extends HttpServlet {
 				cookies.add(new Cookie("clanID", clanID));
 				cookies.add(new Cookie("role", role));
 				cookies.forEach(x-> response.addCookie(x));
+			respJson.put("role",role);
 			}
 			respJson.put("clanData", clanDetails);
 			logger.info("clan details fetched successfully");

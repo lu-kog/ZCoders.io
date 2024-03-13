@@ -79,6 +79,7 @@ public class TestCase {
                             String.format("Test Failed: Expected %s, got %s", expectedOutput, result));
                     resultObject.put("logs", logs);
                 }
+                // System.out.println(tmp.charu07.kata.isEven(2)+"asdfghjkljhgfdsadfvgbhnjmkjhgfdsxcvfgt");
 
             } catch (Exception e) {
                 e.printStackTrace();

@@ -1,4 +1,5 @@
-{"java.project.referencedLibraries":{
+{
+    "java.project.referencedLibraries": {
         "include": [
             "/home/workspace/DEPENDENCIES/**/*.jar",
             "/home/workspace/deployment/**/*.jar",

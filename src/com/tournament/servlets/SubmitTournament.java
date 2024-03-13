@@ -11,9 +11,12 @@ import org.json.JSONObject;
 
 import utils.CommonLogger;
 import utils.JSON;
+
+import javax.servlet.annotation.WebServlet;
+import com.solution.SolutionDao;
 import com.tournament.TournamentDAO;
 
-
+@WebServlet("/v1/SubmitTournament")
 public class SubmitTournament extends HttpServlet {
 	
 	static Logger logger = new CommonLogger(SubmitTournament.class).getLogger();
@@ -22,12 +25,11 @@ public class SubmitTournament extends HttpServlet {
 		
 		String solution = request.getParameter("Sol_ID");
 		String mailID = request.getParameter("mailID");
-		double executionTimeMillis = 1.0;
-		long timeDifferenceMinutes = 1;
-
-		double score = calculateScore(timeDifferenceMinutes, executionTimeMillis);
 		
 		try {
+			double executionTimeMillis = SolutionDao.getObj().getExecutionTimeMillis(solution,mailID);
+			long timeDifferenceMinutes = SolutionDao.getObj().getTimeDiffernce(solution,mailID);
+			double score = calculateScore(timeDifferenceMinutes, executionTimeMillis);
 		
 			boolean isSubmit = TournamentDAO.getObj().isSubmit(mailID, solution, score); 			
 			if(isSubmit) {
@@ -46,8 +48,8 @@ public class SubmitTournament extends HttpServlet {
 		}
 	}
 	
+
 	private double calculateScore(long timeDifferenceMinutes, double executionTimeMillis) {
-		
 		return timeDifferenceMinutes * executionTimeMillis / 1000000;
 	}
 

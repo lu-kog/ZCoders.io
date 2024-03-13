@@ -35,8 +35,7 @@ public class Compiler {
 		File folder = new File(srcPath + "/" + userName);
 		String className = "kata";
 		folder.mkdir();
-		System.out.println(userName);
-		System.out.println(srcCode);
+		
 		System.out.println("Folder created: " + folder.exists());
 		String packageName = "package tmp." + userName + ";";
 		String fullSrcCode = packageName + "\n" + srcCode;

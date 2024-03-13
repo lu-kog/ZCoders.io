@@ -498,7 +498,7 @@ public class UserDAO {
 	
 			
 		} catch (Exception e) {
-			throw new Exception(e.getMessage());
+			return "";
 		}
 	}
 

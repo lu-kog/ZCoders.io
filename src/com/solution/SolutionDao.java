@@ -5,6 +5,7 @@ import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -451,10 +452,14 @@ public class SolutionDao {
 		String query = Query.getSolutionDates;
 		PreparedStatement pstmt = DB.getConnection().prepareStatement(query);
 		pstmt.setString(1, mailId);
+		System.out.println(pstmt.toString());
 		ResultSet rs = pstmt.executeQuery();
 		while (rs.next()) {
-			solutionsDateJsonArray.put(rs.getString(1));
+			System.out.println("lkjbhcgfxdzsxfgchvjbkml;,mkjhbvgf");
+			solutionsDateJsonArray.put(rs.getString("solDate"));
 		}
+		System.out.println("Dates : ");
+		System.out.println(solutionsDateJsonArray);
 		return solutionsDateJsonArray;
 	}
 
@@ -467,6 +472,33 @@ public class SolutionDao {
 		if(no_of_rows_updated ==0){
 			throw new Exception("Execution Time not updated!!");
 		}
+    }
+
+    public double getExecutionTimeMillis(String Sol_ID,String mailID) throws Exception {
+		String query = Query.getMilliSecond;
+		PreparedStatement pstmt = DB.getConnection().prepareStatement(query);
+		pstmt.setString(1,Sol_ID);
+		pstmt.setString(2,mailID);
+		ResultSet rs = pstmt.executeQuery();
+		if(rs.next()){
+			return rs.getDouble("Execution_time");
+		}
+		throw new Exception("Invalid Details");
+    }
+
+    public long getTimeDiffernce(String Sol_ID,String mailID) throws Exception {
+		String query = Query.getTimeDifference;
+		PreparedStatement pstmt = DB.getConnection().prepareStatement(query);
+		pstmt.setString(1,Sol_ID);
+		pstmt.setString(2,mailID);
+		ResultSet rs = pstmt.executeQuery();
+		if(rs.next()){
+			Timestamp joinTime = rs.getTimestamp("Join_time");
+			Timestamp submitTime = rs.getTimestamp("Submit_time");
+			long differenceMillis = submitTime.getTime() - joinTime.getTime();
+			return differenceMillis;
+		}
+		throw new Exception("Invalid Details");
     }
 
 }

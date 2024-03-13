@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.security.spec.ECField;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -33,12 +32,16 @@ public class TestRunner {
 		String className = "kata";
 		Class<?> cls;
 		try {
+			Thread.sleep(800);
 			System.out.println("tmp." + userName + "." + className);
 			cls = Class.forName("tmp." + userName + "." + className);
 		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
 			logger.error("Error on running java code: Class not found - " + e);
 			throw new Exception("Compilation error!");
 		}
+			
+			
 
 		System.out.println(cls);
 
@@ -118,7 +121,7 @@ public class TestRunner {
                 resultObject.put("test"+i, testCasesJson.getJSONObject(i+""));
 				results.put("test"+i+"", resultObject);
 				
-			}
+			} 
 
 			
 		}
@@ -155,6 +158,7 @@ public class TestRunner {
 		
 	}
 	public static void main(String[] args) {
+		// System.out.println(tmp.charu07.kata.isEven(2)+"asdfghjkljhgfdsadfvgbhnjmkjhgfdsxcvfgt");
 		try {
             Class<?> cls = Class.forName("tmp.vsr.kata");
         } catch (ClassNotFoundException e) {

@@ -39,11 +39,13 @@ public class AllQuestionDetails extends HttpServlet {
     }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
     QuestionDao questionDao=new QuestionDao();
-  protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
 	String mailId = request.getParameter("mailID");
+	System.out.println(mailId);
 	  try {
 		    List<Question> questionDetailsList = questionDao.fetchAllQuestionDetails();
 			System.out.println(questionDetailsList.size());
@@ -83,7 +85,7 @@ public class AllQuestionDetails extends HttpServlet {
 		        userObject.put("mailID", question.getUser().getMailID());
 		        userObject.put("userName", question.getUser().getUserName());
 
-		        questionObject.put("user", userObject);
+		        questionObject.put("author", userObject);
 
 		        questionObject.put("attempt", question.getnoOfAttempt());
 		        questionObject.put("submit", question.getnoOfTimesSubmitted());
@@ -100,6 +102,7 @@ public class AllQuestionDetails extends HttpServlet {
 
 		    // Write JSON string to response
 		    logger.info("All Question details fetched successfully");
+			// System.out.println(responseJson.toString());
 		    response.getWriter().write(responseJson.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -113,7 +116,7 @@ public class AllQuestionDetails extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 	}

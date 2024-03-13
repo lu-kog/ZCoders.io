@@ -87,6 +87,10 @@ public class Query {
 
     public static String setExecutionTime = "update Solutions set Execution_time = ? where Sol_ID=?";
 
+    public static String getMilliSecond = "select Execution_time from Solutions where Sol_ID=? and mailID=? ";
+	
+    public static String getTimeDifference = "select Join_time,Submit_time from Tournament where Sol_ID=? and mailID=? ";
+
 	public static final String joinUserInClanByAdmin = "insert into ClanRelation (clanID, mailID) values(?, ?);";
 
 	public static final String createNewClan = "insert into Clan (clanID, clanName, Admin) values(?, ?, ?);";
@@ -198,7 +202,7 @@ public class Query {
 
 	public static final String submitTournament = "UPDATE Tournament SET Submit_time = ?, Solution = ?, Score = ? WHERE mailID = ?";	
 
-	public static final String leaderBoard = "SELECT mailID FROM Tournament ORDER BY Score DESC";
+	public static final String leaderBoard = "SELECT mailID FROM Tournament ORDER BY Score DESC where Date = ?";
 
 	public static final String generateQuestionsForTournament = "SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1";
 
@@ -209,4 +213,8 @@ public class Query {
 	public static final String getQuestionDetailsForTournament = "select Q_name, description, functionString from Questions where Q_ID = ?";
 
 	public static final String getMailIDFromUserName = "select mailID from Users where userName = ?";
+
+	public static final String increaseBadgeCount = "UPDATE Users SET ? = ? + 1 WHERE mailID like ?";
+
+	public static final String getWinners = "select Conquer_winner, Ace_winner, Crown_winner from TournamentQuestionRelation where Date = ?";
 }

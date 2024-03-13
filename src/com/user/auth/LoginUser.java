@@ -1,6 +1,11 @@
 package com.user.auth;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,7 +60,7 @@ public class LoginUser extends HttpServlet {
 
 		
 		Logger logger = new CommonLogger(LoginUser.class).getLogger();
-		String mailID = request.getParameter("mailID");
+		String mailID = (String) request.getAttribute("mailID");
 		String Passwd = request.getParameter("passwd");
 
 
@@ -71,8 +76,13 @@ public class LoginUser extends HttpServlet {
 				cookies.add(new Cookie("sessionID", sessionID));
 				cookies.forEach(x-> response.addCookie(x));
 
-				String score = UserDAO.getObj().getScoreFromMailID(mailID);
 				String userName = UserDAO.getObj().getUserNameFromMailID(mailID);
+				File profile = new File("webapps/Demo/images/" + userName + ".jpg");
+				if(!profile.exists()){
+					copyProfilePicture(userName);
+				}
+
+				String score = UserDAO.getObj().getScoreFromMailID(mailID);
 				String clanName = UserDAO.getObj().getClanNameFromMailID(mailID);
 				// boolean isAdmin = UserDAO.getObj().isAdmin(mailID);
 				JSONObject respObject = new JSONObject();
@@ -99,5 +109,19 @@ public class LoginUser extends HttpServlet {
 		}
 
 	}
+
+
+	public static void copyProfilePicture(String userName) {
+        Path sourcePath = Paths.get("webapps/Demo/images/default.jpg");
+        Path destinationPath = Paths.get("webapps/Demo/images/" + userName + ".jpg");
+
+        try {
+            Files.copy(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
+            System.out.println("Profile picture created for user: " + userName);
+        } catch (IOException e) {
+            System.err.println("Error copying profile picture for user: " + userName);
+            e.printStackTrace();
+        }
+    }
 
 }

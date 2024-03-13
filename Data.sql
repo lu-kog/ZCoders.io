@@ -89,7 +89,9 @@ INSERT into Languages(lang_name) values('Java'), ('Python'), ('Mysql');
 INSERT into Tags(Tag_name) values('Arrays'), ('Algorithm'), ('Debugging'),('Fundamentals'),('String');
 INSERT into Levels(level_name,score) values ('8Kyu',2),('7Kyu',3),('6Kyu',4);
 
-INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJSON,levelID,Author,status) values ("56873465","Sum Arrays",'Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.', 'Examples Input: [1, 5.2, 4, 0, -1]\nOutput: 9.2\n\nInput: []\nOutput: 0\n\n Input: [-2.398]\nOutput: -2.398\n\n','sum_array','{
+INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJSON,levelID,Author,status) values ("56873465",
+"Sum Arrays",
+'Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.', 'Examples Input: [1, 5.2, 4, 0, -1]\nOutput: 9.2\n\nInput: []\nOutput: 0\n\n Input: [-2.398]\nOutput: -2.398\n\n','sum_array','{
     "0": {
         "params": {"0": []},
         "output": 0
@@ -320,6 +322,7 @@ insert into LanguageRelation values(2, '45986677', 'def positive_sum(arr)', '');
 insert into LanguageRelation values(1, '42887152', 'public static int reverse(String word)', '');
 insert into LanguageRelation values(2, '42887152', 'def reverse(word)', '');
 insert into LanguageRelation values(2, '27624322', 'def findLargest(a):','');
+insert into LanguageRelation values(1, '27624322', 'public class kata{\n\tpublic static int findLargest(int[] num){\n\n}\n}','');
 insert into LanguageRelation values(2, '54281620', 'def isEven(num):','');
 insert into LanguageRelation values(1, '54281620', 'public class kata{\n\tpublic static boolean isEven(int num){\n\n}\n}','');
 
@@ -328,10 +331,10 @@ insert into Solutions values('12345678', 'vasanth.albert@zohocorp.com', '5687346
     for(double number : numbers){
       total+=number;
     }
-    return total;', 1,'2023-02-07', 'COMPLETED', 'PRACTICE');
-insert into Solutions values('87654321', 'vasanth.albert@zohocorp.com', '45986677', 'testing', 2,'2023-08-07', 'ATTEMPTED', 'PRACTICE');
-insert into Solutions values('23456789', 'vasanth.albert@zohocorp.com', '56873465', 'testing', 1,'2023-08-07', 'COMPLETED', 'PRACTICE');
-insert into Solutions values('34567890', 'vasanth.albert@zohocorp.com', '42887152', 'testing', 1,'2023-08-07', 'COMPLETED', 'PRACTICE');
+    return total;', 1,'2023-02-07',1.5, 'COMPLETED', 'PRACTICE');
+-- insert into Solutions values('87654321', 'vasanth.albert@zohocorp.com', '45986677', 'testing', 2,'2023-08-07', 'ATTEMPTED', 'PRACTICE');
+-- insert into Solutions values('23456789', 'vasanth.albert@zohocorp.com', '56873465', 'testing', 1,'2023-08-07', 'COMPLETED', 'PRACTICE');
+-- insert into Solutions values('34567890', 'vasanth.albert@zohocorp.com', '42887152', 'testing', 1,'2023-08-07', 'COMPLETED', 'PRACTICE');
 
 INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('sun.a@zohocorp.com', 'iamsun', '2024-03-07', '2024-03-07');
 INSERT INTO Login (mailID, passwd) VALUES ('sun.a@zohocorp.com', '$2a$10$xZzNQo8vuMc8W08QQnPrNuH134wiuz9uijNZaSYyTnqcgJFohGxt.');
@@ -360,7 +363,7 @@ insert into LanguageRelation values(2,'44414555','def flames(male, female):
 INSERT into Questions(Q_ID, Q_name,description,example,functionString,testcaseJSON,levelID,Author,status) VALUES ('83648469', 'Is a letter?', '
 Write a function??`isItLetter`, which tells us if a given character is an uppercase or lowercase letter.
 ', '
-', 'is_it_letter', '{"11":{"output":"true","params":{"0":"x"}},"12":{"output":"true","params":{"0":"B"}},"13":{"output":"false","params":{"0":"1"}},"14":{"output":"false","params":{"0":"@"}},"15":{"output":"false","params":{"0":"\n"}},"16":{"output":"false","params":{"0":"!"}},"17":{"output":"true","params":{"0":"k"}},"18":{"output":"true","params":{"0":"Y"}},"19":{"output":"true","params":{"0":"f"}},"0":{"output":"true","params":{"0":"a"}},"1":{"output":"true","params":{"0":"Z"}},"2":{"output":"true","params":{"0":"m"}},"3":{"output":"true","params":{"0":"Q"}},"4":{"output":"false","params":{"0":"5"}},"5":{"output":"false","params":{"0":"#"}},"6":{"output":"false","params":{"0":" "}},"7":{"output":"false","params":{"0":"}"}},"8":{"output":"false","params":{"0":"["}},"9":{"output":"true","params":{"0":"g"}},"10":{"output":"true","params":{"0":"P"}}}', 1, 'krishnagokul810@gmail.com', 'NOTAPPROVED')
+', 'is_it_letter', '{"11":{"output":"true","params":{"0":"x"}},"12":{"output":"true","params":{"0":"B"}},"13":{"output":"false","params":{"0":"1"}},"14":{"output":"false","params":{"0":"@"}},"15":{"output":"false","params":{"0":"\n"}},"16":{"output":"false","params":{"0":"!"}},"17":{"output":"true","params":{"0":"k"}},"18":{"output":"true","params":{"0":"Y"}},"19":{"output":"true","params":{"0":"f"}},"0":{"output":"true","params":{"0":"a"}},"1":{"output":"true","params":{"0":"Z"}},"2":{"output":"true","params":{"0":"m"}},"3":{"output":"true","params":{"0":"Q"}},"4":{"output":"false","params":{"0":"5"}},"5":{"output":"false","params":{"0":"#"}},"6":{"output":"false","params":{"0":" "}},"7":{"output":"false","params":{"0":"}"}},"8":{"output":"false","params":{"0":"["}},"9":{"output":"true","params":{"0":"g"}},"10":{"output":"true","params":{"0":"P"}}}', 1, 'krishnagokul810@gmail.com', 'NOTAPPROVED');
 
 -- INSERT into TagsRelation values('83648469',4);
 
@@ -383,7 +386,7 @@ Write a function??`isItLetter`, which tells us if a given character is an upperc
 -- delete from ClanRequest where clanID like '58119654' and mailID like 'jeyrajesh@gmail.com';
 -- insert into ClanRelation (clanID, mailID) values('58119654', 'jeyrajesh@gmail.com');
 -- insert into ClanRequest(clanID, mailID) values('58119654', 'mahalakshmi@gmail.com');
-INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('singatamizhan2005@gmail.com', 'Dragon_Blaze', '2024-03-09', '2024-03-09');
+INSERT INTO Users(mailID, userName, Datejoined, Streakdate) VALUES('singatamizhan2005@gmail.com', 'Dragon_Blaze', '2024-03-09', '2024-03-09');
 INSERT INTO Login (mailID, passwd) VALUES ('singatamizhan2005@gmail.com', '$2a$10$Xm4dK4J40sEePT1DrlYNneZdViOyUQgutiTGTZjVxgF78JszW2ss.');
 insert into ClanRequest(clanID, mailID) values('66423152', 'santhiya@gmail.com');
 insert into ClanRequest(clanID, mailID) values('66423152', 'vijila@gmail.com');
@@ -462,20 +465,53 @@ insert into LanguageRelation values(1,'63393309','public class Kata {
 insert into LanguageRelation values(2,'63393309','def sumOfDigits(n):
     # Your code here
     pass','');
-insert into ClanRequest(clanID, mailID) values('66423152', 'sundari@gmail.com');
-delete from ClanRequest where clanID like '66423152' and mailID like 'vijila@gmail.com';
-insert into ClanRelation (clanID, mailID) values('66423152', 'vijila@gmail.com');
-insert into ClanRequest(clanID, mailID) values('66423152', 'sundari@gmail.com');
-delete from ClanRequest where clanID like '66423152' and mailID like 'sorimuthu@gmail.com';
-insert into ClanRelation (clanID, mailID) values('66423152', 'sorimuthu@gmail.com');
+
+
+-- -- insert into ClanRequest(clanID, mailID) values('66423152', 'sundari@gmail.com');
+-- delete from ClanRequest where clanID like '66423152' and mailID like 'vijila@gmail.com';
+-- insert into ClanRelation (clanID, mailID) values('66423152', 'vijila@gmail.com');
+-- insert into ClanRequest(clanID, mailID) values('66423152', 'sundari@gmail.com');
+-- delete from ClanRequest where clanID like '66423152' and mailID like 'sorimuthu@gmail.com';
+-- insert into ClanRelation (clanID, mailID) values('66423152', 'sorimuthu@gmail.com');
+-- delete from ClanRequest where clanID like '66423152' and mailID like 'ragavi@gmail.com';
+-- insert into ClanRelation (clanID, mailID) values('66423152', 'ragavi@gmail.com');
+-- INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('vasanthr987654@gmail.com', 'VSR!', '2024-03-11', '2024-03-11');
+-- INSERT INTO Login (mailID, passwd) VALUES ('vasanthr987654@gmail.com', '$2a$10$ak44QgctiLZwmPbCZ93a7uiPtf37P4nk2O0XRJE.seZaZPyiX6JuC');
+-- insert into ClanRelation (clanID, mailID) values('66423152', 'sundari@gmail.com');
+-- -- INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('singatamizhan@gmail.com', 'Dragon', '2024-03-11', '2024-03-11');
+-- -- INSERT INTO Login (mailID, passwd) VALUES ('singatamizhan@gmail.com', '$2a$10$sg6zmo7/N.HDk4BB18UA6.RwcmscpLVYHBTOZKXu57RvEkIH0BrU6');
+-- INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('king@gmail.com', 'Legend', '2024-03-11', '2024-03-11');
+-- INSERT INTO Login (mailID, passwd) VALUES ('king@gmail.com', '$2a$10$jyou1QhDxyVGgMtxAvOPe.H1DWQ6BIjv18KCoPp4xk3RxAiF73FyG');
+-- delete from ClanRequest where clanID like '66423152' and mailID like 'rabi@gmail.com';
+-- INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('qwerty@gmail.com', 'qwerty', '2024-03-11', '2024-03-11');
+-- INSERT INTO Login (mailID, passwd) VALUES ('qwerty@gmail.com', '$2a$10$.SUIzig9z3MxCLye/UqnkuxZf8YW6WEdD9HHWKEjYQA1t1ZrV9Le6');
+-- INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('dragon.king@gmail.com', 'Dragon_King', '2024-03-11', '2024-03-11');
+-- INSERT INTO Login (mailID, passwd) VALUES ('dragon.king@gmail.com', '$2a$10$jtwxH1oUMvBEd.XvFBcfdOsq8WFINvObNWzqqK5oSCxEYybO0b.ue');
+-- insert into ClanRequest(clanID, mailID) values('78320745', 'dragon.king@gmail.com');
+-- insert into ClanRequest(clanID, mailID) values('93820754', 'dragon.king@gmail.com');
+-- insert into ClanRequest(clanID, mailID) values('40378295', 'dragon.king@gmail.com');
+-- insert into ClanRequest(clanID, mailID) values('66423152', 'dragon.king@gmail.com');
+-- INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('naveen@gmail.com', 'Naveen', '2024-03-12', '2024-03-12');
+-- INSERT INTO Login (mailID, passwd) VALUES ('naveen@gmail.com', '$2a$10$HGDT1NDtHqEfIf85xNpKpedMPkwvXk3M/l50GatiHSIjfaAcgf9YC');
+-- delete from ClanRequest where clanID like '66423152' and mailID like 'rabi@gmail.com';
+-- insert into ClanRelation (clanID, mailID) values('66423152', 'rabi@gmail.com');
+-- delete from ClanRequest where clanID like '66423152' and mailID like 'ragavi@gmail.com';
+-- insert into ClanRelation (clanID, mailID) values('66423152', 'ragavi@gmail.com');
+-- delete from ClanRequest where clanID like '66423152' and mailID like 'sorimuthu@gmail.com';
+-- insert into ClanRelation (clanID, mailID) values('66423152', 'sorimuthu@gmail.com');
+-- delete from ClanRequest where clanID like '66423152' and mailID like 'sun.a@zohocorp.com';
+-- insert into ClanRelation (clanID, mailID) values('66423152', 'sun.a@zohocorp.com');
+-- delete from ClanRequest where clanID like '66423152' and mailID like 'vijila@gmail.com';
+-- insert into ClanRelation (clanID, mailID) values('66423152', 'vijila@gmail.com');
+delete from ClanRequest where clanID like '66423152' and mailID like 'rabi@gmail.com';
+insert into ClanRelation (clanID, mailID) values('66423152', 'rabi@gmail.com');
 delete from ClanRequest where clanID like '66423152' and mailID like 'ragavi@gmail.com';
 insert into ClanRelation (clanID, mailID) values('66423152', 'ragavi@gmail.com');
-INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('vasanthr987654@gmail.com', 'VSR!', '2024-03-11', '2024-03-11');
-INSERT INTO Login (mailID, passwd) VALUES ('vasanthr987654@gmail.com', '$2a$10$ak44QgctiLZwmPbCZ93a7uiPtf37P4nk2O0XRJE.seZaZPyiX6JuC');
-delete from ClanRequest where clanID like '66423152' and mailID like 'sundari@gmail.com';
-insert into ClanRelation (clanID, mailID) values('66423152', 'sundari@gmail.com');
-INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('singatamizhan@gmail.com', 'Dragon', '2024-03-11', '2024-03-11');
-INSERT INTO Login (mailID, passwd) VALUES ('singatamizhan@gmail.com', '$2a$10$sg6zmo7/N.HDk4BB18UA6.RwcmscpLVYHBTOZKXu57RvEkIH0BrU6');
-INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('king@gmail.com', 'Legend', '2024-03-11', '2024-03-11');
-INSERT INTO Login (mailID, passwd) VALUES ('king@gmail.com', '$2a$10$jyou1QhDxyVGgMtxAvOPe.H1DWQ6BIjv18KCoPp4xk3RxAiF73FyG');
-delete from ClanRequest where clanID like '66423152' and mailID like 'rabi@gmail.com';
+delete from ClanRequest where clanID like '66423152' and mailID like 'sorimuthu@gmail.com';
+insert into ClanRelation (clanID, mailID) values('66423152', 'sorimuthu@gmail.com');
+delete from ClanRequest where clanID like '66423152' and mailID like 'sun.a@zohocorp.com';
+insert into ClanRelation (clanID, mailID) values('66423152', 'sun.a@zohocorp.com');
+INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('dragon.king@gmail.com', 'Dragon_king', '2024-03-13', '2024-03-13');
+INSERT INTO Login (mailID, passwd) VALUES ('dragon.king@gmail.com', '$2a$10$ZWH3mWVwQANTX/50651oAeW9kTrpBnsUZhWtx6HDGy9CjCVV9lO0C');
+delete from ClanRequest where clanID like '66423152' and mailID like 'vijila@gmail.com';
+insert into ClanRelation (clanID, mailID) values('66423152', 'vijila@gmail.com');
