@@ -144,7 +144,7 @@ CREATE TABLE Tournament
     mailID VARCHAR(30),
     Join_time TIMESTAMP,
     Submit_time TIMESTAMP,
-    Date DATE,
+    Date DATE PRIMARY key,
     Sol_ID varchar(8),
 	Score double,
     FOREIGN KEY(mailID) REFERENCES Users(mailID),
@@ -155,14 +155,15 @@ CREATE TABLE Tournament
 CREATE TABLE TournamentQuestionRelation(
 	Date DATE primary key,
 	Q_ID varchar(8),
+	l_ID int,
 	Conquer_winner VARCHAR(30),
 	Ace_winner VARCHAR(30),
 	Crown_winner VARCHAR(30),
 	FOREIGN KEY(Conquer_winner) REFERENCES Users(mailID),
+	FOREIGN KEY(l_ID) REFERENCES Languages(l_ID) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY(Ace_winner) REFERENCES Users(mailID),
 	FOREIGN KEY(Crown_winner) REFERENCES Users(mailID),
-	FOREIGN KEY(Q_ID) REFERENCES Questions(Q_ID),
-	FOREIGN KEY(t_id) REFERENCES Tournament(t_id)
+	FOREIGN KEY(Q_ID) REFERENCES Questions(Q_ID)
 );
 
 

@@ -1,6 +1,9 @@
 package com.tournament.servlets;
 
 import java.io.IOException;
+import java.sql.PreparedStatement;
+import java.sql.Timestamp;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -10,7 +13,9 @@ import org.apache.log4j.Logger;
 import org.json.JSONObject;
 
 import utils.CommonLogger;
+import utils.DB;
 import utils.JSON;
+import utils.Query;
 
 import javax.servlet.annotation.WebServlet;
 import com.solution.SolutionDao;
@@ -27,6 +32,12 @@ public class SubmitTournament extends HttpServlet {
 		String mailID = request.getParameter("mailID");
 		
 		try {
+			PreparedStatement pstmt = DB.getConnection().prepareStatement("UPDATE Tournament SET Submit_time = ? WHERE mailID = ?");
+			Timestamp currentTimestamp = new Timestamp(System.currentTimeMillis());
+			pstmt.setTimestamp(1, currentTimestamp);
+			pstmt.setString(2, mailID);
+			int rs = pstmt.executeUpdate();
+			System.out.println(pstmt.toString());
 			double executionTimeMillis = SolutionDao.getObj().getExecutionTimeMillis(solution,mailID);
 			long timeDifferenceMinutes = SolutionDao.getObj().getTimeDiffernce(solution,mailID);
 			double score = calculateScore(timeDifferenceMinutes, executionTimeMillis);
@@ -42,6 +53,7 @@ public class SubmitTournament extends HttpServlet {
 			}
 		}
 		catch(Exception e) {
+			e.printStackTrace();
 			logger.error(mailID + " failed to submit the solution " );
 			JSONObject errObj = JSON.Create(400, mailID + "Failed to submit the solution ");
 			response.getWriter().write(errObj.toString());

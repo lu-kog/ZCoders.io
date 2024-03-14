@@ -4,11 +4,15 @@ import java.sql.Connection;
 import utils.CommonLogger;
 import java.sql.PreparedStatement;
 import utils.DB;
+import utils.Generator;
 import utils.Query;
 import utils.sqlFile;
 import org.apache.log4j.Logger;
 import java.sql.Timestamp;
 import org.json.JSONObject;
+
+import com.solution.SolutionDao;
+
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -26,11 +30,12 @@ public class TournamentDAO {
 	}
 
 	public JSONObject joinTournament(String mailID) throws Exception {
+		System.out.println("Mail : "+mailID);
 
 		String Q_ID = null;
 
 		JSONObject tournamentQuestionDetails = new JSONObject();
-
+	String solutionID ="";
 		try {
 
 			PreparedStatement pstmt = connection.prepareStatement(Query.getQuestionsForTournament);
@@ -50,33 +55,53 @@ public class TournamentDAO {
 			pstmt2.setString(1, mailID);
 			Timestamp currentTimestamp = new Timestamp(System.currentTimeMillis());
 			pstmt2.setTimestamp(2, currentTimestamp);
+					ArrayList<String> languages = new ArrayList<>();
+					languages.add("Java");
+					languages.add("Python");
 
-			pstmt2.setString(3, Q_ID);
+				solutionID = Generator.ValidNumerical(8, "Solutions", "Sol_ID");
+			    	int langID = languages.indexOf("Python")+1;
+
+					logger.info("inserting new Solution:"+solutionID+" mail:"+mailID+" question:"+Q_ID+" langID"+langID);
+			    	SolutionDao solutionDao = new SolutionDao();
+					solutionDao.insertSolution(solutionID, mailID, Q_ID, "ATTEMPTED", "TOURNAMENT", 2);
+			// pstmt2.setString(3, Q_ID);
 
 			java.sql.Date currentDate2 = new java.sql.Date(System.currentTimeMillis());
-			pstmt2.setDate(4, currentDate2);
+			pstmt2.setDate(3, currentDate2);
 
 			int rs2 = pstmt2.executeUpdate();
 
 			if (rs2 > 0) {
 				PreparedStatement pstmt3 = connection.prepareStatement(Query.getQuestionDetailsForTournament);
+				System.out.println(Q_ID + "jbhvgcftgvyubhsb");
 				pstmt3.setString(1, Q_ID);
 
 				ResultSet rs3 = pstmt3.executeQuery();
 
 				if (rs3.next()) {
 					sqlFile.append(pstmt.toString());
-
-					tournamentQuestionDetails.put("questionName", rs.getString("Q_name"));
-					tournamentQuestionDetails.put("questionDescription", rs.getString("description"));
-					tournamentQuestionDetails.put("questionSyntax", rs.getString("functionString"));
+					JSONObject description = new JSONObject();
+					tournamentQuestionDetails.put("questionName", rs3.getString("Q_name"));
+					tournamentQuestionDetails.put("solID", solutionID);
+					description.put("description", rs3.getString("description"));
+					tournamentQuestionDetails.put("details", description);
+					tournamentQuestionDetails.put("questionSyntax", rs3.getString("funcName"));
 				}
 
+		PreparedStatement pstmt4 = DB.getConnection().prepareStatement("UPDATE Tournament set Sol_ID=? where mailID=?");
+		
+		pstmt4.setString(1, solutionID);
+		pstmt4.setString(2, mailID);
+		System.out.println(pstmt4.toString());
+		
+		pstmt4.executeUpdate();
 				logger.info(mailID + " joined in the tournament");
 
 			}
 
 		} catch (Exception e) {
+			e.printStackTrace();
 			logger.error("Error on join tournament : " + e);
 			throw new Exception("Can't join tournament");
 		}
@@ -89,18 +114,18 @@ public class TournamentDAO {
 			PreparedStatement pstmt = connection.prepareStatement(Query.submitTournament);
 			Timestamp currentTimestamp = new Timestamp(System.currentTimeMillis());
 			pstmt.setTimestamp(1, currentTimestamp);
-			pstmt.setString(2, solution);
-			pstmt.setDouble(3, score);
-			pstmt.setString(4, mailID);
+			pstmt.setDouble(2, score);
+			pstmt.setString(3, mailID);
+			System.out.println(pstmt.toString());
 
 			int rs = pstmt.executeUpdate();
-
 			if (rs > 0) {
 				logger.info(mailID + " submitted the solution successfully");
 				sqlFile.append(pstmt.toString());
 				return true;
 			}
 		} catch (Exception e) {
+			e.printStackTrace();
 			logger.error("Error on submit the solution : " + e);
 			throw new Exception(mailID + " can't submit the solution");
 		}
@@ -121,8 +146,12 @@ public class TournamentDAO {
 			int count = 0;
 
 			while (rs.next()) {
-
-				rankingObject.put(String.valueOf(count), rs.getString("mailID"));
+				JSONObject participant = new JSONObject();
+				participant.put("userName", rs.getString("userName"));
+				participant.put("mailID", rs.getString("mailID"));
+				participant.put("position", count+1);
+				participant.put("timeTaken", rs.getString("timeTaken"));
+				rankingObject.put(String.valueOf(count), participant);
 				count++;
 			}
 		} catch (Exception e) {
@@ -264,6 +293,28 @@ public class TournamentDAO {
 		 }
 		 
 		 return winners;
+	 }
+
+
+
+	 public boolean checkIfHeAlreadyParticipated(String mailID) throws Exception {
+
+		try{
+			PreparedStatement pstmt = connection.prepareStatement(Query.checkUserParticipation);
+			pstmt.setString(1,mailID);
+
+			ResultSet rs = pstmt.executeQuery();
+
+			if(rs.next()){
+				return true;
+			}
+
+		}
+		catch(Exception e){
+			throw new Exception("Error on checkIfHeAlreadyParticipated : " + e.getMessage());
+		}
+
+		return false;
 	 }
 
 }

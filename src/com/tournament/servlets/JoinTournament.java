@@ -22,8 +22,7 @@ public class JoinTournament extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String mailId = request.getParameter("mailId");
-		
+		String mailId = request.getParameter("mailID");
 		JSONObject questionDetails = new JSONObject();
 
 		try {
@@ -31,6 +30,7 @@ public class JoinTournament extends HttpServlet {
 			response.getWriter().write(questionDetails.toString());
 		}
 		catch(Exception e) {
+			e.printStackTrace();
 			logger.error(mailId + " Error on joining tournament - "+" error:"+e);
 			JSONObject errObj = JSON.Create(400, mailId + " can't join in the tournament");
 			response.getWriter().write(errObj.toString());

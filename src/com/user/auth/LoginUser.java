@@ -110,6 +110,10 @@ public class LoginUser extends HttpServlet {
 
 	}
 
+	public static void main(String[] args) {
+		copyProfilePicture("Vijila");
+	}
+
 
 	public static void copyProfilePicture(String userName) {
         Path sourcePath = Paths.get("webapps/Demo/images/default.jpg");

@@ -17,12 +17,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.time.LocalTime;
 import org.apache.log4j.Logger;
 import org.json.JSONObject;
-import org.python.antlr.PythonParser.return_stmt_return;
 
 import utils.CommonLogger;
 import utils.JSON;
 
-@WebFilter("/v1/joinTournament")
+// @WebFilter("/v1/joinTournament")
 public class JoinTournamentFilter extends HttpFilter implements Filter {
  
     public JoinTournamentFilter() {

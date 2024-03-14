@@ -4,7 +4,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import org.apache.log4j.Logger;
-import org.mindrot.jbcrypt.BCrypt;
 
 public class sqlFile {
 	static Logger logger = new CommonLogger(sqlFile.class).getLogger();
@@ -24,9 +23,4 @@ public class sqlFile {
 	}
 	
 	
-	public static void main(String[] args) {
-		
-		String hashPw = "$2a$10$tPgtYSwH1.yFuyMao8wJD.JZtmwCcIFpP964Zw1fycvR8hapNpFxa";
-		System.out.println(BCrypt.checkpw("Hermione", hashPw));
-	}
 }

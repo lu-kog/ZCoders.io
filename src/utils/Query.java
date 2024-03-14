@@ -1,6 +1,7 @@
 package utils;
 
 public class Query {
+	public static final String checkUserParticipation = "select mailID from Tournament where mailID = ?";
 
 	public static final String DepromoteAsMember = "update ClanRelation set role = 'MEMBER' where mailID = ? AND clanID = ?;";
 	
@@ -198,11 +199,11 @@ public class Query {
 
 	public static final String getSolutionDates = "select solDate from Solutions where mailID like ?";
 
-	public static final String joinTournament = "insert into Tournament (mailID, Start_time, Q_ID, Date) values (?,?,?,?)";
+	public static final String joinTournament = "insert into Tournament (mailID, Join_time, Date) values (?,?,?)";
 
-	public static final String submitTournament = "UPDATE Tournament SET Submit_time = ?, Solution = ?, Score = ? WHERE mailID = ?";	
+	public static final String submitTournament = "UPDATE Tournament SET Submit_time = ?, Score = ? WHERE mailID = ?";	
 
-	public static final String leaderBoard = "SELECT mailID FROM Tournament ORDER BY Score DESC where Date = ?";
+	public static final String leaderBoard = "SELECT t.mailID, u.userName, (Submit_time - Join_time) as timeTaken FROM Tournament t join Users u on u.mailID = t.mailID where Date like ? order by t.score desc;";
 
 	public static final String generateQuestionsForTournament = "SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1";
 
@@ -210,7 +211,7 @@ public class Query {
 
 	public static final String getQuestionsForTournament = "select Q_ID from TournamentQuestionRelation where Date = ?";
 
-	public static final String getQuestionDetailsForTournament = "select Q_name, description, functionString from Questions where Q_ID = ?";
+	public static final String getQuestionDetailsForTournament = "select Q_name, description, funcName from Questions join LanguageRelation on Questions.Q_ID=LanguageRelation.Q_ID where Questions.Q_ID = ? and l_ID=2";
 
 	public static final String getMailIDFromUserName = "select mailID from Users where userName = ?";
 

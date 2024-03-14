@@ -454,7 +454,7 @@ You need to write a function that calculates the sum of the digits of a given in
 
 123 --> 6
 4567 --> 22
-', 'sumOfDigits', '{"11":{"output":3,"params":{"0":101010}},"12":{"output":45,"params":{"0":1234567890}},"13":{"output":42,"params":{"0":2468642}},"14":{"output":39,"params":{"0":987654}},"15":{"output":45,"params":{"0":9876543210}},"16":{"output":18,"params":{"0":369}},"17":{"output":25,"params":{"0":123454321}},"18":{"output":25,"params":{"0":13579}},"19":{"output":45,"params":{"0":99999}},"0":{"output":6,"params":{"0":123}},"1":{"output":22,"params":{"0":4567}},"2":{"output":24,"params":{"0":789}},"3":{"output":30,"params":{"0":9876}},"4":{"output":3,"params":{"0":111}},"5":{"output":27,"params":{"0":999}},"6":{"output":1,"params":{"0":1000}},"7":{"output":15,"params":{"0":54321}},"8":{"output":45,"params":{"0":987654321}},"9":{"output":25,"params":{"0":13579}},"10":{"output":6,"params":{"0":111111}}}', 2, 'charu07@gmail.com', 'NOTAPPROVED');
+', 'sumOfDigits', '{"11":{"output":3,"params":{"0":101010}},"12":{"output":45,"params":{"0":1234567890}},"13":{"output":32,"params":{"0":2468642}},"14":{"output":39,"params":{"0":987654}},"15":{"output":45,"params":{"0":9876543210}},"16":{"output":18,"params":{"0":369}},"17":{"output":25,"params":{"0":123454321}},"18":{"output":25,"params":{"0":13579}},"19":{"output":45,"params":{"0":99999}},"0":{"output":6,"params":{"0":123}},"1":{"output":22,"params":{"0":4567}},"2":{"output":24,"params":{"0":789}},"3":{"output":30,"params":{"0":9876}},"4":{"output":3,"params":{"0":111}},"5":{"output":27,"params":{"0":999}},"6":{"output":1,"params":{"0":1000}},"7":{"output":15,"params":{"0":54321}},"8":{"output":45,"params":{"0":987654321}},"9":{"output":25,"params":{"0":13579}},"10":{"output":6,"params":{"0":111111}}}', 2, 'charu07@gmail.com', 'NOTAPPROVED');
 -- Select l_ID from Languages where lang_name='Java';
 insert into LanguageRelation values(1,'63393309','public class Kata {
    public static int sumOfDigits(int n) {
@@ -515,3 +515,59 @@ INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('dragon.kin
 INSERT INTO Login (mailID, passwd) VALUES ('dragon.king@gmail.com', '$2a$10$ZWH3mWVwQANTX/50651oAeW9kTrpBnsUZhWtx6HDGy9CjCVV9lO0C');
 delete from ClanRequest where clanID like '66423152' and mailID like 'vijila@gmail.com';
 insert into ClanRelation (clanID, mailID) values('66423152', 'vijila@gmail.com');
+insert into ClanRequest(clanID, mailID) values('66423152', 'dragon.king@gmail.com');
+insert into ClanRequest(clanID, mailID) values('40378295', 'dragon.king@gmail.com');
+insert into ClanRequest(clanID, mailID) values('66423152', 'dragon.king@gmail.com');
+INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('naveen@gmail.com', 'Nav', '2024-03-13', '2024-03-13');
+INSERT INTO Login (mailID, passwd) VALUES ('naveen@gmail.com', '$2a$10$q4bAeiwiphSM1jJdUXuxGujOFChH6wXCUfAtZpIKtMMzwHFMQVqJe');
+insert into ClanRequest(clanID, mailID) values('66423152', 'naveen@gmail.com');
+delete from ClanRequest where clanID like '66423152' and mailID like 'naveen@gmail.com';
+insert into ClanRelation (clanID, mailID) values('66423152', 'naveen@gmail.com');
+SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+UPDATE Tournament SET Submit_time = '2024-03-14 12:17:40.566', Score = 5476.38 WHERE mailID = 'krishnagokul810@gmail.com'
+UPDATE Tournament SET Submit_time = '2024-03-14 12:17:46.481', Score = 5498.48 WHERE mailID = 'krishnagokul810@gmail.com'
+SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+insert into ClanRequest(clanID, mailID) values('66423152', 'naveen@gmail.com');

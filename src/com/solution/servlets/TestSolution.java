@@ -67,6 +67,7 @@ public class TestSolution extends HttpServlet {
 			JSONObject json = new JSONObject(request.getParameter("solutionJson"));
 			solId = json.getString("solId");
 			sol = json.getString("solution");
+			System.out.println(solId);
 			System.out.println(sol);
 			logger.info("new solution: "+sol);
 			
@@ -78,11 +79,11 @@ public class TestSolution extends HttpServlet {
 	
 		try {
 			boolean result = solutionDao.updateSolution(solId, sol);
+			System.out.println("Result :     "+result);
 			System.out.println("status : "+result+"    "+sol);
 			logger.info(result);
 			if (result) {
 				Solution solution = solutionDao.solutionDetails(solId);
-
 				JSONObject solutionJson = new JSONObject();
 				solutionJson.put("solID", solution.getSolID());
 				solutionJson.put("mailID", solution.getUser().getMailID());
@@ -133,6 +134,7 @@ public class TestSolution extends HttpServlet {
 				throw new Exception("Error on getting language of solution");
 			}
 		} catch (Exception e) {
+			e.printStackTrace();
 			logger.error("Error on test solution: " + e);
 			JSONObject errorResponse = JSON.Create(400, e.getMessage());
 			response.getWriter().write(errorResponse.toString());
