@@ -144,9 +144,10 @@ CREATE TABLE Tournament
     mailID VARCHAR(30),
     Join_time TIMESTAMP,
     Submit_time TIMESTAMP,
-    Date DATE PRIMARY key,
+    Date DATE,
     Sol_ID varchar(8),
 	Score double,
+	primary key(mailID,Date),
     FOREIGN KEY(mailID) REFERENCES Users(mailID),
 	FOREIGN KEY(Sol_ID) REFERENCES Solutions(Sol_ID)
 );

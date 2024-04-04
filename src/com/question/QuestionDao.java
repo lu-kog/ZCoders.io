@@ -119,7 +119,7 @@ public class QuestionDao {
         	PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1, questionId);
             ResultSet resultSet = statement.executeQuery();
-            
+            System.out.println(statement.toString());
                 if (resultSet.next()) {
                     logger.info("getting informations");
                 	questionDetails.setQuestionID(resultSet.getString("Q_ID"));

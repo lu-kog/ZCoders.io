@@ -149,6 +149,7 @@ public class TournamentDAO {
 				JSONObject participant = new JSONObject();
 				participant.put("userName", rs.getString("userName"));
 				participant.put("mailID", rs.getString("mailID"));
+				participant.put("Score", rs.getString("Score"));
 				participant.put("position", count+1);
 				participant.put("timeTaken", rs.getString("timeTaken"));
 				rankingObject.put(String.valueOf(count), participant);

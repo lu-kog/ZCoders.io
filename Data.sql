@@ -503,71 +503,104 @@ insert into LanguageRelation values(2,'63393309','def sumOfDigits(n):
 -- insert into ClanRelation (clanID, mailID) values('66423152', 'sun.a@zohocorp.com');
 -- delete from ClanRequest where clanID like '66423152' and mailID like 'vijila@gmail.com';
 -- insert into ClanRelation (clanID, mailID) values('66423152', 'vijila@gmail.com');
-delete from ClanRequest where clanID like '66423152' and mailID like 'rabi@gmail.com';
-insert into ClanRelation (clanID, mailID) values('66423152', 'rabi@gmail.com');
-delete from ClanRequest where clanID like '66423152' and mailID like 'ragavi@gmail.com';
-insert into ClanRelation (clanID, mailID) values('66423152', 'ragavi@gmail.com');
-delete from ClanRequest where clanID like '66423152' and mailID like 'sorimuthu@gmail.com';
-insert into ClanRelation (clanID, mailID) values('66423152', 'sorimuthu@gmail.com');
-delete from ClanRequest where clanID like '66423152' and mailID like 'sun.a@zohocorp.com';
-insert into ClanRelation (clanID, mailID) values('66423152', 'sun.a@zohocorp.com');
-INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('dragon.king@gmail.com', 'Dragon_king', '2024-03-13', '2024-03-13');
-INSERT INTO Login (mailID, passwd) VALUES ('dragon.king@gmail.com', '$2a$10$ZWH3mWVwQANTX/50651oAeW9kTrpBnsUZhWtx6HDGy9CjCVV9lO0C');
+-- delete from ClanRequest where clanID like '66423152' and mailID like 'rabi@gmail.com';
+-- insert into ClanRelation (clanID, mailID) values('66423152', 'rabi@gmail.com');
+-- delete from ClanRequest where clanID like '66423152' and mailID like 'ragavi@gmail.com';
+-- insert into ClanRelation (clanID, mailID) values('66423152', 'ragavi@gmail.com');
+-- delete from ClanRequest where clanID like '66423152' and mailID like 'sorimuthu@gmail.com';
+-- insert into ClanRelation (clanID, mailID) values('66423152', 'sorimuthu@gmail.com');
+-- delete from ClanRequest where clanID like '66423152' and mailID like 'sun.a@zohocorp.com';
+-- insert into ClanRelation (clanID, mailID) values('66423152', 'sun.a@zohocorp.com');
+-- INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('dragon.king@gmail.com', 'Dragon_king', '2024-03-13', '2024-03-13');
+-- INSERT INTO Login (mailID, passwd) VALUES ('dragon.king@gmail.com', '$2a$10$ZWH3mWVwQANTX/50651oAeW9kTrpBnsUZhWtx6HDGy9CjCVV9lO0C');
+-- delete from ClanRequest where clanID like '66423152' and mailID like 'vijila@gmail.com';
+-- insert into ClanRelation (clanID, mailID) values('66423152', 'vijila@gmail.com');
+-- insert into ClanRequest(clanID, mailID) values('66423152', 'dragon.king@gmail.com');
+-- insert into ClanRequest(clanID, mailID) values('40378295', 'dragon.king@gmail.com');
+-- insert into ClanRequest(clanID, mailID) values('66423152', 'dragon.king@gmail.com');
+-- INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('naveen@gmail.com', 'Nav', '2024-03-13', '2024-03-13');
+-- INSERT INTO Login (mailID, passwd) VALUES ('naveen@gmail.com', '$2a$10$q4bAeiwiphSM1jJdUXuxGujOFChH6wXCUfAtZpIKtMMzwHFMQVqJe');
+-- insert into ClanRequest(clanID, mailID) values('66423152', 'naveen@gmail.com');
+-- delete from ClanRequest where clanID like '66423152' and mailID like 'naveen@gmail.com';
+-- insert into ClanRelation (clanID, mailID) values('66423152', 'naveen@gmail.com');
+-- SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+-- SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
+-- SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- UPDATE Tournament SET Submit_time = '2024-03-14 12:17:40.566', Score = 5476.38 WHERE mailID = 'krishnagokul810@gmail.com'
+-- UPDATE Tournament SET Submit_time = '2024-03-14 12:17:46.481', Score = 5498.48 WHERE mailID = 'krishnagokul810@gmail.com'
+-- SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- insert into ClanRequest(clanID, mailID) values('66423152', 'naveen@gmail.com');
+-- SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- UPDATE Tournament SET Submit_time = '2024-03-14 16:01:02.742', Score = 3.08 WHERE mailID = 'naveen@gmail.com'
+-- SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- UPDATE Tournament SET Submit_time = '2024-03-14 16:58:51.792', Score = 1.955 WHERE mailID = 'vasanth.albert@zohocorp.com'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- UPDATE Tournament SET Submit_time = '2024-03-14 17:09:20.505', Score = 47.974 WHERE mailID = 'naveen@gmail.com'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- UPDATE Tournament SET Submit_time = '2024-03-14 17:56:39.221', Score = 2.091 WHERE mailID = 'naveen@gmail.com'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- UPDATE Tournament SET Submit_time = '2024-03-14 18:02:13.297', Score = 2.385 WHERE mailID = 'charu07@gmail.com'
+-- select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
+-- UPDATE Tournament SET Submit_time = '2024-03-14 18:25:39.978', Score = 2.61 WHERE mailID = 'krishnagokul810@gmail.com'
+-- SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
+SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-15'
+UPDATE Tournament SET Submit_time = '2024-03-15 10:59:03.251', Score = 84.72 WHERE mailID = 'krishnagokul810@gmail.com'
+INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('dragon.king@gmail.com', 'Dragon_king', '2024-03-15', '2024-03-15');
+INSERT INTO Login (mailID, passwd) VALUES ('dragon.king@gmail.com', '$2a$10$1FDPppdbS4eS26NDpFRYNu3yy6spmWVHCgEwb8dwcTRlwo.APAyNe');
+insert into ClanRequest(clanID, mailID) values('66423152', 'dragon.king@gmail.com');
+SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-15'
+UPDATE Tournament SET Submit_time = '2024-03-15 11:18:13.741', Score = 14.706 WHERE mailID = 'dragon.king@gmail.com'
 delete from ClanRequest where clanID like '66423152' and mailID like 'vijila@gmail.com';
 insert into ClanRelation (clanID, mailID) values('66423152', 'vijila@gmail.com');
-insert into ClanRequest(clanID, mailID) values('66423152', 'dragon.king@gmail.com');
-insert into ClanRequest(clanID, mailID) values('40378295', 'dragon.king@gmail.com');
-insert into ClanRequest(clanID, mailID) values('66423152', 'dragon.king@gmail.com');
-INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('naveen@gmail.com', 'Nav', '2024-03-13', '2024-03-13');
-INSERT INTO Login (mailID, passwd) VALUES ('naveen@gmail.com', '$2a$10$q4bAeiwiphSM1jJdUXuxGujOFChH6wXCUfAtZpIKtMMzwHFMQVqJe');
-insert into ClanRequest(clanID, mailID) values('66423152', 'naveen@gmail.com');
-delete from ClanRequest where clanID like '66423152' and mailID like 'naveen@gmail.com';
-insert into ClanRelation (clanID, mailID) values('66423152', 'naveen@gmail.com');
 SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
-SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-13'
-SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-UPDATE Tournament SET Submit_time = '2024-03-14 12:17:40.566', Score = 5476.38 WHERE mailID = 'krishnagokul810@gmail.com'
-UPDATE Tournament SET Submit_time = '2024-03-14 12:17:46.481', Score = 5498.48 WHERE mailID = 'krishnagokul810@gmail.com'
-SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1
-select Q_ID from TournamentQuestionRelation where Date = '2024-03-14'
-insert into ClanRequest(clanID, mailID) values('66423152', 'naveen@gmail.com');
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-15'
+select Q_ID from TournamentQuestionRelation where Date = '2024-03-15'
+delete from ClanRequest where clanID like '66423152' and mailID like 'padma@gmail.com';
+insert into ClanRelation (clanID, mailID) values('66423152', 'padma@gmail.com');
+INSERT INTO Users (mailID, userName, Datejoined, Streakdate) VALUES ('shooter.love@gmail.com', 'Shooter', '2024-04-04', '2024-04-04');
+INSERT INTO Login (mailID, passwd) VALUES ('shooter.love@gmail.com', '$2a$10$5ecbiDAyF2CIA0cCUM3j6epIKTN00ghsvDR.fiMiDbEsiBG81xMXm');

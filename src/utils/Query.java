@@ -203,7 +203,7 @@ public class Query {
 
 	public static final String submitTournament = "UPDATE Tournament SET Submit_time = ?, Score = ? WHERE mailID = ?";	
 
-	public static final String leaderBoard = "SELECT t.mailID, u.userName, (Submit_time - Join_time) as timeTaken FROM Tournament t join Users u on u.mailID = t.mailID where Date like ? order by t.score desc;";
+	public static final String leaderBoard = "SELECT t.mailID, u.userName, (Submit_time - Join_time) as timeTaken, t.Score FROM Tournament t join Users u on u.mailID = t.mailID where Date like ? order by t.score desc;";
 
 	public static final String generateQuestionsForTournament = "SELECT Q_ID FROM Questions WHERE status = 'APPROVED' ORDER BY RAND() LIMIT 1";
 
